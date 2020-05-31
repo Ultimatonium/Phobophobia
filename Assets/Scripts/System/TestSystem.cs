@@ -6,6 +6,7 @@ public class TestSystem : SystemBase
 {
     protected override void OnUpdate()
     {
+        return;
         float dT = Time.DeltaTime;
         Entities
             .WithAll<TestTag>().ForEach(
