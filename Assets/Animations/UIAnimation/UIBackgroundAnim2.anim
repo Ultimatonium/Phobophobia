@@ -50,9 +50,9 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1568.9
+        value: 851
         inSlope: 0
-        outSlope: -77.716
+        outSlope: -49
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
@@ -60,7 +60,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 25
         value: -374
-        inSlope: -77.716
+        inSlope: -49
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -78,9 +78,9 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1758.7
+        value: 1033
         inSlope: 0
-        outSlope: -81.30119
+        outSlope: -52.273197
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
@@ -88,7 +88,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 25
         value: -273.83
-        inSlope: -81.30119
+        inSlope: -52.273197
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -185,9 +185,9 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1568.9
+        value: 851
         inSlope: 0
-        outSlope: -77.716
+        outSlope: -49
         tangentMode: 65
         weightedMode: 0
         inWeight: 0.33333334
@@ -195,7 +195,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 25
         value: -374
-        inSlope: -77.716
+        inSlope: -49
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
@@ -213,9 +213,9 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1758.7
+        value: 1033
         inSlope: 0
-        outSlope: -81.30119
+        outSlope: -52.273197
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
@@ -223,7 +223,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 25
         value: -273.83
-        inSlope: -81.30119
+        inSlope: -52.273197
         outSlope: 0
         tangentMode: 5
         weightedMode: 0
