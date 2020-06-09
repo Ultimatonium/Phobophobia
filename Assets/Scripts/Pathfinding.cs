@@ -6,6 +6,7 @@ using Unity.Collections;
 using UnityEngine.AI;
 using System.Linq;
 using Unity.Entities.UniversalDelegates;
+using System.IO;
 
 public class Pathfinding : MonoBehaviour
 {
@@ -13,10 +14,16 @@ public class Pathfinding : MonoBehaviour
     private NativeArray<int> navMeshIndices;
     private NativeMultiHashMap<int,int> neighbourIndices;
 
+    public GameObject start;
+    public GameObject end;
+
+    NativeArray<PathNode> pathNodes;
+
     void Start()
     {
         NavMeshTriangulation navMeshTriangulation = NavMesh.CalculateTriangulation();
-
+        GetComponent<MeshFilter>().mesh.vertices = navMeshTriangulation.vertices;
+        GetComponent<MeshFilter>().mesh.triangles = navMeshTriangulation.indices;
         navMeshVertices = new NativeArray<float3>(navMeshTriangulation.vertices.Length, Allocator.Temp);
         for (int i = 0; i < navMeshTriangulation.vertices.Length; i++)
         {
@@ -29,12 +36,25 @@ public class Pathfinding : MonoBehaviour
             navMeshIndices[i] = navMeshTriangulation.indices[i];
         }
 
-        GetPath(new float3(1, 1, 1), new float3(42, 1, 33));
+        Debug.Log(navMeshTriangulation.vertices[0]);
+        Debug.Log(navMeshTriangulation.vertices[1]);
+        Debug.Log(navMeshTriangulation.vertices[2]);
+        Debug.Log(navMeshTriangulation.vertices[3]);
+        Debug.Log(navMeshTriangulation.vertices[4]);
+        Debug.Log(navMeshTriangulation.vertices[5]);
+
+        for (int i = 0; i < 9; i++)
+        {
+            Debug.Log("index " + i + " " + navMeshTriangulation.indices[i]);
+        }
+
+        GetPath(start.transform.position, end.transform.position);
     }
 
     public NativeArray<PathNode> GetPath(float3 start, float3 end)
     {
-        NativeArray<PathNode> pathNodes = new NativeArray<PathNode>(navMeshVertices.Length, Allocator.Temp);
+        neighbourIndices = new NativeMultiHashMap<int, int>(1, Allocator.Temp);
+        pathNodes = new NativeArray<PathNode>(navMeshVertices.Length, Allocator.Temp);
         for (int i = 0; i < pathNodes.Length; i++)
         {
             pathNodes[i] =
@@ -47,11 +67,10 @@ public class Pathfinding : MonoBehaviour
                 prevIndex = -1,
             };
             NativeArray<int> vertexNeighbours = GetIndicesOfVertexNeighbours(i);
-            neighbourIndices = new NativeMultiHashMap<int, int>(1, Allocator.Temp);
             for (int ii = 0; ii < vertexNeighbours.Length; ii++)
             {
-                neighbourIndices.Add(i, ii);
-                Debug.Log("add " + i + " " + ii);
+                neighbourIndices.Add(i, vertexNeighbours[ii]);
+                //Debug.Log("add " + i + " " + vertexNeighbours[ii]);
             }
         }
 
@@ -60,10 +79,11 @@ public class Pathfinding : MonoBehaviour
 
         int startNodeIndex = CalculateIndex(start);
         int endNodeIndex = CalculateIndex(end);
-        //Debug.Log(startNodeIndex + " " + endNodeIndex);
-        //Debug.DrawLine(pathNodes[startNodeIndex].position, pathNodes[endNodeIndex].position, Color.red, 100);
+        Debug.Log(startNodeIndex + " " + endNodeIndex);
+        Debug.DrawLine(pathNodes[startNodeIndex].position, pathNodes[endNodeIndex].position, Color.blue, 100);
 
-        PathNode startNode = pathNodes[CalculateIndex(startNodeIndex)];
+        //PathNode startNode = pathNodes[CalculateIndex(startNodeIndex)];
+        PathNode startNode = pathNodes[startNodeIndex];
         startNode.gCost = 0;
         pathNodes[startNode.index] = startNode;
 
@@ -92,9 +112,19 @@ public class Pathfinding : MonoBehaviour
 
             closedList.Add(currentNodeIndex);
 
+            NativeArray<int> nativeArrays = neighbourIndices.GetKeyArray(Allocator.Temp);
+            for (int i = 0; i < nativeArrays.Length; i++)
+            {
+                //Debug.Log(nativeArrays[i]);
+                if (nativeArrays[i] == currentNodeIndex)
+                {
+                    //Debug.Log("found I");
+                }
+            }
             bool found = neighbourIndices.TryGetFirstValue(currentNodeIndex, out int neighbourIndex, out NativeMultiHashMapIterator<int> iterator);
-            Debug.Log(found);
+            //Debug.Log(found);
             while (found)
+            //for (int i = 0; i < 1000 && found; i++)
             {
 
                 PathNode neighbourNode = pathNodes[neighbourIndex];
@@ -114,10 +144,31 @@ public class Pathfinding : MonoBehaviour
                     if (!openList.Contains(neighbourNode.index))
                     {
                         openList.Add(neighbourNode.index);
+                        Debug.DrawLine(pathNodes[currentNodeIndex].position, neighbourNode.position, Color.red, 10);
+                        Debug.Log(currentNodeIndex + " " + neighbourNode.index);
                     }
                 }
-                neighbourIndices.TryGetNextValue(out neighbourIndex, ref iterator);
+                found = neighbourIndices.TryGetNextValue(out neighbourIndex, ref iterator);
             }
+        }
+
+        PathNode endNode = pathNodes[endNodeIndex];
+        if (endNode.prevIndex == -1)
+        {
+            // Didn't find a path!
+            Debug.Log("Didn't find a path!");
+        }
+        else
+        {
+            // Found a path
+            Debug.Log("found a path");
+            //NativeList<int2> path = CalculatePath(pathNodeArray, endNode);
+            /*
+            foreach (int2 pathPosition in path) {
+                Debug.Log(pathPosition);
+            }
+            */
+            //path.Dispose();
         }
 
         closedList.Dispose();
@@ -143,26 +194,39 @@ public class Pathfinding : MonoBehaviour
                 switch (remainder)
                 {
                     case 0:
-                        neighbourIndex1 = navMeshIndices[i] + 1;
-                        neighbourIndex2 = navMeshIndices[i] + 2;
+                        neighbourIndex1 = navMeshIndices[i + 1];
+                        neighbourIndex2 = navMeshIndices[i + 2];
                         break;
                     case 1:
-                        neighbourIndex1 = navMeshIndices[i] - 1;
-                        neighbourIndex2 = navMeshIndices[i] + 1;
+                        neighbourIndex1 = navMeshIndices[i - 1];
+                        neighbourIndex2 = navMeshIndices[i + 1];
                         break ;
                     case 2:
-                        neighbourIndex1 = navMeshIndices[i] - 2;
-                        neighbourIndex2 = navMeshIndices[i] - 1;
+                        neighbourIndex1 = navMeshIndices[i - 2];
+                        neighbourIndex2 = navMeshIndices[i - 1];
                         break;
                     default:
                         Debug.LogError("Impossible remainder " + remainder);
                         break;
                 }
+                //Debug.Log(i + " " + neighbourIndex1 + " " + neighbourIndex2);
                 neighboursIndices.TryAdd(neighbourIndex1, navMeshVertices[neighbourIndex1]);
                 neighboursIndices.TryAdd(neighbourIndex2, navMeshVertices[neighbourIndex2]);
+                /*
+                if (vertexIndex == 0)
+                {
+                    Debug.Log("found 0 for " + i);
+                    Debug.Log(neighbourIndex1 + " " + neighbourIndex2);
+                }*/
             }
         }
-
+        for (int i = 0; i < neighboursIndices.GetKeyArray(Allocator.Temp).Length; i++)
+        {
+            if (vertexIndex == 1751)
+            {
+            Debug.Log("search " + vertexIndex + " " + neighboursIndices.GetKeyArray(Allocator.Temp)[i]);
+            }
+        }
         return neighboursIndices.GetKeyArray(Allocator.Temp);
     }
 
@@ -193,6 +257,7 @@ public class Pathfinding : MonoBehaviour
                 lowestCostPathNode = pathNodeArray[openList[i]];
             }
         }
+        //Debug.Log(lowestCostPathNode.index);
         return lowestCostPathNode.index;
     }
 
