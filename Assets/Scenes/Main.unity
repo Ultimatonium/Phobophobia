@@ -1014,6 +1014,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 799883723}
   end: {fileID: 766807742}
+  textMeshPrefab: {fileID: 1100062109492069528, guid: fe53b97df7bb232458a9cf352ec2b2ca,
+    type: 3}
 --- !u!4 &1940404482
 Transform:
   m_ObjectHideFlags: 0
