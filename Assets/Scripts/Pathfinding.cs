@@ -8,24 +8,35 @@ using System.Linq;
 using Unity.Entities.UniversalDelegates;
 using System.IO;
 using TMPro;
+using System;
 
 public class Pathfinding : MonoBehaviour
 {
     private NativeArray<float3> navMeshVertices;
     private NativeArray<int> navMeshIndices;
-    private NativeMultiHashMap<int,int> neighbourIndices;
 
     public GameObject start;
     public GameObject end;
     public GameObject textMeshPrefab;
 
     NativeArray<PathNode> pathNodes;
+    private NativeMultiHashMap<int,int> neighbourIndices;
 
     void Start()
     {
+
         NavMeshTriangulation navMeshTriangulation = NavMesh.CalculateTriangulation();
         GetComponent<MeshFilter>().mesh.vertices = navMeshTriangulation.vertices;
         GetComponent<MeshFilter>().mesh.triangles = navMeshTriangulation.indices;
+        Debug.Log(navMeshTriangulation.vertices.Length);
+        Debug.Log(navMeshTriangulation.indices.Length);
+        Debug.Log(GetComponent<MeshFilter>().mesh.GetTopology(0));
+        NativeList<int> nativeLists = new NativeList<int>(3, Allocator.Temp);
+        nativeLists.Add(1);
+        Debug.Log(nativeLists.Length);
+        Debug.Log(nativeLists.AsArray().Length);
+        return;
+
         navMeshVertices = new NativeArray<float3>(navMeshTriangulation.vertices.Length, Allocator.Persistent);
         for (int i = 0; i < navMeshTriangulation.vertices.Length; i++)
         {
@@ -39,6 +50,15 @@ public class Pathfinding : MonoBehaviour
             paintVertexFromTriangleIndex(i);
         }
 
+        pathNodes = CreatePathNodes(navMeshVertices, CalculateDistanceCost(start.transform.position, end.transform.position));
+        neighbourIndices = GetNodeNeighbours(pathNodes);
+
+        //DrawNeighbour(258, Color.black, float.MaxValue);
+        for (int i = 0; i < pathNodes.Length; i++)
+        {
+            //DrawNeighbour(pathNodes[i].index, Color.black, float.MaxValue);
+        }
+
         /*
         Debug.Log(navMeshTriangulation.vertices[0]);
         Debug.Log(navMeshTriangulation.vertices[1]);
@@ -48,18 +68,16 @@ public class Pathfinding : MonoBehaviour
         Debug.Log(navMeshTriangulation.vertices[5]);
         */
 
+        /*
         for (int i = 0; i < 160; i+=3)
         {
-            /*
             Debug.Log("index " + i + " " 
                 + navMeshTriangulation.indices[i] + "("+ navMeshTriangulation.vertices[navMeshTriangulation.indices[i]]+")"
                 + navMeshTriangulation.indices[i+1] + "(" + navMeshTriangulation.vertices[navMeshTriangulation.indices[i+1]] + ")"
                 + navMeshTriangulation.indices[i+2] + "(" + navMeshTriangulation.vertices[navMeshTriangulation.indices[i+2]] + ")");
-            */
             Debug.DrawLine(navMeshTriangulation.vertices[navMeshTriangulation.indices[i]], navMeshTriangulation.vertices[navMeshTriangulation.indices[i + 1]],Color.green,50);
             Debug.DrawLine(navMeshTriangulation.vertices[navMeshTriangulation.indices[i+1]], navMeshTriangulation.vertices[navMeshTriangulation.indices[i + 2]], Color.green,50);
             Debug.DrawLine(navMeshTriangulation.vertices[navMeshTriangulation.indices[i+2]], navMeshTriangulation.vertices[navMeshTriangulation.indices[i]], Color.green,50);
-            /*
             TextMesh textMeshObject1 = Instantiate(textMeshPrefab, navMeshTriangulation.vertices[navMeshTriangulation.indices[i]], textMeshPrefab.transform.rotation).GetComponent<TextMesh>();
             textMeshObject1.text = navMeshTriangulation.indices[i] + ":" + navMeshTriangulation.vertices[navMeshTriangulation.indices[i]].ToString();
             textMeshObject1.name = textMeshObject1.text;
@@ -69,10 +87,8 @@ public class Pathfinding : MonoBehaviour
             TextMesh textMeshObject3 = Instantiate(textMeshPrefab, navMeshTriangulation.vertices[navMeshTriangulation.indices[i+2]], textMeshPrefab.transform.rotation).GetComponent<TextMesh>();
             textMeshObject3.text = navMeshTriangulation.indices[i+2] + ":" + navMeshTriangulation.vertices[navMeshTriangulation.indices[i+2]].ToString();
             textMeshObject3.name = textMeshObject3.text;
-            */
-
         }
-
+        */
            
 
     }
@@ -80,12 +96,82 @@ public class Pathfinding : MonoBehaviour
     private bool first = true;
     private void Update()
     {
+        DrawHighlightedNeighbour();
         if (first)
         {
-        GetPath(start.transform.position, end.transform.position);
+            GetPath(start.transform.position, end.transform.position);
             first = false;
         }
     }
+
+    private void DrawHighlightedNeighbour()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit raycastHit;
+        if (Physics.Raycast(ray, out raycastHit, float.MaxValue))
+        {
+            int index = CalculateIndex(raycastHit.point);
+            DrawNeighbour(index, Color.red, 0);
+        }
+    }
+
+    private void DrawNeighbour(int index, Color color, float duration)
+    {
+        bool found = neighbourIndices.TryGetFirstValue(index, out int neighbourIndex, out NativeMultiHashMapIterator<int> iterator);
+        while (found)
+        {
+            Debug.DrawLine(pathNodes[index].position, pathNodes[neighbourIndex].position, color, duration);
+            found = neighbourIndices.TryGetNextValue(out neighbourIndex, ref iterator);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        navMeshVertices.Dispose();
+        navMeshIndices.Dispose();
+        pathNodes.Dispose();
+        neighbourIndices.Dispose();
+    }
+
+    private NativeMultiHashMap<int, int> GetNodeNeighbours(NativeArray<PathNode> pathNodes)
+    {
+        neighbourIndices = new NativeMultiHashMap<int, int>(0, Allocator.Persistent);
+        for (int i = 0; i < pathNodes.Length; i++)
+        {
+            NativeArray<int> vertexNeighbours = GetIndicesOfVertexNeighbours(i);
+            for (int ii = 0; ii < vertexNeighbours.Length; ii++)
+            {
+                neighbourIndices.Add(i, vertexNeighbours[ii]);
+                /*
+                if (i == 459)
+                {
+                Debug.Log("add " + i + " " + vertexNeighbours[ii] + " of " + vertexNeighbours.Length);
+                }*/
+            }
+        }
+        return neighbourIndices;
+    }
+
+    private NativeArray<PathNode> CreatePathNodes(NativeArray<float3> vertices, float hCost)
+    {
+        //pathNodes = new NativeArray<PathNode>(vertices.Length, Allocator.Persistent);
+        pathNodes = new NativeList<PathNode>(vertices.Length, Allocator.Persistent);
+        for (int i = 0; i < pathNodes.Length; i++)
+        {
+            pathNodes[i] =
+            new PathNode
+            {
+                position = navMeshVertices[i],
+                index = i,
+                gCost = int.MaxValue,
+                hCost = hCost,
+                prevIndex = -1,
+            };
+        }
+        return pathNodes;
+    }
+
+    
 
     private void paintVertexFromTriangleIndex(int index)
     {
@@ -129,34 +215,9 @@ public class Pathfinding : MonoBehaviour
 
     public NativeArray<PathNode> GetPath(float3 start, float3 end)
     {
-        neighbourIndices = new NativeMultiHashMap<int, int>(0, Allocator.Temp);
-        pathNodes = new NativeArray<PathNode>(navMeshVertices.Length, Allocator.Temp);
-        for (int i = 0; i < pathNodes.Length; i++)
-        {
-            pathNodes[i] =
-            new PathNode
-            {
-                position = navMeshVertices[i],
-                index = i,
-                gCost = int.MaxValue,
-                hCost = CalculateDistanceCost(start, end),
-                prevIndex = -1,
-            };
-        }
+        
 
-        for (int i = 0; i < pathNodes.Length; i++)
-        {
-            NativeArray<int> vertexNeighbours = GetIndicesOfVertexNeighbours(i);
-            for (int ii = 0; ii < vertexNeighbours.Length; ii++)
-            {
-                neighbourIndices.Add(i, vertexNeighbours[ii]);
-                /*
-                if (i == 459)
-                {
-                Debug.Log("add " + i + " " + vertexNeighbours[ii] + " of " + vertexNeighbours.Length);
-                }*/
-            }
-        }
+        
 
 
                 //Debug.Log("230" + pathNodes[230].position);
@@ -254,7 +315,7 @@ public class Pathfinding : MonoBehaviour
                         if (!openList.Contains(neighbourNode.index))
                         {
                             openList.Add(neighbourNode.index);
-                            Debug.DrawLine(pathNodes[currentNodeIndex].position, neighbourNode.position, Color.red, 10);
+                            //Debug.DrawLine(pathNodes[currentNodeIndex].position, neighbourNode.position, Color.red, 10);
                             //Debug.Log(currentNodeIndex + " " + neighbourNode.index);
                         }
                     }
@@ -361,13 +422,18 @@ public class Pathfinding : MonoBehaviour
                 //neighboursIndices.Add(neighbourIndex1);
                 //neighboursIndices.Add(neighbourIndex2);
                 neighboursIndices.TryAdd(neighbourIndex1, navMeshVertices[neighbourIndex1]);
-                neighboursIndices.TryAdd(neighbourIndex2, navMeshVertices[neighbourIndex2]); 
-                /*
-                if (vertexIndex == 459)
+                neighboursIndices.TryAdd(neighbourIndex2, navMeshVertices[neighbourIndex2]);
+                //if (EqualFloat3(pathNodes[navMeshIndices[i]].position, pathNodes[258].position, 0.1f))
+                if (neighbourIndex1 == 260 || neighbourIndex2 == 260)
                 {
-                    Debug.Log("found for " + i);
+                    Debug.Log("found for " + TryGetNavMeshIndices(i));
                     Debug.Log(neighbourIndex1 + " " + neighbourIndex2);
-                }*/
+                    writeTextMesh(pathNodes[neighbourIndex1].position, "neighbour1 " + neighbourIndex1, 10, Color.red);
+                    writeTextMesh(pathNodes[neighbourIndex2].position, "neighbour2 " + neighbourIndex2, 10, Color.red);
+                    Debug.DrawLine(pathNodes[TryGetNavMeshIndices(i)].position, pathNodes[neighbourIndex1].position, Color.green, 999);
+                    Debug.DrawLine(pathNodes[neighbourIndex1].position, pathNodes[neighbourIndex2].position, Color.green, 999);
+                    Debug.DrawLine(pathNodes[neighbourIndex2].position, pathNodes[TryGetNavMeshIndices(i)].position, Color.green, 999);
+                }
             }
             outi = i;
         }

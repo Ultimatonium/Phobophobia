@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         //Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     private void Update()
