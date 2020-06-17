@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/VFXTestScene.unity.meta
 guid: 8d17789d8324f264f80a3fad3a4fcf43
+=======
+guid: 3e079e68d862044e1b4f121fd03d4b96
+folderAsset: yes
+>>>>>>> d0ddc972a79fe38c149cb5b75f0389a955f6fdcb:Assets/Graphics/Models/Envrionment.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
