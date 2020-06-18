@@ -120,7 +120,103 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ee718a42bb53fa64cb4c7472a387dab2, type: 2}
+--- !u!1 &4910008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4910009}
+  - component: {fileID: 4910012}
+  - component: {fileID: 4910011}
+  - component: {fileID: 4910010}
+  m_Layer: 0
+  m_Name: HirschisPathfinding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4910009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 947884590}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &4910010
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910008}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &4910011
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910008}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4910012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4910008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd99790d5ec11b2458e56b474f69bff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 1751417982}
+  end: {fileID: 2080982176}
+  textMeshPrefab: {fileID: 1100062109492069528, guid: fe53b97df7bb232458a9cf352ec2b2ca,
+    type: 3}
 --- !u!1 &125316205
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,8 +233,8 @@ GameObject:
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &125316206
 Transform:
@@ -259,7 +355,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c7e2fae01750c448aac36e8c8cde5fa3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c7e2fae01750c448aac36e8c8cde5fa3,
         type: 3}
@@ -296,6 +392,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: zweiterPilz
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7e2fae01750c448aac36e8c8cde5fa3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7e2fae01750c448aac36e8c8cde5fa3,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e2fae01750c448aac36e8c8cde5fa3, type: 3}
 --- !u!1 &193684098
@@ -314,8 +420,8 @@ GameObject:
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &193684099
 Transform:
@@ -458,6 +564,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: small_pilz_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51cf9c11472e44eccb7fd787d1efcd1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51cf9c11472e44eccb7fd787d1efcd1f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51cf9c11472e44eccb7fd787d1efcd1f, type: 3}
 --- !u!1 &327584749
@@ -476,8 +592,8 @@ GameObject:
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &327584750
 Transform:
@@ -569,8 +685,8 @@ GameObject:
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &381835233
 Transform:
@@ -662,8 +778,8 @@ GameObject:
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &488597645
 Transform:
@@ -755,8 +871,8 @@ GameObject:
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &538440066
 Transform:
@@ -899,6 +1015,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: small_pilz_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51cf9c11472e44eccb7fd787d1efcd1f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51cf9c11472e44eccb7fd787d1efcd1f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51cf9c11472e44eccb7fd787d1efcd1f, type: 3}
 --- !u!1001 &757191339
@@ -982,6 +1108,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bett6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca624550e04064a9aabd787bfbf47919,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca624550e04064a9aabd787bfbf47919,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca624550e04064a9aabd787bfbf47919, type: 3}
@@ -1067,6 +1203,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: room6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c324446f8ebd40f1a955ea15e61d83a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c324446f8ebd40f1a955ea15e61d83a,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c324446f8ebd40f1a955ea15e61d83a, type: 3}
 --- !u!1 &773882997
@@ -1085,8 +1231,8 @@ GameObject:
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &773882998
 Transform:
@@ -1207,7 +1353,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 14042d6f0e8f94f68bfc3cd76a9ce748,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 14042d6f0e8f94f68bfc3cd76a9ce748,
         type: 3}
@@ -1229,6 +1375,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: cristals_uv
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14042d6f0e8f94f68bfc3cd76a9ce748,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14042d6f0e8f94f68bfc3cd76a9ce748,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14042d6f0e8f94f68bfc3cd76a9ce748, type: 3}
 --- !u!1 &877449352
@@ -1247,8 +1403,8 @@ GameObject:
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &877449353
 Transform:
@@ -1391,6 +1547,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: low_second_shroom
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8bd042bd89fd44cbc8bb4c317ddaa7c2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8bd042bd89fd44cbc8bb4c317ddaa7c2,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bd042bd89fd44cbc8bb4c317ddaa7c2, type: 3}
 --- !u!1 &947884589
@@ -1409,8 +1575,8 @@ GameObject:
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &947884590
 Transform:
@@ -1422,7 +1588,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.38884893, z: -0, w: 0.92130154}
   m_LocalPosition: {x: 12.6, y: -8.54, z: 43.5}
   m_LocalScale: {x: 51.793724, y: 19.986, z: 12.256614}
-  m_Children: []
+  m_Children:
+  - {fileID: 4910009}
   m_Father: {fileID: 1201979620}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45.766003, z: 0}
@@ -1614,7 +1781,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 11c8604634f404ebea6124d08e2592d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11c8604634f404ebea6124d08e2592d1,
         type: 3}
@@ -1650,6 +1817,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lampge2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11c8604634f404ebea6124d08e2592d1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11c8604634f404ebea6124d08e2592d1,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11c8604634f404ebea6124d08e2592d1, type: 3}
@@ -1697,7 +1874,7 @@ Transform:
   - {fileID: 1819682568}
   - {fileID: 1867355198}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1535501215
 PrefabInstance:
@@ -1781,6 +1958,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal_3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 25c21cc1141634791b25e76f40cd036a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 25c21cc1141634791b25e76f40cd036a,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25c21cc1141634791b25e76f40cd036a, type: 3}
 --- !u!1 &1582128674
@@ -1799,8 +1986,8 @@ GameObject:
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1582128675
 Transform:
@@ -1943,6 +2130,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: cristals_uv (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14042d6f0e8f94f68bfc3cd76a9ce748,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14042d6f0e8f94f68bfc3cd76a9ce748,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14042d6f0e8f94f68bfc3cd76a9ce748, type: 3}
 --- !u!1 &1657807139
@@ -2053,8 +2250,8 @@ GameObject:
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1688618626
 Transform:
@@ -2206,6 +2403,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1751417982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 25c21cc1141634791b25e76f40cd036a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1961486762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1773634722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,8 +2425,8 @@ GameObject:
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1773634723
 Transform:
@@ -2381,6 +2584,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: zweiterPilz (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7e2fae01750c448aac36e8c8cde5fa3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c7e2fae01750c448aac36e8c8cde5fa3,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e2fae01750c448aac36e8c8cde5fa3, type: 3}
 --- !u!1 &1819682567
@@ -2399,8 +2612,8 @@ GameObject:
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1819682568
 Transform:
@@ -2492,8 +2705,8 @@ GameObject:
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1849535822
 Transform:
@@ -2585,8 +2798,8 @@ GameObject:
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1867355198
 Transform:
@@ -2678,8 +2891,8 @@ GameObject:
   m_Name: low_second_shroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &1903670751
 MeshRenderer:
@@ -2743,7 +2956,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1961486762
 PrefabInstance:
@@ -2790,7 +3003,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 25c21cc1141634791b25e76f40cd036a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25c21cc1141634791b25e76f40cd036a,
         type: 3}
@@ -2827,8 +3040,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: portal_3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 25c21cc1141634791b25e76f40cd036a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 25c21cc1141634791b25e76f40cd036a,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25c21cc1141634791b25e76f40cd036a, type: 3}
+--- !u!1 &2080982176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c324446f8ebd40f1a955ea15e61d83a,
+    type: 3}
+  m_PrefabInstance: {fileID: 764389231}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2114077536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2911,6 +3140,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: low_stuetze1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6c208a31acaa4cb9a441ea05f98c0da,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d6c208a31acaa4cb9a441ea05f98c0da,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c208a31acaa4cb9a441ea05f98c0da, type: 3}
 --- !u!1 &2123809318
@@ -2929,8 +3168,8 @@ GameObject:
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2123809319
 Transform:
@@ -3096,5 +3335,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 16.138, y: 198.605, z: 124.589005}

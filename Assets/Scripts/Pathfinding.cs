@@ -25,7 +25,7 @@ public class Pathfinding : MonoBehaviour
 
     void Start()
     {
-
+        float startTime = Time.realtimeSinceStartup;
         NavMeshTriangulation navMeshTriangulation = NavMesh.CalculateTriangulation();
 
         List<Vector3> navMeshVerticesList = navMeshTriangulation.vertices.ToList();
@@ -99,7 +99,8 @@ public class Pathfinding : MonoBehaviour
             textMeshObject3.name = textMeshObject3.text;
         }
         */
-           
+
+        Debug.Log("start time: " + (Time.realtimeSinceStartup - startTime));
 
     }
 
@@ -120,8 +121,12 @@ public class Pathfinding : MonoBehaviour
         DrawHighlightedNeighbour();
         if (first)
         {
+            Profiler.BeginSample("find path");
+            float startTime = Time.realtimeSinceStartup;
             GetPath(start.transform.position, end.transform.position);
+            Debug.Log("find path time " + (Time.realtimeSinceStartup - startTime));
             first = false;
+            Profiler.EndSample();
         }
     }
 
