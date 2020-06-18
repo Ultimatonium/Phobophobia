@@ -9,6 +9,7 @@ using Unity.Entities.UniversalDelegates;
 using System.IO;
 using TMPro;
 using System;
+using UnityEngine.Profiling;
 
 public class Pathfinding : MonoBehaviour
 {
@@ -26,29 +27,38 @@ public class Pathfinding : MonoBehaviour
     {
 
         NavMeshTriangulation navMeshTriangulation = NavMesh.CalculateTriangulation();
+
+        List<Vector3> navMeshVerticesList = navMeshTriangulation.vertices.ToList();
+        List<int> navMeshIndicesList = navMeshTriangulation.indices.ToList();
+        
+        //Debug.Log("pre" + navMeshVerticesList.Count());
+        //Debug.Log("pre" + navMeshIndicesList.Count());
+        SimplifyMeshTopology(navMeshVerticesList, navMeshIndicesList, 1);
+        //Debug.Log("post" + navMeshVerticesList.Count());
+        //Debug.Log("post" + navMeshIndicesList.Count());
+        navMeshTriangulation.vertices = navMeshVerticesList.ToArray();
+        navMeshTriangulation.indices = navMeshIndicesList.ToArray();
+
         GetComponent<MeshFilter>().mesh.vertices = navMeshTriangulation.vertices;
         GetComponent<MeshFilter>().mesh.triangles = navMeshTriangulation.indices;
-        Debug.Log(navMeshTriangulation.vertices.Length);
-        Debug.Log(navMeshTriangulation.indices.Length);
-        Debug.Log(GetComponent<MeshFilter>().mesh.GetTopology(0));
-        NativeList<int> nativeLists = new NativeList<int>(3, Allocator.Temp);
-        nativeLists.Add(1);
-        Debug.Log(nativeLists.Length);
-        Debug.Log(nativeLists.AsArray().Length);
-        return;
+        //Debug.Log(navMeshTriangulation.vertices.Length);
+        //Debug.Log(navMeshTriangulation.indices.Length);
+        //Debug.Log(GetComponent<MeshFilter>().mesh.GetTopology(0));
 
         navMeshVertices = new NativeArray<float3>(navMeshTriangulation.vertices.Length, Allocator.Persistent);
         for (int i = 0; i < navMeshTriangulation.vertices.Length; i++)
         {
             navMeshVertices[i] = navMeshTriangulation.vertices[i];
+            writeTextMesh(navMeshVertices[i], "vertex" + i + navMeshVertices[i]);
         }
 
         navMeshIndices = new NativeArray<int>(navMeshTriangulation.indices.Length, Allocator.Persistent);
         for (int i = 0; i < navMeshTriangulation.indices.Length; i++)
         {
             navMeshIndices[i] = navMeshTriangulation.indices[i];
-            paintVertexFromTriangleIndex(i);
+            writeTextMesh(navMeshVertices[navMeshIndices[i]], "index triangle" + i + "|" + "index vertex" + navMeshIndices[i] + ":" + navMeshVertices[navMeshIndices[i]].ToString());
         }
+        //CondenseMesh(ref navMeshVertices, ref navMeshIndices);
 
         pathNodes = CreatePathNodes(navMeshVertices, CalculateDistanceCost(start.transform.position, end.transform.position));
         neighbourIndices = GetNodeNeighbours(pathNodes);
@@ -91,6 +101,17 @@ public class Pathfinding : MonoBehaviour
         */
            
 
+    }
+
+    private void CondenseMesh(ref NativeList<float3> verticies, ref NativeList<int> indicies)
+    {
+        NativeList<float3> condensedVerticies = new NativeList<float3>(0, Allocator.Temp);
+        NativeList<int> condensedIndicies = new NativeList<int>(0, Allocator.Temp);
+
+        
+
+        condensedIndicies.Dispose();
+        condensedVerticies.Dispose();
     }
 
     private bool first = true;
@@ -154,11 +175,16 @@ public class Pathfinding : MonoBehaviour
 
     private NativeArray<PathNode> CreatePathNodes(NativeArray<float3> vertices, float hCost)
     {
-        //pathNodes = new NativeArray<PathNode>(vertices.Length, Allocator.Persistent);
-        pathNodes = new NativeList<PathNode>(vertices.Length, Allocator.Persistent);
-        for (int i = 0; i < pathNodes.Length; i++)
+        //NativeArray<PathNode> pathNodes = new NativeArray<PathNode>(vertices.Length, Allocator.Persistent);
+        NativeList<PathNode> pathNodes = new NativeList<PathNode>(vertices.Length, Allocator.Persistent);
+        for (int i = 0; i < vertices.Length; i++)
         {
-            pathNodes[i] =
+            /*
+            if (!PathNodesContainsSamePosition(pathNodes,vertices[i]))
+            {
+            */
+            //pathNodes[i] =
+            pathNodes.Add(
             new PathNode
             {
                 position = navMeshVertices[i],
@@ -166,12 +192,24 @@ public class Pathfinding : MonoBehaviour
                 gCost = int.MaxValue,
                 hCost = hCost,
                 prevIndex = -1,
-            };
+            }
+                );
+            //}
         }
         return pathNodes;
     }
 
-    
+    private bool PathNodesContainsSamePosition(NativeArray<PathNode> pathNodes, float3 position)
+    {
+        for (int i = 0; i < pathNodes.Length; i++)
+        {
+            if (EqualFloat3(pathNodes[i].position, position, 0.1f))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     private void paintVertexFromTriangleIndex(int index)
     {
@@ -287,7 +325,7 @@ public class Pathfinding : MonoBehaviour
             //while (found)
             for (int i = 0; i < 999 && found; i++)
             {
-                if (currentNodeIndex == 463)
+                if (currentNodeIndex == 56)
                 {
                     Debug.Log("found " + neighbourIndex);
                 }
@@ -295,13 +333,16 @@ public class Pathfinding : MonoBehaviour
                 if (closedList.Contains(neighbourNode.index))
                 {
                     // Already searched this node
+                    found = neighbourIndices.TryGetNextValue(out neighbourIndex, ref iterator);
                     continue;
                 }
+                /*
                 if (neighbourNode.position.y > 1)
                 {
                     //ignore jump
                     continue;
                 }
+                */
                 if (!closedList.Contains(neighbourNode.index))
                 {
 
@@ -315,7 +356,7 @@ public class Pathfinding : MonoBehaviour
                         if (!openList.Contains(neighbourNode.index))
                         {
                             openList.Add(neighbourNode.index);
-                            //Debug.DrawLine(pathNodes[currentNodeIndex].position, neighbourNode.position, Color.red, 10);
+                            Debug.DrawLine(pathNodes[currentNodeIndex].position, neighbourNode.position, Color.red, 10);
                             //Debug.Log(currentNodeIndex + " " + neighbourNode.index);
                         }
                     }
@@ -380,16 +421,31 @@ public class Pathfinding : MonoBehaviour
         return math.abs(a - b) < tolerance;
     }
 
+    private NativeMultiHashMap<int, int> CollectVertexNeighbours()
+    {
+        NativeMultiHashMap<int, int> vertexNeighbours = new NativeMultiHashMap<int, int>(0,Allocator.Persistent);
+
+        for (int i = 0; i < navMeshIndices.Length; i += 3)
+        {
+            vertexNeighbours.Add(i, i + 1);
+            vertexNeighbours.Add(i, i + 2);
+            vertexNeighbours.Add(i + 1, 1);
+
+        }
+
+        return vertexNeighbours;
+    }
+
     private NativeArray<int> GetIndicesOfVertexNeighbours(int vertexIndex)
     {
-        //NativeList<int> neighboursIndices = new NativeList<int>(Allocator.Temp);
-        NativeHashMap<int, float3> neighboursIndices = new NativeHashMap<int, float3>(0,Allocator.Temp);
+        NativeList<int> neighboursIndices = new NativeList<int>(Allocator.Temp);
+        //NativeHashMap<int, float3> neighboursIndices = new NativeHashMap<int, float3>(0,Allocator.Temp);
         //NativeMultiHashMap<float3, int> neighboursIndices = new NativeMultiHashMap<float3, int>();
 
-        int neighbourIndex1 = 0;
-        int neighbourIndex2 = 0;
+        int neighbourIndex1;
+        int neighbourIndex2;
 
-        int outi = 0;
+        //int outi = 0;
         for (int i = 0; i < navMeshIndices.Length; i++)
         {
             /*
@@ -397,9 +453,12 @@ public class Pathfinding : MonoBehaviour
             {
                 Debug.Log(vertexIndex + "(" + pathNodes[vertexIndex].position + ")" + " pre mod " + i + " " + navMeshIndices[i] + "(" + pathNodes[navMeshIndices[i]].position + ")");
             }*/
-            if (EqualFloat3(pathNodes[navMeshIndices[i]].position, pathNodes[vertexIndex].position, 0.1f))
+            //if (EqualFloat3(pathNodes[navMeshIndices[i]].position, pathNodes[vertexIndex].position, 0.1f))
+            if (vertexIndex == navMeshIndices[i]) 
             {
-                int remainder = navMeshIndices[i] % 3;
+                neighbourIndex1 = -1;
+                neighbourIndex2 = -1;
+                int remainder = i % 3;
                 switch (remainder)
                 {
                     case 0:
@@ -409,7 +468,7 @@ public class Pathfinding : MonoBehaviour
                     case 1:
                         neighbourIndex1 = TryGetNavMeshIndices(i - 1);
                         neighbourIndex2 = TryGetNavMeshIndices(i + 1);
-                        break ;
+                        break;
                     case 2:
                         neighbourIndex1 = TryGetNavMeshIndices(i - 2);
                         neighbourIndex2 = TryGetNavMeshIndices(i - 1);
@@ -421,9 +480,26 @@ public class Pathfinding : MonoBehaviour
                 //Debug.Log(i + " " + neighbourIndex1 + " " + neighbourIndex2);
                 //neighboursIndices.Add(neighbourIndex1);
                 //neighboursIndices.Add(neighbourIndex2);
+                /*
+                if (vertexIndex == 2 && i == 73)
+                {
+                    Debug.Log(i % 3);
+                    Debug.Log(remainder);
+                    Debug.Log("loop" + i + " " + neighbourIndex1 + " " + neighbourIndex2);
+                }
+                */
+                if (ValidAndUniqueInt(neighboursIndices, neighbourIndex1)) {
+                    neighboursIndices.Add(neighbourIndex1);
+                }
+                if (ValidAndUniqueInt(neighboursIndices, neighbourIndex2)) {
+                    neighboursIndices.Add(neighbourIndex2);
+                }
+                /*
                 neighboursIndices.TryAdd(neighbourIndex1, navMeshVertices[neighbourIndex1]);
                 neighboursIndices.TryAdd(neighbourIndex2, navMeshVertices[neighbourIndex2]);
+                */
                 //if (EqualFloat3(pathNodes[navMeshIndices[i]].position, pathNodes[258].position, 0.1f))
+                /*
                 if (neighbourIndex1 == 260 || neighbourIndex2 == 260)
                 {
                     Debug.Log("found for " + TryGetNavMeshIndices(i));
@@ -434,24 +510,25 @@ public class Pathfinding : MonoBehaviour
                     Debug.DrawLine(pathNodes[neighbourIndex1].position, pathNodes[neighbourIndex2].position, Color.green, 999);
                     Debug.DrawLine(pathNodes[neighbourIndex2].position, pathNodes[TryGetNavMeshIndices(i)].position, Color.green, 999);
                 }
+                */
             }
-            outi = i;
+            //outi = i;
         }
         /*
-        if (vertexIndex == 459 || vertexIndex == 552)
+        if (vertexIndex == 2)
         {
-            Debug.Log("outi of :" + vertexIndex + " " + navMeshIndices.Length + " " + outi);
-        }*/
-        /*
-        for (int i = 0; i < neighboursIndices.GetKeyArray(Allocator.Temp).Length; i++)
-        {
-            if (vertexIndex == 459)
+            for (int i = 0; i < neighboursIndices.Length; i++)
             {
-            Debug.Log("search " + vertexIndex + " " + neighboursIndices.GetKeyArray(Allocator.Temp)[i]);
+                Debug.Log(neighboursIndices[i]);
             }
-        }*/
-        return neighboursIndices.GetKeyArray(Allocator.Temp);
-        //return neighboursIndices.AsArray();
+        }
+        */
+        return neighboursIndices.AsArray();
+    }
+
+    private bool ValidAndUniqueInt(NativeList<int> list, int value)
+    {
+        return !list.Contains(value) && value != -1;
     }
 
     private int TryGetNavMeshIndices(int index)
@@ -495,6 +572,68 @@ public class Pathfinding : MonoBehaviour
         }
         //Debug.Log(lowestCostPathNode.index);
         return lowestCostPathNode.index;
+    }
+
+    /**
+     * https://forum.unity.com/threads/navmesh-calculatetriangulation-produces-inaccurate-meshes.293894/
+     * PedroCoriAG
+     */
+    public static void SimplifyMeshTopology(List<Vector3> vertices, List<int> indices, float weldThreshold)
+    {
+        Profiler.BeginSample("SimplifyNavMeshTopology");
+        float startTime = Time.realtimeSinceStartup;
+
+        int startingVerts = vertices.Count;
+
+        // Put vertex indices into buckets based on their position
+        Dictionary<Vector3Int, List<int>> vertexBuckets = new Dictionary<Vector3Int, List<int>>(vertices.Count);
+        Dictionary<int, int> shiftedIndices = new Dictionary<int, int>(indices.Count);
+        List<Vector3> uniqueVertices = new List<Vector3>();
+        int weldThresholdMultiplier = Mathf.RoundToInt(1 / weldThreshold);
+
+        // Heuristic for skipping indices that relies on the fact that the first time a vertex index appears on the indices array, it will always be the highest-numbered
+        // index up to that point (e.g. if there's a 5 in the indices array, all the indices to the left of it are in the range [0, 4])
+        int minRepeatedIndex = 0;
+
+        for (int i = 0; i < vertices.Count; ++i)
+        {
+            Vector3Int currentVertex = Vector3Int.RoundToInt(vertices[i] * weldThresholdMultiplier);
+            if (vertexBuckets.TryGetValue(currentVertex, out List<int> indexRefs))
+            {
+                indexRefs.Add(i);
+                shiftedIndices[i] = shiftedIndices[indexRefs[0]];
+                if (minRepeatedIndex == 0)
+                {
+                    minRepeatedIndex = i;
+                }
+            }
+            else
+            {
+                indexRefs = new List<int> { i };
+                vertexBuckets.Add(currentVertex, indexRefs);
+                shiftedIndices[i] = uniqueVertices.Count;
+                uniqueVertices.Add(vertices[i]);
+            }
+        }
+
+        // Walk indices array and replace any repeated vertex indices with their corresponding unique one
+        for (int i = 0; i < indices.Count; ++i)
+        {
+            var currentIndex = indices[i];
+            if (currentIndex < minRepeatedIndex)
+            {
+                // Can't be a repeated index, skip.
+                continue;
+            }
+
+            indices[i] = shiftedIndices[currentIndex];
+        }
+
+        vertices.Clear();
+        vertices.AddRange(uniqueVertices);
+
+        Debug.Log($"Finished simplifying mesh topology. Time: {Time.realtimeSinceStartup - startTime}. initVerts: {startingVerts}, endVerts: {vertices.Count}");
+        Profiler.EndSample();
     }
 
     public struct PathNode
