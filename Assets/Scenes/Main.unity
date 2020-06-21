@@ -392,10 +392,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8371390007044724621, guid: f5d5b06e7f7d33646afbd7f061a272d2, type: 3}
-  spawnFrequency: 3
+  spawnFrequency: 0.5
   timeUntilSpawn: 0
-  spawnCount: 10
-  spawnIncrease: 5
+  spawnCount: 1
+  spawnIncrease: 1
 --- !u!114 &415754456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,7 +881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799883723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 800, y: 0, z: 800}
+  m_LocalPosition: {x: 200, y: 0, z: 800}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -964,7 +964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812507998}
   m_LocalRotation: {x: 0.058579385, y: 0.83043313, z: -0.54682475, w: 0.089061886}
-  m_LocalPosition: {x: 415.81808, y: 1424.5568, z: 1082.4814}
+  m_LocalPosition: {x: 340, y: 653.97, z: 842.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1218,7 +1218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1940404481
 MonoBehaviour:
   m_ObjectHideFlags: 0

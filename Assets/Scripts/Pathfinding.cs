@@ -25,8 +25,10 @@ public class Pathfinding : MonoBehaviour
 
     void Start()
     {
+        return;
         float startTime = Time.realtimeSinceStartup;
         NavMeshTriangulation navMeshTriangulation = NavMesh.CalculateTriangulation();
+        Debug.Log("original" + navMeshTriangulation.vertices.Length);
 
         List<Vector3> navMeshVerticesList = navMeshTriangulation.vertices.ToList();
         List<int> navMeshIndicesList = navMeshTriangulation.indices.ToList();
@@ -49,14 +51,14 @@ public class Pathfinding : MonoBehaviour
         for (int i = 0; i < navMeshTriangulation.vertices.Length; i++)
         {
             navMeshVertices[i] = navMeshTriangulation.vertices[i];
-            writeTextMesh(navMeshVertices[i], "vertex" + i + navMeshVertices[i]);
+            //writeTextMesh(navMeshVertices[i], "vertex" + i + navMeshVertices[i]);
         }
 
         navMeshIndices = new NativeArray<int>(navMeshTriangulation.indices.Length, Allocator.Persistent);
         for (int i = 0; i < navMeshTriangulation.indices.Length; i++)
         {
             navMeshIndices[i] = navMeshTriangulation.indices[i];
-            writeTextMesh(navMeshVertices[navMeshIndices[i]], "index triangle" + i + "|" + "index vertex" + navMeshIndices[i] + ":" + navMeshVertices[navMeshIndices[i]].ToString());
+            //writeTextMesh(navMeshVertices[navMeshIndices[i]], "index triangle" + i + "|" + "index vertex" + navMeshIndices[i] + ":" + navMeshVertices[navMeshIndices[i]].ToString());
         }
         //CondenseMesh(ref navMeshVertices, ref navMeshIndices);
 
@@ -118,6 +120,7 @@ public class Pathfinding : MonoBehaviour
     private bool first = true;
     private void Update()
     {
+        return;
         DrawHighlightedNeighbour();
         if (first)
         {
@@ -153,6 +156,7 @@ public class Pathfinding : MonoBehaviour
 
     private void OnDestroy()
     {
+        return;
         navMeshVertices.Dispose();
         navMeshIndices.Dispose();
         pathNodes.Dispose();
@@ -295,7 +299,7 @@ public class Pathfinding : MonoBehaviour
         {
             order++;
             int currentNodeIndex = GetLowestCostFNodeIndex(openList, pathNodes);
-            writeTextMesh(pathNodes[currentNodeIndex].position, "Order:" + order, 10, Color.black);
+            //writeTextMesh(pathNodes[currentNodeIndex].position, "Order:" + order, 10, Color.black);
             //Debug.Log(currentNodeIndex);
 
             if (currentNodeIndex == endNodeIndex)
@@ -330,10 +334,12 @@ public class Pathfinding : MonoBehaviour
             //while (found)
             for (int i = 0; i < 999 && found; i++)
             {
+                /*
                 if (currentNodeIndex == 56)
                 {
                     Debug.Log("found " + neighbourIndex);
                 }
+                */
                 PathNode neighbourNode = pathNodes[neighbourIndex];
                 if (closedList.Contains(neighbourNode.index))
                 {
