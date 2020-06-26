@@ -14,7 +14,7 @@ public class DrawPathSystem : SystemBase
             {
                 for (int i = 1; i < pathNodes.Length; i++)
                 {
-                    Debug.DrawLine(pathNodes[i - 1].position, pathNodes[i].position, Color.green, 60);
+                    Debug.DrawLine(pathNodes[i - 1].position, pathNodes[i].position, Color.green);
                 }
             }
         }

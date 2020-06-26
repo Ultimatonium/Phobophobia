@@ -55,12 +55,12 @@ public class PathfindingSystem : SystemBase
         NativeArray<float3> navMeshVertices = this.navMeshVertices;
         NativeMultiHashMap<int, int> neighbourIndices = this.neighbourIndices;
 
-        Entities.ForEach((Entity entity, ref PathfindingParamsData pathfindingParamsData) =>
+        Entities.ForEach((Entity entity, int entityInQueryIndex, ref PathfindingParamsData pathfindingParamsData) =>
             {
                 NativeArray<PathNode> path = CalculatePath(pathfindingParamsData.startPosition, pathfindingParamsData.endPosition, navMeshVertices, neighbourIndices);
-                DynamicBuffer<PathNode> dynamicBuffers = ECS.SetBuffer<PathNode>(entity.Index, entity);
+                DynamicBuffer<PathNode> dynamicBuffers = ECS.SetBuffer<PathNode>(entityInQueryIndex, entity);
                 dynamicBuffers.AddRange(path);
-                ECS.RemoveComponent<PathfindingParamsData>(entity.Index, entity);
+                ECS.RemoveComponent<PathfindingParamsData>(entityInQueryIndex, entity);
             }
             ).Schedule();
 
