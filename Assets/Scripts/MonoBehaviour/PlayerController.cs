@@ -60,8 +60,14 @@ public class PlayerController : MonoBehaviour
 
     private void SelectTower()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Destroy(selectedTower);
+            selectedTower = null;
+        }
         if (selectedTower != null) return;
-        if (Input.GetKey(KeyCode.Alpha1)) {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
             selectedTower = Instantiate(towerPrefab);
         }
     }
