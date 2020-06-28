@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.Entities;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -6,6 +8,10 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed;
     [SerializeField]
     private float rotationSpeed;
+    [SerializeField]
+    private GameObject towerPrefab;
+
+    private GameObject selectedTower;
 
     private void Start()
     {
@@ -16,13 +22,12 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         transform.position += GetMoveDir();
-        transform.rotation *= getRotation();
+        transform.rotation *= GetRotation();
+        SelectTower();
+        SetTowerPosition();
+        ActiveTower();
     }
 
-    private Quaternion getRotation()
-    {
-        return Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime, 0);
-    }
 
     private Vector3 GetMoveDir()
     {
@@ -46,5 +51,33 @@ public class PlayerController : MonoBehaviour
         }
 
         return moveDir.normalized * moveSpeed * Time.deltaTime;
+    }
+
+    private Quaternion GetRotation()
+    {
+        return Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime, 0);
+    }
+
+    private void SelectTower()
+    {
+        if (selectedTower != null) return;
+        if (Input.GetKey(KeyCode.Alpha1)) {
+            selectedTower = Instantiate(towerPrefab);
+        }
+    }
+
+
+    private void SetTowerPosition()
+    {
+        if (selectedTower == null) return;
+        selectedTower.transform.position = transform.position + transform.forward * 10;
+        selectedTower.transform.rotation = transform.rotation;
+    }
+    private void ActiveTower()
+    {
+        if (selectedTower == null) return;
+        if (Input.GetMouseButtonDown(0)) {
+            selectedTower.AddComponent<ConvertToEntity>();
+        }
     }
 }

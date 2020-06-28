@@ -4,12 +4,12 @@ using Unity.Transforms;
 
 public class DestoryEnemySystem : SystemBase
 {
-    EndSimulationEntityCommandBufferSystem endSimulationEntityCommandBuffer;
+    BeginSimulationEntityCommandBufferSystem endSimulationEntityCommandBuffer;
 
     protected override void OnCreate()
     {
         base.OnCreate();
-        endSimulationEntityCommandBuffer = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
+        endSimulationEntityCommandBuffer = World.GetOrCreateSystem<BeginSimulationEntityCommandBufferSystem>();
     }
 
     protected override void OnUpdate()
@@ -19,9 +19,10 @@ public class DestoryEnemySystem : SystemBase
         Entity target = GetEntityQuery(typeof(BaseTag)).GetSingletonEntity();
         float3 targetPosition = EntityManager.GetComponentData<Translation>(target).Value;
 
-        Entities.WithAll<EnemyTag>().ForEach((int entityInQueryIndex, ref Entity entity, in Translation translation) =>
+        Entities.WithAll<EnemyTag>().ForEach((int entityInQueryIndex, ref Entity entity, in Translation translation, in HealthData healthData) =>
         {
-            if (math.distancesq(targetPosition, translation.Value) < 0.1f)
+            if (math.distancesq(targetPosition, translation.Value) < 0.1f
+            || healthData.health < 0)
             {
                 ECS.DestroyEntity(entityInQueryIndex, entity);
             }

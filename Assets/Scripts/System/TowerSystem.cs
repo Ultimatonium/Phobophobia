@@ -12,30 +12,66 @@ public class TowerSystem : SystemBase
     {
         NativeArray<Entity> enemies = GetEntityQuery(typeof(EnemyTag)).ToEntityArray(Allocator.TempJob);
         ComponentDataFromEntity<Translation> positions = GetComponentDataFromEntity<Translation>();
-        BufferFromEntity<FloatBufferElement> healthModifiersBuffers = GetBufferFromEntity<FloatBufferElement>();
+        ComponentDataFromEntity<HealthData> healthDatas = GetComponentDataFromEntity<HealthData>();
+        BufferFromEntity<HealthModifierBufferElement> healthModifiersBuffers = GetBufferFromEntity<HealthModifierBufferElement>();
         float dt = Time.DeltaTime;
-        Entities.ForEach((Entity entity, ref TowerData towerData) =>
+        Entities.ForEach((Entity entity, ref TowerData towerData, ref Rotation rotation, in LocalToWorld localToWorld) =>
         {
             towerData.timeUntilShoot -= dt;
             if (towerData.timeUntilShoot < 0)
             {
                 towerData.timeUntilShoot = CadenceToFrequency(towerData.cadence);
 
-                for (int i = 0; i < enemies.Length; i++)
+                Entity target = GetLowestTargetInRange(entity, enemies, towerData.range, positions, healthDatas);
+
+                if (target != Entity.Null)
                 {
-                    if (math.distancesq(positions[enemies[i]].Value, positions[entity].Value) < towerData.range * towerData.range)
-                    {
-                        healthModifiersBuffers[enemies[i]].Add(new FloatBufferElement { value = -towerData.damage });
-                    }
+                    healthModifiersBuffers[target].Add(new HealthModifierBufferElement { value = -towerData.damage });
+                    rotation.Value = quaternion.LookRotation(positions[target].Value - positions[entity].Value, localToWorld.Up);
+                    rotation.Value.value.x = 0;
+                    rotation.Value.value.z = 0;
+                    DrawShot(positions[entity].Value, positions[target].Value);
                 }
             }
         }
-        ).Schedule();
+        //).Schedule();
+        ).WithoutBurst().Run(); //fix DrawShot
+
         Dependency.Complete();
         enemies.Dispose();
         DrawRange();
     }
 
+    private static Entity GetLowestTargetInRange(Entity tower, NativeArray<Entity> enemies, float towerRange, ComponentDataFromEntity<Translation> positions, ComponentDataFromEntity<HealthData> healthDatas)
+    {
+        Entity target = Entity.Null;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (math.distancesq(positions[enemies[i]].Value, positions[tower].Value) < towerRange * towerRange)
+            {
+                if (target == Entity.Null) target = enemies[i];
+                if (healthDatas[target].health > healthDatas[enemies[i]].health)
+                {
+                    target = enemies[i];
+                }
+            }
+        }
+        return target;
+    }
+
+    private void DrawShot(float3 towerPosition, float3 target)
+    {
+        GameObject shot = new GameObject();
+        LineRenderer lineRenderer = shot.AddComponent<LineRenderer>();
+        lineRenderer.startColor = Color.red;
+        lineRenderer.endColor = Color.black;
+        lineRenderer.SetPosition(0, towerPosition);
+        lineRenderer.SetPosition(1, target);
+        lineRenderer.material = new Material(Shader.Find("Particles/Standard Unlit"));
+        lineRenderer.startWidth = 0.2f;
+        lineRenderer.endWidth = 0.1f;
+        GameObject.Destroy(shot, 0.1f);
+    }
 
     private static float CadenceToFrequency(float cadence)
     {

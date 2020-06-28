@@ -10,7 +10,7 @@ public class MoveToTargetSystem : SystemBase
         Entities.ForEach((ref TargetData targetData, ref MoveData moveData, ref Translation translation, ref Rotation rotation, ref DynamicBuffer<PathNode> pathNodes) =>
         {
             float3 dir;
-            if (pathNodes.Length > 0 && EqualFloat3(translation.Value, pathNodes[0].position, 0.2f))
+            if (pathNodes.Length > 0 && EqualFloat3(translation.Value, pathNodes[0].position, 0.5f))
             {
                 pathNodes.RemoveAt(0);
             }

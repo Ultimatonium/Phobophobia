@@ -106,7 +106,6 @@ GameObject:
   - component: {fileID: 1145388270619818316}
   - component: {fileID: 8020353169486673910}
   - component: {fileID: 4989168261802635994}
-  - component: {fileID: 630961999965205356}
   - component: {fileID: 575414352163485647}
   m_Layer: 0
   m_Name: Tower
@@ -191,19 +190,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &630961999965205356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173241115641228636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &575414352163485647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa41cccb68802654aa03a9630324c371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cadence: 60
   range: 50
   damage: 1
+  cadence: 600
+  timeUntilShoot: 0

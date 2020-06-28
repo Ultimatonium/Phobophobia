@@ -63,7 +63,7 @@ public class SpawnSystem : SystemBase
                         ECS.SetComponent(i, enemy, new TargetData { targetPosition = targetPosition });
                         ECS.AddComponent(i, enemy, new PathfindingParamsData { startPosition = spawnPosition, endPosition = targetPosition });
                         ECS.AddBuffer<PathNode>(i, enemy);
-                        ECS.AddBuffer<FloatBufferElement>(i, enemy);
+                        ECS.AddBuffer<HealthModifierBufferElement>(i, enemy);
                     }
                     spawnDataJob.spawnCount += spawnDataJob.spawnIncrease;
                     spawnDatas[0] = spawnDataJob;
