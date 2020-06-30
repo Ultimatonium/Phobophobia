@@ -19,14 +19,26 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
+      rotation in copied configuration does not match rotation in animation file:\n\t'Tower_RIG4:HipPart1_L'
+      : rotation error = 0.051455 deg\n\t'Tower_RIG4:HipPart2_L' : rotation error
+      = 0.051455 deg\n"
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'AttackL' has import animation warnings that
+      might lower retargeting quality:\n\t'Tower_RIG4:HipPart1_R' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Tower_RIG4:HipPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Tower_RIG4:ShoulderPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Tower_RIG4:ElbowPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Tower_RIG4:ShoulderPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Tower_RIG4:ElbowPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Tower_RIG4:HipPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Tower_RIG4:HipPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -75,8 +87,864 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Tower_RIG4:Root_M
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Chest_M
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Head_M
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Scapula_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Scapula_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Eye_L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Eye_R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:ThumbFinger1_L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:ThumbFinger2_L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:ThumbFinger3_L
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:IndexFinger1_L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:IndexFinger2_L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:IndexFinger3_L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:MiddleFinger1_L
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:MiddleFinger2_L
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:MiddleFinger3_L
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:RingFinger1_L
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:RingFinger2_L
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:RingFinger3_L
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:PinkyFinger1_L
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:PinkyFinger2_L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:PinkyFinger3_L
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:ThumbFinger1_R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:ThumbFinger2_R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:ThumbFinger3_R
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:IndexFinger1_R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:IndexFinger2_R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:IndexFinger3_R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:MiddleFinger1_R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:MiddleFinger2_R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:MiddleFinger3_R
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:RingFinger1_R
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:RingFinger2_R
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:RingFinger3_R
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:PinkyFinger1_R
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:PinkyFinger2_R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:PinkyFinger3_R
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Tower_RIG4:Neck_M
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: CHAR_TowerRIG(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Geometry
+      parentName: CHAR_TowerRIG(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Tower_Geo_clean_geo
+      parentName: Tower_RIG4:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Tower_Geo_clean_Tower_Body
+      parentName: Tower_RIG4:Tower_Geo_clean_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Tower_Geo_clean_Tower_Eye_L
+      parentName: Tower_RIG4:Tower_Geo_clean_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Tower_Geo_clean_Tower_Eye_R
+      parentName: Tower_RIG4:Tower_Geo_clean_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Tower_Geo_clean_Tower_Lid
+      parentName: Tower_RIG4:Tower_Geo_clean_geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Main
+      parentName: CHAR_TowerRIG(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:DeformationSystem
+      parentName: Tower_RIG4:Main
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Root_M
+      parentName: Tower_RIG4:DeformationSystem
+      position: {x: -2.5917969e-17, y: 1.292449, z: -0.023298128}
+      rotation: {x: 0.4701984, y: -0.5281226, z: -0.4701984, w: 0.5281226}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:CapFlip
+      parentName: Tower_RIG4:Root_M
+      position: {x: -1.0135394, y: 0.14146721, z: 0.48192954}
+      rotation: {x: 0.70540756, y: -0.048992023, z: 0.70540756, w: 0.048992023}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:CapRotate
+      parentName: Tower_RIG4:CapFlip
+      position: {x: -0.48192954, y: -1.5099033e-16, z: 8.5265126e-16}
+      rotation: {x: -4.440892e-16, y: 1.0106431e-15, z: -6.121647e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Chest_M
+      parentName: Tower_RIG4:Root_M
+      position: {x: -0.41828895, y: 3.375078e-16, z: -2.1738182e-16}
+      rotation: {x: 0, y: 0, z: -0.1267944, w: 0.99192905}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Neck_M
+      parentName: Tower_RIG4:Chest_M
+      position: {x: -0.1535467, y: -6.0396133e-16, z: 5.9576375e-16}
+      rotation: {x: 0, y: 0, z: -0.020904552, w: 0.9997815}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Head_M
+      parentName: Tower_RIG4:Neck_M
+      position: {x: -0.2044919, y: 2.1316282e-16, z: -5.440967e-16}
+      rotation: {x: 0, y: 0, z: 0.08996425, w: 0.99594504}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Eye_L
+      parentName: Tower_RIG4:Head_M
+      position: {x: -0.0036450895, y: 0.45458534, z: 0.13849595}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:EyeEnd_L
+      parentName: Tower_RIG4:Eye_L
+      position: {x: -0.094888255, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Eye_R
+      parentName: Tower_RIG4:Head_M
+      position: {x: -0.0036450895, y: 0.45458534, z: -0.13849595}
+      rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:EyeEnd_R
+      parentName: Tower_RIG4:Eye_R
+      position: {x: -0.094888255, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:HeadEnd_M
+      parentName: Tower_RIG4:Head_M
+      position: {x: -0.1974732, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Scapula_L
+      parentName: Tower_RIG4:Chest_M
+      position: {x: -0.10049242, y: 0.036200523, z: 0.057404473}
+      rotation: {x: 0.7056655, y: 0.0454526, z: 0.7051424, w: -0.052387565}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Shoulder_L
+      parentName: Tower_RIG4:Scapula_L
+      position: {x: 0.44364348, y: 1.3451906e-13, z: 1.0516033e-14}
+      rotation: {x: -4.421312e-10, y: 0.000032815547, z: 0.0022796318, w: 0.99999744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ShoulderPart1_L
+      parentName: Tower_RIG4:Shoulder_L
+      position: {x: 0.15286125, y: -2.9206738e-11, z: -8.5265126e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Elbow_L
+      parentName: Tower_RIG4:ShoulderPart1_L
+      position: {x: 0.15286125, y: -2.9206734e-11, z: -1.9895197e-15}
+      rotation: {x: -0.000000002612508, y: -0.00000010495872, z: -0.024883106, w: 0.99969035}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ElbowPart1_L
+      parentName: Tower_RIG4:Elbow_L
+      position: {x: 0.13212775, y: -3.676126e-12, z: 0.0000000015497076}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Wrist_L
+      parentName: Tower_RIG4:ElbowPart1_L
+      position: {x: 0.13212775, y: -3.6761436e-12, z: 0.0000000015497076}
+      rotation: {x: 0.0010343387, y: 0.019586498, z: -0.0527189, w: 0.9984168}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Cup_L
+      parentName: Tower_RIG4:Wrist_L
+      position: {x: 0.024628613, y: 0.016880685, z: 0.0011166204}
+      rotation: {x: -0.0010517692, y: -0.014324684, z: 0.07321888, w: 0.99721247}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger1_L
+      parentName: Tower_RIG4:Cup_L
+      position: {x: 0.23474616, y: 0.13151985, z: 0.037628047}
+      rotation: {x: 0.0008223639, y: -0.055162884, z: -0.04579439, w: 0.9974264}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger2_L
+      parentName: Tower_RIG4:PinkyFinger1_L
+      position: {x: 0.056736782, y: 1.008793e-12, z: 1.4807909e-10}
+      rotation: {x: -0.021732591, y: -0.033631653, z: -0.019865546, w: 0.99900055}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger3_L
+      parentName: Tower_RIG4:PinkyFinger2_L
+      position: {x: 0.060632747, y: -4.9843506e-12, z: 1.5866249e-10}
+      rotation: {x: 0.0053741694, y: -0.027592996, z: -0.0075604124, w: 0.9995762}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger4_L
+      parentName: Tower_RIG4:PinkyFinger3_L
+      position: {x: 0.05048453, y: -2.8678926e-12, z: 1.3210211e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger1_L
+      parentName: Tower_RIG4:Cup_L
+      position: {x: 0.2417465, y: 0.05356259, z: 0.008369394}
+      rotation: {x: 0.0010319803, y: -0.06224247, z: -0.05718357, w: 0.9964211}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger2_L
+      parentName: Tower_RIG4:RingFinger1_L
+      position: {x: 0.05912362, y: -1.4536994e-12, z: 1.5473262e-10}
+      rotation: {x: -0.0044509405, y: -0.04068542, z: -0.004583416, w: 0.99915165}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger3_L
+      parentName: Tower_RIG4:RingFinger2_L
+      position: {x: 0.08226864, y: -4.711502e-12, z: 2.1518161e-10}
+      rotation: {x: 0.0015702208, y: -0.034364015, z: -0.0046248734, w: 0.99939746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger4_L
+      parentName: Tower_RIG4:RingFinger3_L
+      position: {x: 0.06936313, y: -7.0913583e-12, z: 1.8094255e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger1_L
+      parentName: Tower_RIG4:Wrist_L
+      position: {x: 0.28012976, y: -0.09583274, z: 0.013304099}
+      rotation: {x: 0.0066109295, y: -0.081276394, z: 0.00307325, w: 0.99666494}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger2_L
+      parentName: Tower_RIG4:IndexFinger1_L
+      position: {x: 0.09208945, y: -1.5365398e-12, z: 2.3998808e-10}
+      rotation: {x: 0.00940822, y: -0.039146986, z: -0.009155303, w: 0.9991473}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger3_L
+      parentName: Tower_RIG4:IndexFinger2_L
+      position: {x: 0.07130472, y: -4.702905e-13, z: 1.8518534e-10}
+      rotation: {x: -0.006237566, y: -0.0390755, z: 0.008119079, w: 0.99918383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger4_L
+      parentName: Tower_RIG4:IndexFinger3_L
+      position: {x: 0.07466625, y: -6.058194e-12, z: 1.945341e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger1_L
+      parentName: Tower_RIG4:Wrist_L
+      position: {x: 0.27714753, y: 3.000764e-12, z: 7.215979e-10}
+      rotation: {x: 0.009808812, y: -0.07172001, z: 0.029493548, w: 0.99694043}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger2_L
+      parentName: Tower_RIG4:MiddleFinger1_L
+      position: {x: 0.1087312, y: 3.3802293e-12, z: 2.8444674e-10}
+      rotation: {x: 0.00092932023, y: -0.038535066, z: -0.013994585, w: 0.99915886}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger3_L
+      parentName: Tower_RIG4:MiddleFinger2_L
+      position: {x: 0.075382344, y: 3.109982e-12, z: 1.9734443e-10}
+      rotation: {x: 0.00008034823, y: -0.03881952, z: -0.004569403, w: 0.9992358}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger4_L
+      parentName: Tower_RIG4:MiddleFinger3_L
+      position: {x: 0.07178752, y: 2.6477685e-12, z: 1.8788938e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger1_L
+      parentName: Tower_RIG4:Wrist_L
+      position: {x: 0.028694954, y: -0.0150924735, z: 0.014407397}
+      rotation: {x: -0.40969887, y: 0.07968221, z: -0.34920216, w: 0.83896095}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger2_L
+      parentName: Tower_RIG4:ThumbFinger1_L
+      position: {x: 0.18633898, y: -2.9414451e-10, z: 1.7383606e-10}
+      rotation: {x: 0.04511016, y: -0.029090714, z: -0.0068643373, w: 0.99853486}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger3_L
+      parentName: Tower_RIG4:ThumbFinger2_L
+      position: {x: 0.085232325, y: -1.9220323e-10, z: 7.897981e-11}
+      rotation: {x: -0.014959128, y: -0.027035877, z: 0.030685255, w: 0.99905145}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger4_L
+      parentName: Tower_RIG4:ThumbFinger3_L
+      position: {x: 0.07497513, y: -1.7566662e-10, z: 6.943836e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Scapula_R
+      parentName: Tower_RIG4:Chest_M
+      position: {x: -0.10049242, y: 0.036200523, z: -0.057404473}
+      rotation: {x: 0.0454526, y: -0.7056655, z: 0.052387565, w: 0.7051424}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Shoulder_R
+      parentName: Tower_RIG4:Scapula_R
+      position: {x: -0.44364348, y: 2.4129142e-13, z: -1.1084466e-14}
+      rotation: {x: -4.32589e-10, y: 0.000032815547, z: 0.0022799221, w: 0.99999744}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ShoulderPart1_R
+      parentName: Tower_RIG4:Shoulder_R
+      position: {x: -0.15286125, y: -6.1506355e-16, z: 2.2737367e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Elbow_R
+      parentName: Tower_RIG4:ShoulderPart1_R
+      position: {x: -0.15286125, y: -6.2394533e-16, z: 1.7053025e-15}
+      rotation: {x: -0.0000000026190565, y: -0.000000105219165, z: -0.024883732, w: 0.99969035}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ElbowPart1_R
+      parentName: Tower_RIG4:Elbow_R
+      position: {x: -0.13212775, y: -5.8530955e-15, z: -0.0000000014120172}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Wrist_R
+      parentName: Tower_RIG4:ElbowPart1_R
+      position: {x: -0.13212775, y: -5.8530955e-15, z: -0.0000000014120166}
+      rotation: {x: 0.0010343373, y: 0.019586498, z: -0.052718565, w: 0.9984168}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Cup_R
+      parentName: Tower_RIG4:Wrist_R
+      position: {x: -0.024628613, y: -0.016880685, z: -0.0011166204}
+      rotation: {x: -0.0010517692, y: -0.014324684, z: 0.07321888, w: 0.99721247}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger1_R
+      parentName: Tower_RIG4:Cup_R
+      position: {x: -0.23474616, y: -0.13151985, z: -0.037628047}
+      rotation: {x: 0.0008222326, y: -0.055163465, z: -0.04579434, w: 0.99742633}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger2_R
+      parentName: Tower_RIG4:PinkyFinger1_R
+      position: {x: -0.056736782, y: -8.0881075e-13, z: -1.1860976e-10}
+      rotation: {x: -0.02173254, y: -0.03363107, z: -0.019865166, w: 0.9990005}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger3_R
+      parentName: Tower_RIG4:PinkyFinger2_R
+      position: {x: -0.060632747, y: 3.9917223e-12, z: -1.2708681e-10}
+      rotation: {x: 0.0053741694, y: -0.027592996, z: -0.0075604124, w: 0.9995762}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:PinkyFinger4_R
+      parentName: Tower_RIG4:PinkyFinger3_R
+      position: {x: -0.05048453, y: 2.2968294e-12, z: -1.0581203e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger1_R
+      parentName: Tower_RIG4:Cup_R
+      position: {x: -0.2417465, y: -0.05356259, z: -0.008369394}
+      rotation: {x: 0.0010320548, y: -0.06224174, z: -0.057183605, w: 0.9964211}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger2_R
+      parentName: Tower_RIG4:RingFinger1_R
+      position: {x: -0.05912362, y: 1.16394e-12, z: -1.2394111e-10}
+      rotation: {x: -0.004450956, y: -0.040687334, z: -0.0045840116, w: 0.9991515}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger3_R
+      parentName: Tower_RIG4:RingFinger2_R
+      position: {x: -0.08226864, y: 3.773515e-12, z: -1.7235578e-10}
+      rotation: {x: 0.0015700301, y: -0.034365248, z: -0.0046250313, w: 0.99939746}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:RingFinger4_R
+      parentName: Tower_RIG4:RingFinger3_R
+      position: {x: -0.06936313, y: 5.6794036e-12, z: -1.4493508e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger1_R
+      parentName: Tower_RIG4:Wrist_R
+      position: {x: -0.28012976, y: 0.09583274, z: -0.013304099}
+      rotation: {x: 0.006610956, y: -0.081275895, z: 0.0030734066, w: 0.99666506}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger2_R
+      parentName: Tower_RIG4:IndexFinger1_R
+      position: {x: -0.09208945, y: 1.2306155e-12, z: -1.9222739e-10}
+      rotation: {x: 0.009408258, y: -0.039148264, z: -0.00915567, w: 0.99914724}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger3_R
+      parentName: Tower_RIG4:IndexFinger2_R
+      position: {x: -0.07130472, y: 3.762013e-13, z: -1.4833347e-10}
+      rotation: {x: -0.0062375274, y: -0.039077975, z: 0.008118624, w: 0.9991837}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:IndexFinger4_R
+      parentName: Tower_RIG4:IndexFinger3_R
+      position: {x: -0.07466625, y: 4.8519986e-12, z: -1.5581776e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger1_R
+      parentName: Tower_RIG4:Wrist_R
+      position: {x: -0.27714753, y: -2.403624e-12, z: -5.7799265e-10}
+      rotation: {x: 0.009808917, y: -0.071719706, z: 0.029493863, w: 0.99694043}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger2_R
+      parentName: Tower_RIG4:MiddleFinger1_R
+      position: {x: -0.1087312, y: -2.7082201e-12, z: -2.2783922e-10}
+      rotation: {x: 0.00092920184, y: -0.03853481, z: -0.013994671, w: 0.99915886}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger3_R
+      parentName: Tower_RIG4:MiddleFinger2_R
+      position: {x: -0.075382344, y: -2.4915788e-12, z: -1.5807103e-10}
+      rotation: {x: 0.00008023578, y: -0.038819984, z: -0.0045703305, w: 0.99923575}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:MiddleFinger4_R
+      parentName: Tower_RIG4:MiddleFinger3_R
+      position: {x: -0.07178752, y: -2.1215163e-12, z: -1.504958e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger1_R
+      parentName: Tower_RIG4:Wrist_R
+      position: {x: -0.028694954, y: 0.0150924735, z: -0.014407397}
+      rotation: {x: -0.40969858, y: 0.07968311, z: -0.3492021, w: 0.83896106}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger2_R
+      parentName: Tower_RIG4:ThumbFinger1_R
+      position: {x: -0.18633898, y: 2.35608e-10, z: -1.3924151e-10}
+      rotation: {x: 0.04511058, y: -0.029091198, z: -0.0068638595, w: 0.9985348}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger3_R
+      parentName: Tower_RIG4:ThumbFinger2_R
+      position: {x: -0.085232325, y: 1.5395471e-10, z: -6.326274e-11}
+      rotation: {x: -0.014959132, y: -0.027035143, z: 0.030684322, w: 0.9990515}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ThumbFinger4_R
+      parentName: Tower_RIG4:ThumbFinger3_R
+      position: {x: -0.07497513, y: 1.4070878e-10, z: -5.561958e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Hip_L
+      parentName: Tower_RIG4:Root_M
+      position: {x: 0.3713129, y: -0.05032027, z: 0.167018}
+      rotation: {x: 0.99882466, y: 0.0134966215, z: 0.007608837, w: -0.045927785}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:HipPart1_L
+      parentName: Tower_RIG4:Hip_L
+      position: {x: 0.11005906, y: 4.0856205e-16, z: -9.947598e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:HipPart2_L
+      parentName: Tower_RIG4:HipPart1_L
+      position: {x: 0.11005906, y: 4.2632563e-16, z: -8.881784e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Knee_L
+      parentName: Tower_RIG4:HipPart2_L
+      position: {x: 0.11005906, y: 4.0856205e-16, z: -9.592326e-16}
+      rotation: {x: 0, y: 0, z: 0.102545425, w: 0.9947283}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Ankle_L
+      parentName: Tower_RIG4:Knee_L
+      position: {x: 0.4084837, y: 2.0816682e-16, z: -2.8066437e-15}
+      rotation: {x: -0.052597385, y: 0.000026263031, z: -0.031219147, w: 0.9981277}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Toes_L
+      parentName: Tower_RIG4:Ankle_L
+      position: {x: 0.13035235, y: -0.17652792, z: -6.750156e-16}
+      rotation: {x: 0.004941838, y: 0.0034982683, z: -0.57776475, w: 0.8161809}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ToesEnd_L
+      parentName: Tower_RIG4:Toes_L
+      position: {x: 0.120041855, y: 0, z: 6.810421e-10}
+      rotation: {x: 0.00000015737032, y: 0.0000009200959, z: -1.4479578e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Hip_R
+      parentName: Tower_RIG4:Root_M
+      position: {x: 0.3713129, y: -0.05032027, z: -0.167018}
+      rotation: {x: -0.0134966215, y: 0.99882466, z: -0.045927785, w: -0.007608837}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:HipPart1_R
+      parentName: Tower_RIG4:Hip_R
+      position: {x: -0.11005906, y: -3.7303492e-16, z: 9.592326e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:HipPart2_R
+      parentName: Tower_RIG4:HipPart1_R
+      position: {x: -0.11005906, y: -4.2632563e-16, z: 1.0302869e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Knee_R
+      parentName: Tower_RIG4:HipPart2_R
+      position: {x: -0.11005906, y: -4.0856205e-16, z: 9.592326e-16}
+      rotation: {x: 0, y: 0, z: 0.102545425, w: 0.9947283}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Ankle_R
+      parentName: Tower_RIG4:Knee_R
+      position: {x: -0.4084837, y: 8.7707615e-17, z: 2.5934808e-15}
+      rotation: {x: -0.052597385, y: 0.00002626307, z: -0.031219147, w: 0.9981277}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:Toes_R
+      parentName: Tower_RIG4:Ankle_R
+      position: {x: -0.13035235, y: 0.17652792, z: 4.2632563e-16}
+      rotation: {x: 0.004941065, y: 0.0034977212, z: -0.57776475, w: 0.8161809}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Tower_RIG4:ToesEnd_R
+      parentName: Tower_RIG4:Toes_R
+      position: {x: -0.120041855, y: 0, z: 0.00000021375686}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -86,14 +954,15 @@ ModelImporter:
     feetSpacing: 0
     globalScale: 1
     rootMotionBoneName: 
-    hasTranslationDoF: 0
+    hasTranslationDoF: 1
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2cdb331be2c0a1d478f4c99a97e4aa3c,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 
