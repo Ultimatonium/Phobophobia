@@ -92,7 +92,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: EnemyASRIG:Root_M
+    rootMotionBoneName: EnemyASRIG:DeformationSystem
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
