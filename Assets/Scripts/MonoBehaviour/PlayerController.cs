@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
     [SerializeField]
+    private float towerDistance = 10;
+    [SerializeField]
     private GameObject towerPrefab;
+    [SerializeField]
+    private GameObject towerPlaceholderPrefab;
 
     private GameObject selectedTower;
 
@@ -68,7 +72,7 @@ public class PlayerController : MonoBehaviour
         if (selectedTower != null) return;
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            selectedTower = Instantiate(towerPrefab);
+            selectedTower = Instantiate(towerPlaceholderPrefab);
         }
     }
 
@@ -76,14 +80,16 @@ public class PlayerController : MonoBehaviour
     private void SetTowerPosition()
     {
         if (selectedTower == null) return;
-        selectedTower.transform.position = transform.position + transform.forward * 10;
+        selectedTower.transform.position = transform.position + transform.forward * towerDistance;
         selectedTower.transform.rotation = transform.rotation;
     }
     private void ActiveTower()
     {
         if (selectedTower == null) return;
         if (Input.GetMouseButtonDown(0)) {
-            selectedTower.AddComponent<ConvertToEntity>();
+            GameObject tower = Instantiate(towerPrefab, selectedTower.transform.position, selectedTower.transform.rotation);
+            tower.GetComponent<Animator>().SetBool("IsAttacking", false);
+            Destroy(selectedTower);
         }
     }
 }

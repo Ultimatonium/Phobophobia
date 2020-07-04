@@ -15,7 +15,7 @@ public class TowerSystem : SystemBase
         ComponentDataFromEntity<HealthData> healthDatas = GetComponentDataFromEntity<HealthData>();
         BufferFromEntity<HealthModifierBufferElement> healthModifiersBuffers = GetBufferFromEntity<HealthModifierBufferElement>();
         float dt = Time.DeltaTime;
-        Entities.ForEach((Entity entity, ref TowerData towerData, ref Rotation rotation, in LocalToWorld localToWorld) =>
+        Entities.ForEach((Entity entity, Animator animator, Transform transform, ref TowerData towerData, ref Rotation rotation, in LocalToWorld localToWorld) =>
         {
             towerData.timeUntilShoot -= dt;
             if (towerData.timeUntilShoot < 0)
@@ -31,6 +31,11 @@ public class TowerSystem : SystemBase
                     rotation.Value.value.x = 0;
                     rotation.Value.value.z = 0;
                     DrawShot(positions[entity].Value, positions[target].Value);
+                    animator.SetBool("IsAttacking", true);
+                    transform.rotation = rotation.Value;
+                } else
+                {
+                    animator.SetBool("IsAttacking", false);
                 }
             }
         }
