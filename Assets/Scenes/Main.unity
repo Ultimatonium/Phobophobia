@@ -550,7 +550,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 33
   rotationSpeed: 100
-  towerPrefab: {fileID: 1173241115641228636, guid: 434d288ee3ebe7344abecf47f3a4afad,
+  towerDistance: 10
+  towerPrefab: {fileID: 2772876548846245896, guid: 3c764984fd4f91c46ab17ba7eae52fa2,
+    type: 3}
+  towerPlaceholderPrefab: {fileID: 3017093364829475399, guid: 3e6b174c943cc854289d9ca70b34db47,
     type: 3}
 --- !u!1 &489394463
 GameObject:
@@ -1176,7 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConversionMode: 0
+  ConversionMode: 1
 --- !u!65 &2028368298
 BoxCollider:
   m_ObjectHideFlags: 0
