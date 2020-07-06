@@ -309,6 +309,31 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Geometry
+      parentName: CHAR_PhoboRIG(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:geo
+      parentName: PhoboRIG:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:Eyes_low
+      parentName: PhoboRIG:model:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:Hat_low
+      parentName: PhoboRIG:model:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:Phobo_low1
+      parentName: PhoboRIG:model:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     - name: PhoboRIG:Main
       parentName: CHAR_PhoboRIG(Clone)
       position: {x: -0, y: 0, z: 0}
@@ -389,6 +414,41 @@ ModelImporter:
       position: {x: -0.1894256, y: 8.1934455e-16, z: -2.182593e-17}
       rotation: {x: 0, y: 0, z: -0.11249484, w: 0.99365234}
       scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Neck_M
+      parentName: PhoboRIG:Chest_M
+      position: {x: -0.22191942, y: 0, z: 1.9107805e-16}
+      rotation: {x: -0, y: -0, z: -0.14720045, w: 0.9891067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Head_M
+      parentName: PhoboRIG:Neck_M
+      position: {x: -0.13127977, y: 4.2632563e-16, z: -4.80029e-16}
+      rotation: {x: 0, y: 0, z: 0.41200244, w: 0.91118276}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Eye_L
+      parentName: PhoboRIG:Head_M
+      position: {x: -0.12483414, y: 0.3757462, z: 0.14809641}
+      rotation: {x: 0, y: 0, z: -0.7012775, w: 0.7128884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:EyeEnd_L
+      parentName: PhoboRIG:Eye_L
+      position: {x: -0.07010044, y: -8.5265126e-16, z: -1.9539925e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Eye_R
+      parentName: PhoboRIG:Head_M
+      position: {x: -0.12483414, y: 0.3757462, z: -0.14809641}
+      rotation: {x: 0, y: 0, z: -0.7012775, w: 0.7128884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:EyeEnd_R
+      parentName: PhoboRIG:Eye_R
+      position: {x: -0.07010044, y: 1.1368684e-15, z: -4.796163e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:HeadEnd_M
+      parentName: PhoboRIG:Head_M
+      position: {x: -0.49557877, y: -4.4408918e-17, z: -7.914667e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     - name: PhoboRIG:Scapula_L
       parentName: PhoboRIG:Chest_M
       position: {x: -0.06907561, y: -0.01001074, z: 0.043653592}
@@ -417,7 +477,7 @@ ModelImporter:
     - name: PhoboRIG:Wrist_L
       parentName: PhoboRIG:Elbow_L
       position: {x: 0.40797576, y: 6.139089e-14, z: 5.9639403e-13}
-      rotation: {x: -0.009372289, y: 0.057001162, z: -0.09249653, w: 0.9940359}
+      rotation: {x: -0.009372291, y: 0.057001162, z: -0.092496544, w: 0.9940359}
       scale: {x: 1, y: 1, z: 1}
     - name: PhoboRIG:WristEnd_L
       parentName: PhoboRIG:Wrist_L
@@ -459,63 +519,8 @@ ModelImporter:
       position: {x: -0.13642998, y: 4.263256e-15, z: 4.8352432e-14}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:Neck_M
-      parentName: PhoboRIG:Chest_M
-      position: {x: -0.22191942, y: 0, z: 1.9107805e-16}
-      rotation: {x: -0, y: -0, z: -0.14720045, w: 0.9891067}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:Head_M
-      parentName: PhoboRIG:Neck_M
-      position: {x: -0.13127977, y: 4.2632563e-16, z: -4.80029e-16}
-      rotation: {x: 0, y: 0, z: 0.41200244, w: 0.91118276}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:HeadEnd_M
-      parentName: PhoboRIG:Head_M
-      position: {x: -0.49557877, y: -4.4408918e-17, z: -7.914667e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:Eye_L
-      parentName: PhoboRIG:Head_M
-      position: {x: -0.12483414, y: 0.3757462, z: 0.14809641}
-      rotation: {x: 0, y: 0, z: -0.7012775, w: 0.7128884}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:EyeEnd_L
-      parentName: PhoboRIG:Eye_L
-      position: {x: -0.07010044, y: -8.5265126e-16, z: -1.9539925e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:Eye_R
-      parentName: PhoboRIG:Head_M
-      position: {x: -0.12483414, y: 0.3757462, z: -0.14809641}
-      rotation: {x: 0, y: 0, z: -0.7012775, w: 0.7128884}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:EyeEnd_R
-      parentName: PhoboRIG:Eye_R
-      position: {x: -0.07010044, y: 1.1368684e-15, z: -4.796163e-16}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:Geometry
-      parentName: CHAR_PhoboRIG(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:model:geo
-      parentName: PhoboRIG:Geometry
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:model:Phobo_low1
-      parentName: PhoboRIG:model:geo
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:model:Eyes_low
-      parentName: PhoboRIG:model:geo
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: PhoboRIG:model:Hat_low
-      parentName: PhoboRIG:model:geo
+    - name: Phil_low
+      parentName: PhoboRIG:Wrist_R
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
