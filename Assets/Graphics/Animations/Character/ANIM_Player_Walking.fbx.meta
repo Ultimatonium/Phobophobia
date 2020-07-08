@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: fa2823374255a684eafbcc0860c85db6
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: -1610863427237328480
+    second: Walking
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Walking' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'PhoboRIG:ShoulderPart1_L' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking
+      takeName: Walking
+      internalID: 0
+      firstFrame: 11
+      lastFrame: 42
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: PhoboRIG:Root_M
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Spine1_M
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Spine2_M
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Neck_M
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Head_M
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Scapula_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Scapula_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Eye_L
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Eye_R
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: PhoboRIG:Chest_M
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: CHAR_PhoboRIG(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Geometry
+      parentName: CHAR_PhoboRIG(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:geo
+      parentName: PhoboRIG:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:Eyes_low
+      parentName: PhoboRIG:model:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:Hat_low
+      parentName: PhoboRIG:model:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:model:Phobo_low1
+      parentName: PhoboRIG:model:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Main
+      parentName: CHAR_PhoboRIG(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:DeformationSystem
+      parentName: PhoboRIG:Main
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Root_M
+      parentName: PhoboRIG:DeformationSystem
+      position: {x: -1.9709482e-17, y: 0.587072, z: -0.06888592}
+      rotation: {x: -0.5476875, y: 0.44725657, z: 0.5476875, w: -0.44725657}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Hip_L
+      parentName: PhoboRIG:Root_M
+      position: {x: 0.05186405, y: 0.005115314, z: 0.20777066}
+      rotation: {x: 0.9885918, y: 0.1476936, z: 0.029383717, w: -0.0030913758}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Knee_L
+      parentName: PhoboRIG:Hip_L
+      position: {x: 0.26318458, y: -1.6431301e-16, z: 3.5527136e-17}
+      rotation: {x: 0, y: 0, z: 0.13875718, w: 0.99032646}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Ankle_L
+      parentName: PhoboRIG:Knee_L
+      position: {x: 0.19446993, y: -4.0856205e-16, z: -3.5527135e-16}
+      rotation: {x: -0.010249381, y: -0.028688986, z: -0.09151359, w: 0.9953377}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Toes_L
+      parentName: PhoboRIG:Ankle_L
+      position: {x: 0.05903294, y: -0.13424176, z: 3.5527136e-17}
+      rotation: {x: 0.003909486, y: 0.004623543, z: -0.7635956, w: 0.6456664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:ToesEnd_L
+      parentName: PhoboRIG:Toes_L
+      position: {x: 0.06782759, y: -1.0569323e-15, z: -1.4546163e-10}
+      rotation: {x: -0.00000010047848, y: 0.0000012007248, z: 1.20647e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Hip_R
+      parentName: PhoboRIG:Root_M
+      position: {x: 0.05186405, y: 0.005115314, z: -0.20777066}
+      rotation: {x: -0.1476936, y: 0.9885918, z: -0.0030913758, w: -0.029383717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Knee_R
+      parentName: PhoboRIG:Hip_R
+      position: {x: -0.26318458, y: 1.687539e-16, z: -2.4868996e-16}
+      rotation: {x: 0, y: 0, z: 0.13875718, w: 0.99032646}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Ankle_R
+      parentName: PhoboRIG:Knee_R
+      position: {x: -0.19446993, y: -7.105427e-17, z: 5.32907e-16}
+      rotation: {x: -0.010249381, y: -0.028688986, z: -0.09151359, w: 0.9953377}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Toes_R
+      parentName: PhoboRIG:Ankle_R
+      position: {x: -0.05903294, y: 0.13424176, z: -3.907985e-16}
+      rotation: {x: 0.0039087054, y: 0.0046226196, z: -0.7635956, w: 0.6456664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:ToesEnd_R
+      parentName: PhoboRIG:Toes_R
+      position: {x: -0.06782759, y: 3.201439e-14, z: 0.00000016188937}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Spine1_M
+      parentName: PhoboRIG:Root_M
+      position: {x: -0.18190713, y: 0, z: -8.723152e-17}
+      rotation: {x: 0, y: 0, z: 0.13563865, w: 0.99075836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Spine2_M
+      parentName: PhoboRIG:Spine1_M
+      position: {x: -0.24870174, y: -1.1990408e-16, z: 7.1323536e-17}
+      rotation: {x: 0, y: 0, z: -0.0151427025, w: 0.9998854}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Chest_M
+      parentName: PhoboRIG:Spine2_M
+      position: {x: -0.1894256, y: 8.1934455e-16, z: -2.182593e-17}
+      rotation: {x: 0, y: 0, z: -0.11249484, w: 0.99365234}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Neck_M
+      parentName: PhoboRIG:Chest_M
+      position: {x: -0.22191942, y: 0, z: 1.9107805e-16}
+      rotation: {x: -0, y: -0, z: -0.14720045, w: 0.9891067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Head_M
+      parentName: PhoboRIG:Neck_M
+      position: {x: -0.13127977, y: 4.2632563e-16, z: -4.80029e-16}
+      rotation: {x: 0, y: 0, z: 0.41200244, w: 0.91118276}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Eye_L
+      parentName: PhoboRIG:Head_M
+      position: {x: -0.12483414, y: 0.3757462, z: 0.14809641}
+      rotation: {x: 0, y: 0, z: -0.7012775, w: 0.7128884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:EyeEnd_L
+      parentName: PhoboRIG:Eye_L
+      position: {x: -0.07010044, y: -8.5265126e-16, z: -1.9539925e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Eye_R
+      parentName: PhoboRIG:Head_M
+      position: {x: -0.12483414, y: 0.3757462, z: -0.14809641}
+      rotation: {x: 0, y: 0, z: -0.7012775, w: 0.7128884}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:EyeEnd_R
+      parentName: PhoboRIG:Eye_R
+      position: {x: -0.07010044, y: 1.1368684e-15, z: -4.796163e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:HeadEnd_M
+      parentName: PhoboRIG:Head_M
+      position: {x: -0.49557877, y: -4.4408918e-17, z: -7.914667e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Scapula_L
+      parentName: PhoboRIG:Chest_M
+      position: {x: -0.06907561, y: -0.01001074, z: 0.043653592}
+      rotation: {x: 0.7056184, y: 0.046153042, z: 0.7055798, w: -0.046148416}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Shoulder_L
+      parentName: PhoboRIG:Scapula_L
+      position: {x: 0.3568648, y: 2.3916977e-10, z: 1.2981047e-11}
+      rotation: {x: -0.6082334, y: -0.112746686, z: -0.10777426, w: 0.7782834}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:ShoulderPart1_L
+      parentName: PhoboRIG:Shoulder_L
+      position: {x: 0.15750054, y: 2.3305802e-14, z: 1.611511e-13}
+      rotation: {x: 0.000000059604638, y: 0.017377129, z: 0.11934553, w: 0.9927007}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:ShoulderPart2_L
+      parentName: PhoboRIG:ShoulderPart1_L
+      position: {x: 0.15750054, y: 2.4158452e-14, z: 1.6111556e-13}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Elbow_L
+      parentName: PhoboRIG:ShoulderPart2_L
+      position: {x: 0.15750054, y: 2.3732127e-14, z: 1.6111556e-13}
+      rotation: {x: 0.0011350792, y: 0.0046463697, z: 0.0057466906, w: 0.9999721}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Wrist_L
+      parentName: PhoboRIG:Elbow_L
+      position: {x: 0.40797576, y: 6.139089e-14, z: 5.9639403e-13}
+      rotation: {x: -0.009372291, y: 0.057001162, z: -0.092496544, w: 0.9940359}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:WristEnd_L
+      parentName: PhoboRIG:Wrist_L
+      position: {x: 0.13642998, y: -4.2632563e-16, z: 3.2684964e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Scapula_R
+      parentName: PhoboRIG:Chest_M
+      position: {x: -0.06907561, y: -0.01001074, z: -0.043653592}
+      rotation: {x: 0.046153042, y: -0.7056184, z: 0.046148416, w: 0.7055798}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Shoulder_R
+      parentName: PhoboRIG:Scapula_R
+      position: {x: -0.3568648, y: -2.391717e-10, z: -1.2979626e-11}
+      rotation: {x: -0.6082334, y: -0.11274661, z: -0.10777426, w: 0.7782835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:ShoulderPart1_R
+      parentName: PhoboRIG:Shoulder_R
+      position: {x: -0.15750054, y: 6.536993e-15, z: 4.0287774e-14}
+      rotation: {x: -0, y: 0.017377306, z: 0.11934556, w: 0.99270076}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:ShoulderPart2_R
+      parentName: PhoboRIG:ShoulderPart1_R
+      position: {x: -0.15750054, y: 6.536993e-15, z: 4.0323298e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Elbow_R
+      parentName: PhoboRIG:ShoulderPart2_R
+      position: {x: -0.15750054, y: 6.82121e-15, z: 4.0358826e-14}
+      rotation: {x: 0.0011350388, y: 0.004646033, z: 0.005746668, w: 0.99997205}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:Wrist_R
+      parentName: PhoboRIG:Elbow_R
+      position: {x: -0.40797576, y: 1.4495072e-14, z: 1.5013767e-13}
+      rotation: {x: -0.009372352, y: 0.057001516, z: -0.09249533, w: 0.994036}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PhoboRIG:WristEnd_R
+      parentName: PhoboRIG:Wrist_R
+      position: {x: -0.13642998, y: 4.263256e-15, z: 4.8352432e-14}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Phil_low
+      parentName: PhoboRIG:Wrist_R
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 954bd9ce31db83a498850c1838542050,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

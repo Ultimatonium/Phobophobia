@@ -455,7 +455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &484068162
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ Transform:
   m_GameObject: {fileID: 484068161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1801, y: 3.1801, z: 3.1801}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -807,6 +807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF_CHAR_EnemyRIG
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715166516967931223, guid: 9beb7b4259328264a813613753db2642,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4090742837891311597, guid: 9beb7b4259328264a813613753db2642,
         type: 3}
@@ -1278,7 +1283,7 @@ PrefabInstance:
     - target: {fileID: 7750332663978353196, guid: 5c6235404aa4a1a4484199cd4bfcfab1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.62
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7750332663978353196, guid: 5c6235404aa4a1a4484199cd4bfcfab1,
         type: 3}
@@ -1288,7 +1293,7 @@ PrefabInstance:
     - target: {fileID: 7750332663978353196, guid: 5c6235404aa4a1a4484199cd4bfcfab1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7750332663978353196, guid: 5c6235404aa4a1a4484199cd4bfcfab1,
         type: 3}
