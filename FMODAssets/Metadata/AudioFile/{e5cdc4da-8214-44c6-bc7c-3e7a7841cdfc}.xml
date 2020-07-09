@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{e5cdc4da-8214-44c6-bc7c-3e7a7841cdfc}">
+		<property name="assetPath">
+			<value>VO/VO_UI/VO_UI_SpeakCount/VO_UI_SpeakCount_03.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.1030625000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec23b9c3-625d-4ade-bcf3-7975cb68ef54}</destination>
+		</relationship>
+	</object>
+</objects>

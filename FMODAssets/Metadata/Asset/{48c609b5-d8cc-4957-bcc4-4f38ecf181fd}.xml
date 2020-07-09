@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{48c609b5-d8cc-4957-bcc4-4f38ecf181fd}">
+		<property name="assetPath">
+			<value>SFX/SFX_Explosion_Rubble/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec23b9c3-625d-4ade-bcf3-7975cb68ef54}</destination>
+		</relationship>
+	</object>
+</objects>

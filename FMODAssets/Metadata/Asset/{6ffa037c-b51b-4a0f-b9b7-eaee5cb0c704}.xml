@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{6ffa037c-b51b-4a0f-b9b7-eaee5cb0c704}">
+		<property name="assetPath">
+			<value>SFX/SFX_Weapon_RocketLauncher_Reload/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec23b9c3-625d-4ade-bcf3-7975cb68ef54}</destination>
+		</relationship>
+	</object>
+</objects>

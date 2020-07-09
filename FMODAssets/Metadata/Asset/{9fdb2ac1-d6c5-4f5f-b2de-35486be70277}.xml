@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{9fdb2ac1-d6c5-4f5f-b2de-35486be70277}">
+		<property name="assetPath">
+			<value>SFX/SFX_Weapon_Rocket_Trail_Loop/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec23b9c3-625d-4ade-bcf3-7975cb68ef54}</destination>
+		</relationship>
+	</object>
+</objects>

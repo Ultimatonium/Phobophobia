@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{17475ac9-bb8d-43d6-a3fa-326805c921da}">
+		<property name="assetPath">
+			<value>VO/VO_Avatar_Death_Fall/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec23b9c3-625d-4ade-bcf3-7975cb68ef54}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{99a2ee95-2b96-4c5b-a545-74136896fff3}">
+		<property name="name">
+			<value>SceneTime</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4053fbb5-b59f-4e8a-898f-86e8f07a9534}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{775f0465-49fe-445a-8f47-362d8f2ac79a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{775f0465-49fe-445a-8f47-362d8f2ac79a}">
+		<property name="maximum">
+			<value>180</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
