@@ -1609,47 +1609,62 @@ PrefabInstance:
     - target: {fileID: 7856852469378967745, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.24695525
+      value: 0.24695514
       objectReference: {fileID: 0}
     - target: {fileID: 7856852469378967745, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0015188953
+      value: 0.0015185525
       objectReference: {fileID: 0}
     - target: {fileID: 7856852469378967745, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.00000002531267
+      value: -0.0000001795783
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856852469378967745, guid: feb9442ce0187174aa1bb4fc123614d1,
+        type: 3}
+      propertyPath: m_AngularYLimit.limit
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7856852469688198567, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.24367684
+      value: 0.24367654
       objectReference: {fileID: 0}
     - target: {fileID: 7856852469688198567, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.0014988006
+      value: 0.001498622
       objectReference: {fileID: 0}
     - target: {fileID: 7856852469688198567, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.0000001295197
+      value: -0.00000014977597
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856852469688198567, guid: feb9442ce0187174aa1bb4fc123614d1,
+        type: 3}
+      propertyPath: m_AngularYLimit.limit
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7856852470637569634, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.24409583
+      value: -0.2440957
       objectReference: {fileID: 0}
     - target: {fileID: 7856852470637569634, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.00000033758158
+      value: -0.000000038632674
       objectReference: {fileID: 0}
     - target: {fileID: 7856852470637569634, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.000000019390813
+      value: 0.00000011997365
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856852470637569634, guid: feb9442ce0187174aa1bb4fc123614d1,
+        type: 3}
+      propertyPath: m_AngularYLimit.limit
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7856852470648763167, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
@@ -1659,27 +1674,27 @@ PrefabInstance:
     - target: {fileID: 7856852470648763167, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.031491663
+      value: -0.031491604
       objectReference: {fileID: 0}
     - target: {fileID: 7856852470648763167, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.00000005356819
+      value: -0.000000095545104
       objectReference: {fileID: 0}
     - target: {fileID: 7856852471109582840, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.09742387
+      value: 0.097423784
       objectReference: {fileID: 0}
     - target: {fileID: 7856852471109582840, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.24942544
+      value: 0.2494253
       objectReference: {fileID: 0}
     - target: {fileID: 7856852471109582840, guid: feb9442ce0187174aa1bb4fc123614d1,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.000000033993274
+      value: 0.00000008940697
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feb9442ce0187174aa1bb4fc123614d1, type: 3}
