@@ -3,7 +3,12 @@ guid: 954bd9ce31db83a498850c1838542050
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PhoboRIG_model_Phobo_low_lambert1
+    second: {fileID: 2100000, guid: 6e42967ff63e2664c9057d60388cb226, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
