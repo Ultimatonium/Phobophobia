@@ -3102,6 +3102,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8221408658892431215, guid: 920d2e4c30fd24448acec04be95c6972,
+        type: 3}
+      propertyPath: startDelay.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221408658892431215, guid: 920d2e4c30fd24448acec04be95c6972,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221408658892431215, guid: 920d2e4c30fd24448acec04be95c6972,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221408658892431215, guid: 920d2e4c30fd24448acec04be95c6972,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 920d2e4c30fd24448acec04be95c6972, type: 3}
 --- !u!4 &5499411914738424634 stripped
