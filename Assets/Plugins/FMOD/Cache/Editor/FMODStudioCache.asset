@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Props/CrateImpacts
   guid: aeddc023b3f4954f9f52a2fb3df42773
   Banks:
-  - {fileID: -191092545357938161}
+  - {fileID: -4968254469680085346}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -23,6 +23,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 183
+--- !u!114 &-9009735207518707167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerBank.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/PlayerBank.bank
+  SubDir: 
+  lastModified: 637302629871319406
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8475412504907209228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,7 +56,7 @@ MonoBehaviour:
   Path: event:/Player/PlayerImpacts/LaserHit
   guid: db946bb24745654b835662ab73678ce0
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -64,6 +82,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8235602973432631486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GameOverMusic/SceneTime
+  m_EditorClassIdentifier: 
+  Name: SceneTime
+  Min: 0
+  Max: 180
+  Default: 0
+  Exists: 1
 --- !u!114 &-7917692005054806287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +114,7 @@ MonoBehaviour:
   Path: event:/Player/Vocals/Jump
   guid: 115b0c40f01a7a4a886e408f00e690f3
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -102,7 +137,7 @@ MonoBehaviour:
   Path: event:/Weapons/Explosions/ExplosionSFX
   guid: 6c4b2fef8243b847bde826749520de91
   Banks:
-  - {fileID: -191092545357938161}
+  - {fileID: -4968254469680085346}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -125,7 +160,7 @@ MonoBehaviour:
   Path: event:/UI_ SFX/KeyPressCorrect
   guid: 66cb471bf624be44aad698dfddf2a114
   Banks:
-  - {fileID: 8812742248938714453}
+  - {fileID: 3192857603811214085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -148,7 +183,7 @@ MonoBehaviour:
   Path: event:/FortReverbZoneEvent
   guid: c4cee25a6d8fc64493f854fc7abad57f
   Banks:
-  - {fileID: -191092545357938161}
+  - {fileID: -4968254469680085346}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -171,7 +206,7 @@ MonoBehaviour:
   Path: event:/Player/PlayerImpacts/LandMetal
   guid: 1d0443cc9a18c24fab09c379f8f37d95
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -194,7 +229,7 @@ MonoBehaviour:
   Path: event:/Player/Vocals/Land
   guid: 91856a8fd8c0ad41895a796596998a76
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -238,6 +273,42 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-5245022573822525802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SentryBank.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/SentryBank.bank
+  SubDir: 
+  lastModified: 637302629871349330
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4968254469680085346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BattlegroundBank.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/BattlegroundBank.bank
+  SubDir: 
+  lastModified: 637302629871080040
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4702236636164852095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +324,7 @@ MonoBehaviour:
   Path: event:/Player/Vocals/Heartbeat
   guid: 2e6aff6c46f76846a1278675bb2fa9e3
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -276,7 +347,7 @@ MonoBehaviour:
   Path: event:/Enemy/SentryDroneNoises
   guid: b0c95896559240429e1901dc72931b93
   Banks:
-  - {fileID: 6370689366340934087}
+  - {fileID: -5245022573822525802}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -316,7 +387,7 @@ MonoBehaviour:
   Path: event:/Player/PlayerImpacts/GameOverImpact
   guid: 516d4ad1b6d01e49bdd521ef5a87e7ca
   Banks:
-  - {fileID: 8812742248938714453}
+  - {fileID: 3192857603811214085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -358,7 +429,7 @@ MonoBehaviour:
   Min: 0
   Max: 6
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3002094926547069696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +445,7 @@ MonoBehaviour:
   Path: event:/Weapons/RocketTrail
   guid: 354e1560635f844e8a222350e6e79d3d
   Banks:
-  - {fileID: -191092545357938161}
+  - {fileID: -4968254469680085346}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -399,6 +470,24 @@ MonoBehaviour:
   lastModified: 637298945383000530
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-1949373652477119474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MusicBank.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/MusicBank.bank
+  SubDir: 
+  lastModified: 637302629871269542
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-1824238461954485866
 MonoBehaviour:
@@ -415,7 +504,7 @@ MonoBehaviour:
   Path: event:/Props/AmbienceEmitter
   guid: b3b52cc597e59c48990ca5786ecc5722
   Banks:
-  - {fileID: -191092545357938161}
+  - {fileID: -4968254469680085346}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -438,7 +527,7 @@ MonoBehaviour:
   Path: event:/Enemy/LaserBolt
   guid: 5d1c7c6ad7bcb340bebe1f9daa1ca17a
   Banks:
-  - {fileID: 6370689366340934087}
+  - {fileID: -5245022573822525802}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -497,7 +586,7 @@ MonoBehaviour:
   Path: event:/Weapons/RocketFire
   guid: 5f291b4f2f9f1948a525e46af34e036b
   Banks:
-  - {fileID: -191092545357938161}
+  - {fileID: -4968254469680085346}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -522,7 +611,7 @@ MonoBehaviour:
   lastModified: 637298945382802171
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,12 +626,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 4136150043946016783}
-  - {fileID: -191092545357938161}
-  - {fileID: 8812742248938714453}
-  - {fileID: 1941915914714594346}
-  - {fileID: 4559923868534916897}
-  - {fileID: -2061202125747185165}
-  - {fileID: 6370689366340934087}
+  - {fileID: -4968254469680085346}
+  - {fileID: 3192857603811214085}
+  - {fileID: 791018997806216486}
+  - {fileID: -1949373652477119474}
+  - {fileID: -9009735207518707167}
+  - {fileID: -5245022573822525802}
   EditorEvents:
   - {fileID: -3002094926547069696}
   - {fileID: 2813095411822122338}
@@ -574,10 +663,10 @@ MonoBehaviour:
   - {fileID: 88879368434730489}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1941915914714594346}
+  - {fileID: 791018997806216486}
   StringsBanks:
   - {fileID: 4136150043946016783}
-  stringsBankWriteTime: 637298945382960642
+  stringsBankWriteTime: 637302629871229649
   cacheVersion: 3
 --- !u!114 &7653569884089667
 MonoBehaviour:
@@ -612,7 +701,7 @@ MonoBehaviour:
   Path: event:/Enemy/SentryDroneAlert
   guid: f9f2e70d6d570e44aa432f80a70be397
   Banks:
-  - {fileID: 6370689366340934087}
+  - {fileID: -5245022573822525802}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -620,6 +709,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 9500
+--- !u!114 &791018997806216486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637302629871199735
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &979561443923185640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,7 +742,7 @@ MonoBehaviour:
   Path: event:/UI_ SFX/YouWin
   guid: 1efd99782e01f844a65b7e9220473e79
   Banks:
-  - {fileID: 8812742248938714453}
+  - {fileID: 3192857603811214085}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -658,7 +765,7 @@ MonoBehaviour:
   Path: event:/UI_ SFX/SpeakCount
   guid: 6f5863001158f44ebab3e159db25a1d4
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -681,7 +788,7 @@ MonoBehaviour:
   Path: event:/Player/Footsteps/FootstepsGround
   guid: 3793113130b0464e889c8ed2e0744ba0
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -689,6 +796,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 918
+--- !u!114 &1436004030854836531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BattlegroundMusic/GameScore
+  m_EditorClassIdentifier: 
+  Name: GameScore
+  Min: 0
+  Max: 6
+  Default: 0
+  Exists: 1
 --- !u!114 &1578759410016084458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,12 +828,12 @@ MonoBehaviour:
   Path: event:/Music/GameOverMusic
   guid: fcf06252a8fc7e42a6b04236b6c6a4a1
   Banks:
-  - {fileID: 8812742248938714453}
+  - {fileID: 3192857603811214085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7003961542002995930}
+  - {fileID: -8235602973432631486}
   MinDistance: 0
   MaxDistance: 0
   Length: 17454
@@ -748,7 +872,7 @@ MonoBehaviour:
   lastModified: 637298945382950672
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2263578575157335879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,7 +906,7 @@ MonoBehaviour:
   Path: event:/Player/PlayerImpacts/LandGround
   guid: 6cbabd8c78a44c44b051d77e03f775c1
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -805,7 +929,7 @@ MonoBehaviour:
   Path: event:/Props/AmbienceReceiver
   guid: a2fe036eb04ae149950890683734831e
   Banks:
-  - {fileID: -191092545357938161}
+  - {fileID: -4968254469680085346}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -828,12 +952,12 @@ MonoBehaviour:
   Path: event:/Music/BattlegroundMusic
   guid: 5f3171ec56d2964d92d28b63902db6c4
   Banks:
-  - {fileID: 4559923868534916897}
+  - {fileID: -1949373652477119474}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3292220310027378115}
+  - {fileID: 1436004030854836531}
   MinDistance: 0
   MaxDistance: 0
   Length: 14601
@@ -852,7 +976,7 @@ MonoBehaviour:
   Path: event:/Player/Footsteps/FootstepsMetal
   guid: c15f3ef33ac3ef49aae4dfa57ea01a5f
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -892,8 +1016,8 @@ MonoBehaviour:
   Path: snapshot:/InFort
   guid: 5c3dd04309281749a68748c314984f34
   Banks:
-  - {fileID: -191092545357938161}
-  - {fileID: 1941915914714594346}
+  - {fileID: -4968254469680085346}
+  - {fileID: 791018997806216486}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -901,6 +1025,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &3192857603811214085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/GameOverBank.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/GameOverBank.bank
+  SubDir: 
+  lastModified: 637302629871169810
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3255867601994084495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -916,8 +1058,8 @@ MonoBehaviour:
   Path: snapshot:/HitFilter
   guid: 7528c16fb387b44abb058754fb4a6030
   Banks:
-  - {fileID: 1941915914714594346}
-  - {fileID: -2061202125747185165}
+  - {fileID: 791018997806216486}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -974,7 +1116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODAssets/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637298945382960642
+  lastModified: 637302629871229649
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1067,7 +1209,7 @@ MonoBehaviour:
   lastModified: 637298945382980586
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5493023553714850333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,7 +1225,7 @@ MonoBehaviour:
   Path: event:/Props/HealthPickup
   guid: b77c5f47f6398842a3e06fcb0c7679ea
   Banks:
-  - {fileID: -2061202125747185165}
+  - {fileID: -9009735207518707167}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1144,7 +1286,7 @@ MonoBehaviour:
   lastModified: 637298945383010511
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &6540000045135633264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,7 +1338,7 @@ MonoBehaviour:
   Min: 0
   Max: 180
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7100704735289110277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,7 +1390,7 @@ MonoBehaviour:
   Path: event:/UI_ SFX/KeyPressError
   guid: 53c803b89c27884bb63d50a73b15dbe8
   Banks:
-  - {fileID: 8812742248938714453}
+  - {fileID: 3192857603811214085}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1291,4 +1433,4 @@ MonoBehaviour:
   lastModified: 637298945382950672
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
