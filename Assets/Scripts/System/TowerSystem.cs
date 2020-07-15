@@ -52,8 +52,10 @@ public class TowerSystem : SystemBase
         Entity target = Entity.Null;
         for (int i = 0; i < enemies.Length; i++)
         {
+            //Debug.Log((math.distancesq(positions[enemies[i]].Value, positions[tower].Value) + "|" + (towerRange * towerRange)));
             if (math.distancesq(positions[enemies[i]].Value, positions[tower].Value) < towerRange * towerRange)
             {
+                //Debug.Log("Tower");
                 if (target == Entity.Null) target = enemies[i];
                 if (healthDatas[target].health > healthDatas[enemies[i]].health)
                 {

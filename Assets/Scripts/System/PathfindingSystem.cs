@@ -8,6 +8,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 
+[DisableAutoCreation]
 public class PathfindingSystem : SystemBase
 {
     EndSimulationEntityCommandBufferSystem endSimulationEntityCommandBuffer;

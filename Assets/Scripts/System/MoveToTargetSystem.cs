@@ -2,6 +2,7 @@
 using Unity.Transforms;
 using Unity.Mathematics;
 
+[DisableAutoCreation]
 public class MoveToTargetSystem : SystemBase
 {
     protected override void OnUpdate()

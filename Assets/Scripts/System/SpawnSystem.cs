@@ -4,8 +4,10 @@ using Unity.Collections;
 using Unity.Transforms;
 using Unity.Jobs;
 using UnityEngine;
+using UnityEditorInternal;
+using Unity.Rendering;
 
-
+[DisableAutoCreation]
 public class SpawnSystem : SystemBase
 {
     EndSimulationEntityCommandBufferSystem endSimulationEntityCommandBuffer;
@@ -22,6 +24,8 @@ public class SpawnSystem : SystemBase
 
     protected override void OnUpdate()
     {
+        World.GetOrCreateSystem<CopySkinnedEntityDataToRenderEntity>().Enabled = false; //hack only
+        
         NativeArray<Entity> enemies = GetEntityQuery(typeof(EnemyTag)).ToEntityArray(Allocator.TempJob);
         if (enemies.Length < 100020)
         {
@@ -29,14 +33,21 @@ public class SpawnSystem : SystemBase
             EntityCommandBuffer.Concurrent ECS = endSimulationEntityCommandBuffer.CreateCommandBuffer().ToConcurrent();
 
             NativeArray<Entity> spawns = GetEntityQuery(typeof(SpawnTag)).ToEntityArray(Allocator.TempJob);
+            if (spawns.Length == 0)
+            {
+                spawns.Dispose();
+                enemies.Dispose();
+                return;
+            }
+
             Entity target = GetEntityQuery(typeof(BaseTag)).GetSingletonEntity();
             Entity spawner = GetEntityQuery(typeof(SpawnData)).GetSingletonEntity();
             SpawnData spawnData = EntityManager.GetComponentData<SpawnData>(spawner);
 
             int randomSpawn = UnityEngine.Random.Range(0, spawns.Length);
-
+            
             float3 spawnPosition = EntityManager.GetComponentData<Translation>(spawns[randomSpawn]).Value;
-            float spawnScale = EntityManager.GetComponentData<NonUniformScale>(spawns[randomSpawn]).Value.x;
+            //float spawnScale = EntityManager.GetComponentData<NonUniformScale>(spawns[randomSpawn]).Value.x;
             float3 targetPosition = EntityManager.GetComponentData<Translation>(target).Value;
 
             spawns.Dispose();
@@ -51,17 +62,17 @@ public class SpawnSystem : SystemBase
                 Job.WithCode(() =>
                 {
                     SpawnData spawnDataJob = spawnDatas[0];
-                    float spawnHalfScale = spawnScale / 2;
+                    //float spawnHalfScale = spawnScale / 2;
 
                     for (int i = 0; i < spawnDataJob.spawnCount; i++)
                     {
                         spawnDataJob.timeUntilSpawn = spawnDataJob.spawnFrequency;
 
-                        float3 spawnPositionMod = new float3(randomGen.NextFloat() * spawnScale - spawnHalfScale, 0, randomGen.NextFloat() * spawnScale - spawnHalfScale);
+                        //float3 spawnPositionMod = new float3(randomGen.NextFloat() * spawnScale - spawnHalfScale, 0, randomGen.NextFloat() * spawnScale - spawnHalfScale);
                         Entity enemy = ECS.Instantiate(i, spawnDataJob.enemy);
-                        ECS.SetComponent(i, enemy, new Translation { Value = spawnPosition + spawnPositionMod });
-                        ECS.SetComponent(i, enemy, new TargetData { targetPosition = targetPosition });
-                        ECS.AddComponent(i, enemy, new PathfindingParamsData { startPosition = spawnPosition, endPosition = targetPosition });
+                        ECS.SetComponent(i, enemy, new Translation { Value = spawnPosition /*+ spawnPositionMod*/ });
+                        //ECS.SetComponent(i, enemy, new TargetData { targetPosition = targetPosition });
+                        //ECS.AddComponent(i, enemy, new PathfindingParamsData { startPosition = spawnPosition, endPosition = targetPosition });
                         ECS.AddBuffer<PathNode>(i, enemy);
                         ECS.AddBuffer<HealthModifierBufferElement>(i, enemy);
                     }
