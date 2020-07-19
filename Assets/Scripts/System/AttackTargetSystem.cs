@@ -14,13 +14,13 @@ public class AttackTargetSystem : SystemBase
 
         Entities.WithAny<TowerTag, EnemyTag>().ForEach((Entity entity, Animator animator, Transform transform, ref RangeAttackData rangeAttackData, ref Rotation rotation, in LocalToWorld localToWorld, in AttackTargetData attackTarget) =>
         {
-            rangeAttackData.timeUntilShoot -= dt;
-            if (rangeAttackData.timeUntilShoot < 0)
+            if (attackTarget.target != Entity.Null)
             {
-                rangeAttackData.timeUntilShoot = CadenceToFrequency(rangeAttackData.cadence);
-
-                if (attackTarget.target != Entity.Null)
+                rangeAttackData.timeUntilShoot -= dt;
+                if (rangeAttackData.timeUntilShoot < 0)
                 {
+                    rangeAttackData.timeUntilShoot = CadenceToFrequency(rangeAttackData.cadence);
+
                     healthModifiersBuffers[attackTarget.target].Add(new HealthModifierBufferElement { value = -rangeAttackData.damage });
                     rotation.Value = quaternion.LookRotation(positions[attackTarget.target].Value - positions[entity].Value, localToWorld.Up);
                     rotation.Value.value.x = 0;
@@ -29,10 +29,11 @@ public class AttackTargetSystem : SystemBase
                     animator.SetBool("isAttacking", true);
                     transform.rotation = rotation.Value;
                 }
-                else
-                {
-                    animator.SetBool("isAttacking", false);
-                }
+            }
+            else
+            {
+                animator.SetBool("isAttacking", false);
+                rangeAttackData.timeUntilShoot = 0;
             }
         }
         ).WithoutBurst().Run();
