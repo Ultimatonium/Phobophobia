@@ -9,11 +9,13 @@ public class SceneHandler : MonoBehaviour
     private Object scene;
     [SerializeField]
     private float time;
+    [SerializeField]
+    private bool additive;
 
     private void Start()
     {
         if (scene != null)
-            DelayedLoadScene(scene, time);
+            DelayedLoadScene(scene, time, additive);
     }
 
     public void LoadScene(Object scene)
@@ -21,15 +23,27 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadSceneAsync(scene.name, LoadSceneMode.Single);
     }
 
-    public void DelayedLoadScene(Object scene, float time)
+    public void LoadSceneAdditive(Object scene)
     {
-        StartCoroutine(WaitForSceneLoad(scene, time));
+        SceneManager.LoadSceneAsync(scene.name, LoadSceneMode.Additive);
     }
 
-    private IEnumerator WaitForSceneLoad(Object scene, float time)
+    public void DelayedLoadScene(Object scene, float time, bool additive)
+    {
+        StartCoroutine(WaitForSceneLoad(scene, time, additive));
+    }
+
+    private IEnumerator WaitForSceneLoad(Object scene, float time, bool additive)
     {
         yield return new WaitForSeconds(time);
-        LoadScene(scene);
+        if (additive)
+        {
+            LoadSceneAdditive(scene);
+        }
+        else
+        {
+            LoadScene(scene);
+        }
     }
 
     public void Quit()
