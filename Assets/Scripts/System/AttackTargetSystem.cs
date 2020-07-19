@@ -1,72 +1,42 @@
-﻿using Unity.Collections;
+﻿using UnityEngine;
 using Unity.Entities;
-using Unity.Jobs;
-using Unity.Mathematics;
 using Unity.Transforms;
-using UnityEngine;
+using Unity.Mathematics;
+using Unity.Collections;
 
-[DisableAutoCreation]
-public class TowerSystem : SystemBase
+public class AttackTargetSystem : SystemBase
 {
     protected override void OnUpdate()
     {
-        NativeArray<Entity> targets = GetEntityQuery(typeof(EnemyTag),typeof(BaseTag)).ToEntityArray(Allocator.TempJob);
         ComponentDataFromEntity<Translation> positions = GetComponentDataFromEntity<Translation>();
-        ComponentDataFromEntity<HealthData> healthDatas = GetComponentDataFromEntity<HealthData>();
-        ComponentDataFromEntity<EnemyTag> enemyTags = GetComponentDataFromEntity<EnemyTag>();
         BufferFromEntity<HealthModifierBufferElement> healthModifiersBuffers = GetBufferFromEntity<HealthModifierBufferElement>();
         float dt = Time.DeltaTime;
-        Entities.WithAny<TowerTag,EnemyTag>().ForEach((Entity entity, Animator animator, Transform transform, ref RangeAttackData rangeAttackData, ref Rotation rotation, in LocalToWorld localToWorld) =>
+
+        Entities.WithAny<TowerTag, EnemyTag>().ForEach((Entity entity, Animator animator, Transform transform, ref RangeAttackData rangeAttackData, ref Rotation rotation, in LocalToWorld localToWorld, in AttackTargetData attackTarget) =>
         {
             rangeAttackData.timeUntilShoot -= dt;
             if (rangeAttackData.timeUntilShoot < 0)
             {
                 rangeAttackData.timeUntilShoot = CadenceToFrequency(rangeAttackData.cadence);
 
-                Entity target = GetLowestTargetInRange(entity, targets, rangeAttackData.range, positions, healthDatas, enemyTags);
-                //Debug.Log(target);
-
-                if (target != Entity.Null)
+                if (attackTarget.target != Entity.Null)
                 {
-                    healthModifiersBuffers[target].Add(new HealthModifierBufferElement { value = -rangeAttackData.damage });
-                    rotation.Value = quaternion.LookRotation(positions[target].Value - positions[entity].Value, localToWorld.Up);
+                    healthModifiersBuffers[attackTarget.target].Add(new HealthModifierBufferElement { value = -rangeAttackData.damage });
+                    rotation.Value = quaternion.LookRotation(positions[attackTarget.target].Value - positions[entity].Value, localToWorld.Up);
                     rotation.Value.value.x = 0;
                     rotation.Value.value.z = 0;
-                    DrawShot(positions[entity].Value, positions[target].Value);
+                    DrawShot(positions[entity].Value, positions[attackTarget.target].Value);
                     animator.SetBool("isAttacking", true);
                     transform.rotation = rotation.Value;
-                } else
+                }
+                else
                 {
                     animator.SetBool("isAttacking", false);
                 }
             }
         }
-        //).Schedule();
-        ).WithoutBurst().Run(); //fix DrawShot
+        ).WithoutBurst().Run();
 
-        Dependency.Complete();
-        targets.Dispose();
-        DrawRange();
-    }
-
-    private static Entity GetLowestTargetInRange(Entity source, NativeArray<Entity> targets, float towerRange, ComponentDataFromEntity<Translation> positions, ComponentDataFromEntity<HealthData> healthDatas, ComponentDataFromEntity<EnemyTag> enemyTags)
-    {
-        Entity target = Entity.Null;
-        for (int i = 0; i < targets.Length; i++)
-        {
-            if (enemyTags.Exists(source) && enemyTags.Exists(targets[i])) continue;
-            //Debug.Log((math.distancesq(positions[enemies[i]].Value, positions[tower].Value) + "|" + (towerRange * towerRange)));
-            if (math.distancesq(positions[targets[i]].Value, positions[source].Value) < towerRange * towerRange)
-            {
-                //Debug.Log("Tower");
-                if (target == Entity.Null) target = targets[i];
-                if (healthDatas[target].health > healthDatas[targets[i]].health)
-                {
-                    target = targets[i];
-                }
-            }
-        }
-        return target;
     }
 
     private void DrawShot(float3 towerPosition, float3 target)

@@ -23,10 +23,8 @@ public class Spawner : MonoBehaviour
     {
         timeTillSpawn = spawnIntervall;
 
-        /*
-        GameObject enemy = Instantiate(enemyPrefab, spawns[UnityEngine.Random.Range(0, spawns.Length)].transform.position, Quaternion.identity);
-        enemy.GetComponent<NavMeshAgent>().SetDestination(target.transform.position);
-        */
+        //GameObject enemy = Instantiate(enemyPrefab, spawns[UnityEngine.Random.Range(0, spawns.Length)].transform.position, Quaternion.identity);
+        //enemy.GetComponent<NavMeshAgent>().SetDestination(target.transform.position);
     }
 
     private void Update()

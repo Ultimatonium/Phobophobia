@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
 
 [GenerateAuthoringComponent]
-public struct TowerData : IComponentData
+public struct RangeAttackData : IComponentData
 {
     public float range;
     public float damage;

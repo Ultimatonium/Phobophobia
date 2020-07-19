@@ -1,6 +1,4 @@
-﻿using System;
-using Unity.Entities;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,7 +28,6 @@ public class PlayerController : MonoBehaviour
                 break;
             }
         }
-        Debug.Log(characterCam);
         //Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;
     }
@@ -105,7 +102,7 @@ public class PlayerController : MonoBehaviour
         if (selectedTower == null) return;
         if (Input.GetMouseButtonDown(0)) {
             GameObject tower = Instantiate(towerPrefab, selectedTower.transform.position, selectedTower.transform.rotation);
-            tower.GetComponent<Animator>().SetBool("IsAttacking", false);
+            tower.GetComponent<Animator>().SetBool("isAttacking", false);
             Destroy(selectedTower);
         }
     }

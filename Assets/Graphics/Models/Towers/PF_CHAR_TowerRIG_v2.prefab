@@ -1476,6 +1476,8 @@ GameObject:
   - component: {fileID: -7233352744406664917}
   - component: {fileID: -1552161215679280676}
   - component: {fileID: 5725661598388281665}
+  - component: {fileID: 7143567493546592639}
+  - component: {fileID: -7600223644749488778}
   m_Layer: 0
   m_Name: PF_CHAR_TowerRIG_v2
   m_TagString: Untagged
@@ -1577,6 +1579,31 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &7143567493546592639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818326793803307219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e45dbacbffabb4a9f05e4cb784ed7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7600223644749488778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818326793803307219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fb1797f5c65394ab5819a39f4f8850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &7818326793824462268
 GameObject:
   m_ObjectHideFlags: 0

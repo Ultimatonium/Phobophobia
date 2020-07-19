@@ -1,6 +1,7 @@
 ﻿using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine;
 
 public class DestoryEnemySystem : SystemBase
 {
@@ -16,18 +17,32 @@ public class DestoryEnemySystem : SystemBase
     {
         EntityCommandBuffer.Concurrent ECS = endSimulationEntityCommandBuffer.CreateCommandBuffer().ToConcurrent();
 
-        Entity target = GetEntityQuery(typeof(BaseTag)).GetSingletonEntity();
-        float3 targetPosition = EntityManager.GetComponentData<Translation>(target).Value;
+        ComponentDataFromEntity<HealthData> healthDatas = GetComponentDataFromEntity<HealthData>();
 
-        Entities.WithAll<EnemyTag>().ForEach((int entityInQueryIndex, ref Entity entity, in Translation translation, in HealthData healthData) =>
+        Entities.ForEach((Entity entity, int entityInQueryIndex, ref AttackTargetData attackTarget) =>
         {
-            if (math.distancesq(targetPosition, translation.Value) < 0.1f
-            || healthData.health < 0)
+            if (attackTarget.target != Entity.Null)
             {
-                ECS.DestroyEntity(entityInQueryIndex, entity);
+                if (healthDatas[attackTarget.target].health < 0)
+                {
+                    //ECS.RemoveComponent<AttackTargetData>(entityInQueryIndex, entity);
+                    attackTarget.target = Entity.Null;
+                }
             }
         }
         ).Schedule();
+
+        Entities.WithAll<EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, Transform transform, in HealthData healthData) =>
+        {
+            if (healthData.health < 0)
+            {
+                //ECS.DestroyEntity(entityInQueryIndex, entity);
+                EntityManager.DestroyEntity(entity);                
+                Object.Destroy(transform.gameObject, 0.1f);
+            }
+        }
+        ).WithoutBurst().WithStructuralChanges().Run();
+
         endSimulationEntityCommandBuffer.AddJobHandleForProducer(Dependency);
     }
 }

@@ -28,6 +28,7 @@ public class MoveToTargetSystem : SystemBase
         }
         ).Schedule();
     }
+
     private static bool EqualFloat3(float3 a, float3 b, float tolerance)
     {
         return math.abs(a.x - b.x) < tolerance

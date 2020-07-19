@@ -467,6 +467,8 @@ GameObject:
   - component: {fileID: 8382588547081445595}
   - component: {fileID: -4995111378401063467}
   - component: {fileID: -6898497134700296623}
+  - component: {fileID: 8874167000255452058}
+  - component: {fileID: -7207710853639696542}
   m_Layer: 0
   m_Name: PF_CHAR_EnemyRIG
   m_TagString: Untagged
@@ -532,7 +534,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -597,6 +599,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49613ab2ee8b4ed44aed3c3bd88861f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8874167000255452058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715166516967931223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa41cccb68802654aa03a9630324c371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 20
+  damage: 1
+  cadence: 50
+  timeUntilShoot: 0
+--- !u!114 &-7207710853639696542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715166516967931223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fb1797f5c65394ab5819a39f4f8850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &3792130175637210530
 GameObject:
   m_ObjectHideFlags: 0
