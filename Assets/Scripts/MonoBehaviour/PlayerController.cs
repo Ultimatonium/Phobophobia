@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float moveSpeed;
     [SerializeField]
-    private float rotationSpeed;
+    private float characterRotationSpeed;
+    [SerializeField]
+    private float cameraRotationSpeed;
     [SerializeField]
     private float towerDistance = 10;
     [SerializeField]
@@ -16,9 +18,19 @@ public class PlayerController : MonoBehaviour
     private GameObject towerPlaceholderPrefab;
 
     private GameObject selectedTower;
+    private GameObject characterCam;
 
     private void Start()
     {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).GetComponent<Camera>() != null)
+            {
+                characterCam = transform.GetChild(i).gameObject;
+                break;
+            }
+        }
+        Debug.Log(characterCam);
         //Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;
     }
@@ -27,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         transform.position += GetMoveDir();
         transform.rotation *= GetRotation();
+        RotateCam();
         SelectTower();
         SetTowerPosition();
         ActiveTower();
@@ -59,9 +72,13 @@ public class PlayerController : MonoBehaviour
 
     private Quaternion GetRotation()
     {
-        return Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime, 0);
+        return Quaternion.Euler(0, Input.GetAxis("Mouse X") * characterRotationSpeed * Time.deltaTime, 0);
     }
 
+    private void RotateCam()
+    {
+        characterCam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * cameraRotationSpeed * Time.deltaTime,0,0), Space.Self);
+    }
     private void SelectTower()
     {
         if (Input.GetKey(KeyCode.Escape))
