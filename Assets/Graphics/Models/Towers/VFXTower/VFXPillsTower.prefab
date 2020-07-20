@@ -661,7 +661,7 @@ ParticleSystem:
     enabled: 1
     type: 4
     angle: 0
-    length: 5
+    length: 10
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 10.77
+      value: 10
       mode: 0
       spread: 0
       speed:
@@ -804,7 +804,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 3
+      mode: 0
       spread: 0
       speed:
         serializedVersion: 2
@@ -975,7 +975,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 20
+        scalar: 7
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1025,8 +1025,8 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 10
-      repeatInterval: 0.1
+      cycleCount: 20
+      repeatInterval: 0.05
       probability: 1
   SizeModule:
     enabled: 0

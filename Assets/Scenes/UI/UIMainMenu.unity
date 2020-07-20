@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 1835083337}
   - component: {fileID: 1835083336}
   m_Layer: 5
-  m_Name: Background Animated
+  m_Name: BackgroundAnimated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1344,7 +1344,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 71.682, y: 142.68}
-  m_SizeDelta: {x: 573.3638, y: 322.6562}
+  m_SizeDelta: {x: 642.11, y: 357.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1835083336
 Animator:
@@ -1356,7 +1356,7 @@ Animator:
   m_GameObject: {fileID: 1835083334}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 456ecc99a3631694c8505b27afad951d, type: 2}
+  m_Controller: {fileID: 9100000, guid: fd6fe93500d2f3b43a6d5e1eba3b57dd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

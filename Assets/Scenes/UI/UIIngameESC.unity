@@ -516,7 +516,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 256281209}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6491858463149627780, guid: c4cbb29e9f64cbc43b1e3f1e418f48f2,
+          type: 3}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &256281209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,7 +796,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 779678167}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6491858463149627781, guid: c4cbb29e9f64cbc43b1e3f1e418f48f2,
+          type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &779678167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,7 +1158,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1219569233}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6491858463149627780, guid: c4cbb29e9f64cbc43b1e3f1e418f48f2,
+          type: 3}
+        m_MethodName: LoadScene
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 102900000, guid: cea73d6f9368fff41a47968951f3f026,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1219569233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1889,7 +1926,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2074735908}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6491858463149627780, guid: c4cbb29e9f64cbc43b1e3f1e418f48f2,
+          type: 3}
+        m_MethodName: LoadScene
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 102900000, guid: 6d6966dd6740ddc44974da9830e6a223,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2074735908
 MonoBehaviour:
   m_ObjectHideFlags: 0
