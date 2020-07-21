@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI/UIIngameFirstScreen.unity
     guid: 41e23cb075b045f47a4b544e495510be
+  - enabled: 1
+    path: Assets/Scenes/UI/UiLoadingGame.unity
+    guid: 5d4ece7702f4507419ff352e830491db
   m_configObjects: {}
