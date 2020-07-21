@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.Entities;
+using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,8 +20,13 @@ public class PlayerController : MonoBehaviour
     private GameObject selectedTower;
     private GameObject characterCam;
 
+    private EntityManager entityManager;
+    private Entity gameStateEntity;
+
     private void Start()
     {
+        entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).GetComponent<Camera>() != null)
@@ -34,14 +41,51 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        transform.position += GetMoveDir();
-        transform.rotation *= GetRotation();
-        RotateCam();
-        SelectTower();
-        SetTowerPosition();
-        ActiveTower();
+        if (gameStateEntity == Entity.Null) GetGameState();
+        if (gameStateEntity == Entity.Null) return;
+
+        FlipPause();
+        if (entityManager.GetComponentData<GameStateData>(gameStateEntity).gameState == GameState.Running)
+        {
+            transform.position += GetMoveDir();
+            transform.rotation *= GetRotation();
+            RotateCam();
+            SelectTower();
+            SetTowerPosition();
+            ActiveTower();
+        }
     }
 
+    private void GetGameState()
+    {
+        Unity.Collections.NativeArray<Entity> entities = entityManager.GetAllEntities();
+
+        for (int i = 0; i < entities.Length; i++)
+        {
+            if (entityManager.HasComponent<GameStateData>(entities[i]))
+            {
+                gameStateEntity = entities[i];
+            }
+        }
+
+        entities.Dispose();
+    }
+
+    private void FlipPause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (entityManager.GetComponentData<GameStateData>(gameStateEntity).gameState == GameState.Running)
+            {
+                entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Pause });
+                Time.timeScale = 0;
+            } else
+            {
+                entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Running });
+                Time.timeScale = 1;
+            }
+        }
+    }
 
     private Vector3 GetMoveDir()
     {
