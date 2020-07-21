@@ -10,7 +10,10 @@ public class EnemyPositionSyncSystem : SystemBase
     {
         Entities.ForEach((Transform transform, ref Translation translation) =>
         {
-            translation.Value = transform.position;
+            if (transform != null)
+            {
+                translation.Value = transform.position;
+            }
         }
         ).WithoutBurst().Run();
     }

@@ -22,10 +22,8 @@ ModelImporter:
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Dying' has import animation warnings that might
-      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
-      retargeting quality.\n\t'PhoboRIG:Head_M' has translation animation that will
-      be discarded.\n\t'PhoboRIG:ShoulderPart1_R' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart2_R'
+      lower retargeting quality:\n\t'PhoboRIG:ShoulderPart1_R' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart2_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart1_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
@@ -33,7 +31,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -534,7 +532,7 @@ ModelImporter:
     feetSpacing: 0
     globalScale: 1
     rootMotionBoneName: 
-    hasTranslationDoF: 0
+    hasTranslationDoF: 1
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 954bd9ce31db83a498850c1838542050,

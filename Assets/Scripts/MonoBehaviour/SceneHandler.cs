@@ -18,14 +18,40 @@ public class SceneHandler : MonoBehaviour
             DelayedLoadScene(scene, time, additive);
     }
 
+    public void TryUnloadScene(Object scene)
+    {
+        TryUnloadScene(scene.name);
+    }
+
+    public void TryUnloadScene(string scene)
+    {
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            if (SceneManager.GetSceneAt(i).name == scene)
+            {
+                SceneManager.UnloadSceneAsync(scene);
+            }
+        }
+    }
+
     public void LoadScene(Object scene)
     {
-        SceneManager.LoadSceneAsync(scene.name, LoadSceneMode.Single);
+        LoadScene(scene.name);
+    }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
     }
 
     public void LoadSceneAdditive(Object scene)
     {
-        SceneManager.LoadSceneAsync(scene.name, LoadSceneMode.Additive);
+        LoadSceneAdditive(scene.name);
+    }
+
+    public void LoadSceneAdditive(string scene)
+    {
+        SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
     }
 
     public void DelayedLoadScene(Object scene, float time, bool additive)
