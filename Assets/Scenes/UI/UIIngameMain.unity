@@ -151,12 +151,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 941739553}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -80.599976, y: 70.29999}
-  m_SizeDelta: {x: 102.355225, y: 94.99515}
+  m_AnchoredPosition: {x: -76.6, y: 88.449}
+  m_SizeDelta: {x: 190.60376, y: 176.89798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &106746553
 MonoBehaviour:
@@ -171,13 +171,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a84ef3f16f32bcd4dbc6b6516e376ac7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -309,8 +309,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -80.619995, y: 43}
-  m_SizeDelta: {x: 74.66431, y: 74.22136}
+  m_AnchoredPosition: {x: -137.53, y: 46.2}
+  m_SizeDelta: {x: 80.58685, y: 74.22136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320881276
 MonoBehaviour:
@@ -634,7 +634,7 @@ PrefabInstance:
     - target: {fileID: 1664600774534186634, guid: d3275cd904caa874db060d1b01e725ad,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1664600774534186634, guid: d3275cd904caa874db060d1b01e725ad,
         type: 3}
@@ -849,7 +849,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 941739553}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -13.769001}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1108,9 +1108,9 @@ RectTransform:
   - {fileID: 1734878550}
   - {fileID: 2012367684}
   - {fileID: 260737685}
-  - {fileID: 106746552}
   - {fileID: 166378817}
   - {fileID: 879120337}
+  - {fileID: 106746552}
   - {fileID: 320881275}
   m_Father: {fileID: 883830977}
   m_RootOrder: 0
