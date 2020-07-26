@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Reflection;
 using UnityEngine;
 
 /* Example usage: 
@@ -44,7 +44,7 @@ public class FMODEvents : MonoBehaviour
     StartCoroutine(GetChannelGroup());
   }
 
-  private IEnumerator GetChannelGroup()
+  private System.Collections.IEnumerator GetChannelGroup()
   {
     if(instance.isValid())
     {
@@ -72,7 +72,7 @@ public class FMODEvents : MonoBehaviour
     string startWith = "event:/";
     if(!eventPath.StartsWith(startWith))
     {
-      Debug.LogWarning($"\"{System.Reflection.MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
+      Debug.LogWarning($"\"{MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
       return;
     }
 
@@ -87,7 +87,7 @@ public class FMODEvents : MonoBehaviour
     string startWith = "event:/";
     if(!eventPath.StartsWith(startWith))
     {
-      Debug.LogWarning($"\"{System.Reflection.MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
+      Debug.LogWarning($"\"{MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
       return;
     }
 
@@ -99,7 +99,7 @@ public class FMODEvents : MonoBehaviour
     string startWith = "event:/";
     if(!eventPath.StartsWith(startWith))
     {
-      Debug.LogWarning($"\"{System.Reflection.MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
+      Debug.LogWarning($"\"{MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
       return;
     }
 
@@ -113,7 +113,7 @@ public class FMODEvents : MonoBehaviour
     string startWith = "event:/";
     if(!eventPath.StartsWith(startWith))
     {
-      Debug.LogWarning($"\"{System.Reflection.MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
+      Debug.LogWarning($"\"{MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
       return;
     }
 
@@ -132,7 +132,7 @@ public class FMODEvents : MonoBehaviour
     string startWith = "event:/";
     if(!eventPath.StartsWith(startWith))
     {
-      Debug.LogWarning($"\"{System.Reflection.MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
+      Debug.LogWarning($"\"{MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
       return;
     }
 
@@ -152,7 +152,7 @@ public class FMODEvents : MonoBehaviour
     string startWith = "event:/";
     if(!eventPath.StartsWith(startWith))
     {
-      Debug.LogWarning($"\"{System.Reflection.MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
+      Debug.LogWarning($"\"{MethodBase.GetCurrentMethod().Name}\" has to start with \"{startWith}\"!");
       return;
     }
 
@@ -168,8 +168,7 @@ public class FMODEvents : MonoBehaviour
 
   private FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
   {
-    FMOD.Studio.PLAYBACK_STATE pS;
-    instance.getPlaybackState(out pS);
+    instance.getPlaybackState(out FMOD.Studio.PLAYBACK_STATE pS);
 
     return pS;
   }
@@ -182,10 +181,8 @@ public class FMODEvents : MonoBehaviour
     else if(PlaybackState(instance) == FMOD.Studio.PLAYBACK_STATE.SUSTAINING)
     {
       instance.triggerCue(); //Move past one sustain point.
-      if(okay) //Was that already enough?
-        return true;
-      else
-        return false;
+
+      return okay;
     }
     else
     {
@@ -210,7 +207,7 @@ public class FMODEvents : MonoBehaviour
     for(int i = 0; i < meterInfo.numchannels; i++)
       rms += meterInfo.rmslevel[i] * meterInfo.rmslevel[i];
 
-    rms = Mathf.Sqrt(rms / (float)meterInfo.numchannels);
+    rms = Mathf.Sqrt(rms / meterInfo.numchannels);
 
     float dB = rms > 0f ? 20f * Mathf.Log10(rms * Mathf.Sqrt(2f)) : -80f;
     if(dB > 10f)

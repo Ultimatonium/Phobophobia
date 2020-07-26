@@ -1,9 +1,7 @@
-﻿using System;
-using System.Runtime.InteropServices;
-using UnityEngine;
+﻿using System.Runtime.InteropServices;
 
 //This is useful for syncing game with sound events.
-public class BeatSystem : MonoBehaviour
+public class BeatSystem : UnityEngine.MonoBehaviour
 {
   public static int Beat {get; private set;}
   public static string Marker {get; private set;}
@@ -31,20 +29,20 @@ public class BeatSystem : MonoBehaviour
 
   public void StopAndClear(FMOD.Studio.EventInstance instance)
   {
-    instance.setUserData(IntPtr.Zero);
+    instance.setUserData(System.IntPtr.Zero);
     instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     instance.release();
     timelineHandle.Free();
   }
 
   [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
-  private static FMOD.RESULT BeatEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, FMOD.Studio.EventInstance instance, IntPtr parameterPtr)
+  private static FMOD.RESULT BeatEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, FMOD.Studio.EventInstance instance, System.IntPtr parameterPtr)
   {
-    IntPtr timelineInfoPtr;
+    System.IntPtr timelineInfoPtr;
     FMOD.RESULT result = instance.getUserData(out timelineInfoPtr);
     if(result != FMOD.RESULT.OK)
-      Debug.LogError("Timeline Callback Error: " + result);
-    else if(timelineInfoPtr != IntPtr.Zero)
+      UnityEngine.Debug.LogError("Timeline Callback Error: " + result);
+    else if(timelineInfoPtr != System.IntPtr.Zero)
     {
       GCHandle timelineHandle = GCHandle.FromIntPtr(timelineInfoPtr);
       TimelineInfo timelineInfo = (TimelineInfo)timelineHandle.Target;

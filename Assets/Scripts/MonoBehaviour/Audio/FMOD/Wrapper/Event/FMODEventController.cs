@@ -1,14 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using UnityEngine;
-using FMOD;
-using FMOD.Studio;
-using FMODUnity;
+﻿using UnityEngine;
 
 namespace SwinguinGames.FMOD
 {
@@ -101,7 +91,7 @@ namespace SwinguinGames.FMOD
 			}
 
 			if(appliedTo < 1)
-				UnityEngine.Debug.LogError("Marker was not applied to any events!");
+        Debug.LogError("Marker was not applied to any events!");
 		}
 	}
 }

@@ -1,14 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
-using UnityEngine;
-using FMOD;
-using FMOD.Studio;
-using FMODUnity;
+﻿using FMOD;
 
 namespace SwinguinGames.FMOD
 {
@@ -44,16 +34,16 @@ namespace SwinguinGames.FMOD
       }
     }
 
-		public static global::FMOD.Sound CreateSound(int sampleSize, int channels = 1, int sampleRate = 44100)
+		public static Sound CreateSound(int sampleSize, int channels = 1, int sampleRate = 44100)
 		{
-			/* Explicitly create the delegate object and assign it to a member, so it doesn't get freed by the garbage collected while it's being used.
+      /* Explicitly create the delegate object and assign it to a member, so it doesn't get freed by the garbage collected while it's being used.
 			   pcmReadCallback = new global::FMOD.SOUND_PCMREADCALLBACK(PcmReadCallback);
 			   pcmSetPosCallback = new global::FMOD.SOUND_PCMSETPOSCALLBACK(PcmSetPosCallback); */
 
-			global::FMOD.CREATESOUNDEXINFO soundInfo = new global::FMOD.CREATESOUNDEXINFO()
+      CREATESOUNDEXINFO soundInfo = new CREATESOUNDEXINFO()
 			{
-				cbsize = Marshal.SizeOf(typeof(global::FMOD.CREATESOUNDEXINFO)),
-				format = global::FMOD.SOUND_FORMAT.PCMFLOAT,
+				cbsize = System.Runtime.InteropServices.Marshal.SizeOf(typeof(CREATESOUNDEXINFO)),
+				format = SOUND_FORMAT.PCMFLOAT,
 				defaultfrequency = sampleRate,
 				length = (uint)(sampleSize * channels * sizeof(float)),
 				numchannels = channels,
@@ -61,10 +51,9 @@ namespace SwinguinGames.FMOD
 				//pcmsetposcallback = pcmSetPosCallback
 			};
 
-			global::FMOD.Sound sound;
-			FMODUtils.Check(FMODUnity.RuntimeManager.CoreSystem.createSound(string.Empty, global::FMOD.MODE.OPENUSER | global::FMOD.MODE.LOOP_NORMAL, ref soundInfo, out sound));
+      Check(FMODUnity.RuntimeManager.CoreSystem.createSound(string.Empty, MODE.OPENUSER | MODE.LOOP_NORMAL, ref soundInfo, out Sound sound));
 
-			return sound;
+      return sound;
 		}
 	}
 }

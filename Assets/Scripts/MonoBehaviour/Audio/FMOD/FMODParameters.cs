@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-
-public class FMODParameters : MonoBehaviour
+﻿public class FMODParameters : UnityEngine.MonoBehaviour
 {
-  [FMODUnity.EventRef][SerializeField] private string eventPath = null;
+  [FMODUnity.EventRef][UnityEngine.SerializeField] private string eventPath = null;
 
   private FMOD.Studio.EventInstance paraInstance;
 
@@ -13,9 +10,9 @@ public class FMODParameters : MonoBehaviour
     paraInstance.start();
   }
 
-  public void SetParametersByName(Dictionary<string, float> parameters, bool global = false)
+  public void SetParametersByName(System.Collections.Generic.Dictionary<string, float> parameters, bool global = false)
   {
-    foreach(KeyValuePair<string, float> parameter in parameters)
+    foreach(System.Collections.Generic.KeyValuePair<string, float> parameter in parameters)
     {
       if(!global)
         paraInstance.setParameterByName(parameter.Key, parameter.Value);

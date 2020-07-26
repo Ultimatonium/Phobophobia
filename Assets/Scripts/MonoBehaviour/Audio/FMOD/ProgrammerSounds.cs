@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using UnityEngine;
+﻿using System.Runtime.InteropServices;
 
 /* Programmer sounds are ideal for an efficient implementation of dialogue systems.
  * They need an audio table - a group of audio files that are compressed in a bank and not associated with any event; they can be accessed solely by a string key.
  * 
  * Example usage: PlayDialogue(nameOfDialogue); */
-class ProgrammerSounds : MonoBehaviour
+class ProgrammerSounds : UnityEngine.MonoBehaviour
 {
-  [FMODUnity.EventRef][SerializeField] private  string eventPath = null;
+  [FMODUnity.EventRef][UnityEngine.SerializeField] private  string eventPath = null;
 
   private FMOD.Studio.EVENT_CALLBACK dialogueCallback;
 
@@ -30,13 +27,12 @@ class ProgrammerSounds : MonoBehaviour
     dialogueInstance.release();
   }
 
-  private static FMOD.RESULT DialogueEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, FMOD.Studio.EventInstance instance, IntPtr parameterPtr)
+  private static FMOD.RESULT DialogueEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, FMOD.Studio.EventInstance instance, System.IntPtr parameterPtr)
   {
-    IntPtr stringPtr;
-    instance.getUserData(out stringPtr);
+    instance.getUserData(out System.IntPtr stringPtr);
 
     GCHandle stringHandle = GCHandle.FromIntPtr(stringPtr);
-    String key = stringHandle.Target as String;
+    string key = stringHandle.Target as string;
 
     switch(type)
     {
@@ -48,7 +44,7 @@ class ProgrammerSounds : MonoBehaviour
           if(key.Contains("."))
           {
             FMOD.Sound dialogueSound;
-            var soundResult = FMODUnity.RuntimeManager.CoreSystem.createSound(Application.streamingAssetsPath + "/" + key, soundMode, out dialogueSound);
+            var soundResult = FMODUnity.RuntimeManager.CoreSystem.createSound(UnityEngine.Application.streamingAssetsPath + "/" + key, soundMode, out dialogueSound);
             if(soundResult == FMOD.RESULT.OK)
             {
               parameter.sound = dialogueSound.handle;
@@ -77,9 +73,11 @@ class ProgrammerSounds : MonoBehaviour
       case FMOD.Studio.EVENT_CALLBACK_TYPE.DESTROY_PROGRAMMER_SOUND:
         {
           var parameter = (FMOD.Studio.PROGRAMMER_SOUND_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.PROGRAMMER_SOUND_PROPERTIES));
-          var sound = new FMOD.Sound();
-          sound.handle = parameter.sound;
-          sound.release();
+        var sound = new FMOD.Sound
+        {
+          handle = parameter.sound
+        };
+        sound.release();
         }
         break;
       case FMOD.Studio.EVENT_CALLBACK_TYPE.DESTROYED:

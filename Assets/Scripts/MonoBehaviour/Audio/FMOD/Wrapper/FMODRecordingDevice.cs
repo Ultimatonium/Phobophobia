@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Runtime.InteropServices;
-using UnityEngine;
-using FMOD;
-using FMOD.Studio;
-using FMODUnity;
+﻿using FMOD;
 
 namespace SwinguinGames.FMOD
 {
@@ -24,63 +16,54 @@ namespace SwinguinGames.FMOD
 		public int DesiredLatency
 		{
 			//User specified latency:
-			get {return (SampleRate * LATENCY_MS) / 1000;}
+			get {return SampleRate * LATENCY_MS / 1000;}
 		}
 
 		public int DriftThreshold
 		{
 			//The point to start compensating for drift.
-			get {return (SampleRate * DRIFT_MS) / 1000;}
+			get {return SampleRate * DRIFT_MS / 1000;}
 		}
 
-		public global::FMOD.Sound StartRecording()
+		public Sound StartRecording()
 		{
       //Create user sound to record into, then start recording.
-			global::FMOD.CREATESOUNDEXINFO soundInfo = new global::FMOD.CREATESOUNDEXINFO()
+      CREATESOUNDEXINFO soundInfo = new CREATESOUNDEXINFO()
 			{
-				cbsize = Marshal.SizeOf(typeof(global::FMOD.CREATESOUNDEXINFO)),
-				format = global::FMOD.SOUND_FORMAT.PCM16,
+				cbsize = System.Runtime.InteropServices.Marshal.SizeOf(typeof(CREATESOUNDEXINFO)),
+				format = SOUND_FORMAT.PCM16,
 				defaultfrequency = SampleRate,
 				length = (uint)(SampleRate * Channels * sizeof(short)),  //One second buffer, which doesn't change latency.
 				numchannels = Channels
 			};
 
-			global::FMOD.Sound sound;
-			FMODUtils.Check(RuntimeManager.CoreSystem.createSound(string.Empty, global::FMOD.MODE.OPENUSER | global::FMOD.MODE.LOOP_NORMAL, ref soundInfo, out sound));
-			FMODUtils.Check(RuntimeManager.CoreSystem.recordStart(DeviceIndex, sound, true));
+      FMODUtils.Check(FMODUnity.RuntimeManager.CoreSystem.createSound(string.Empty, MODE.OPENUSER | MODE.LOOP_NORMAL, ref soundInfo, out Sound sound));
+      FMODUtils.Check(FMODUnity.RuntimeManager.CoreSystem.recordStart(DeviceIndex, sound, true));
 
 			return sound;
 		}
 
-		public static IEnumerable<FMODRecordingDevice> GetAllDevices()
+		public static System.Collections.Generic.IEnumerable<FMODRecordingDevice> GetAllDevices()
 		{
-			int totalMicCount, connectedMicCount;
-			FMODUtils.Check(RuntimeManager.CoreSystem.getRecordNumDrivers(out totalMicCount, out connectedMicCount), "Could not list recording devices!");
+      FMODUtils.Check(FMODUnity.RuntimeManager.CoreSystem.getRecordNumDrivers(out int totalMicCount, out int connectedMicCount), "Could not list recording devices!");
 
-			for(int i = 0; i < connectedMicCount; i++)
+      for(int i = 0; i < connectedMicCount; i++)
 				yield return GetDevice(i);
 		}
 
 		public static FMODRecordingDevice GetDevice(int deviceIndex)
 		{
-			string name;
-			System.Guid guid;
-			int systemRate;
-			SPEAKERMODE speakerMode;
-			int speakerModeChannels;
-			DRIVER_STATE state;
+      FMODUtils.Check(FMODUnity.RuntimeManager.CoreSystem.getRecordDriverInfo(deviceIndex,
+                                                                              out string name,
+                                                                              100,
+																																	          	out System.Guid guid,
+																																	            out int systemRate,
+                                                                              out SPEAKERMODE speakerMode,
+                                                                              out int speakerModeChannels,
+                                                                              out DRIVER_STATE state),
+                      "Could not retrievw recording device!");
 
-			FMODUtils.Check(RuntimeManager.CoreSystem.getRecordDriverInfo(deviceIndex,
-																																		out name,
-																																		100,
-																																		out guid,
-																																		out systemRate,
-																																		out speakerMode,
-																																		out speakerModeChannels,
-																																		out state),
-											"Could not retrievw recording device!");
-
-			return new FMODRecordingDevice()
+      return new FMODRecordingDevice()
 			{
 				DeviceIndex = deviceIndex,
 				Name = name,

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using FMOD;
 using FMOD.Studio;
-using FMODUnity;
 
 namespace SwinguinGames.FMOD
 {
@@ -42,7 +38,7 @@ namespace SwinguinGames.FMOD
 
 		public static Dictionary<string, int> Load(string eventPath)
 		{
-			string resourcePath = string.Format("{0}/{1}", MarkerJSONFolder, Path.GetFileNameWithoutExtension(eventPath));
+			string resourcePath = string.Format("{0}/{1}", MarkerJSONFolder, System.IO.Path.GetFileNameWithoutExtension(eventPath));
 			var jsonAsset = Resources.Load(resourcePath);
 			if(jsonAsset == null)
 			{
@@ -84,7 +80,7 @@ namespace SwinguinGames.FMOD
 		public Vector3 Position
 		{
 			//get {throw new NotImplementedException();}
-			set {Instance.set3DAttributes(RuntimeUtils.To3DAttributes(value));}
+			set {Instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(value));}
 		}
 
 		public FMODEvent SetPosition(Vector3 position)
@@ -103,10 +99,9 @@ namespace SwinguinGames.FMOD
 		{
 			get
 			{
-				int length = 0;
-				Do(description.getLength(out length), "Could not retrieve event timeline length!");
+        Do(description.getLength(out int length), "Could not retrieve event timeline length!");
 
-				return length / 1000f;
+        return length / 1000f;
 			}
 		}
 
@@ -114,7 +109,7 @@ namespace SwinguinGames.FMOD
 		private event Action<FMODEvent, string> onMarker;
 		private event Func<FMODEvent, string, Sound> onProgrammerSoundCreated;
 
-		private global::FMOD.Studio.EVENT_CALLBACK callbackSink = null;
+		private EVENT_CALLBACK callbackSink = null;
 		private Dictionary<string, int> markers = null;
 		private bool markersLoaded = false;
 
@@ -159,7 +154,7 @@ namespace SwinguinGames.FMOD
 																EVENT_CALLBACK_TYPE.START_FAILED |
 																EVENT_CALLBACK_TYPE.TIMELINE_MARKER |
 																EVENT_CALLBACK_TYPE.CREATE_PROGRAMMER_SOUND),
-					  "Callback could not be set!");
+					                      "Callback could not be set!");
 			}
 		}
 
@@ -176,15 +171,15 @@ namespace SwinguinGames.FMOD
 			}
 		}
 
-		[AOT.MonoPInvokeCallbackAttribute(typeof(global::FMOD.Studio.EVENT_CALLBACK))]
-		private global::FMOD.RESULT FMODEventCallback(global::FMOD.Studio.EVENT_CALLBACK_TYPE type, global::FMOD.Studio.EventInstance instance, IntPtr parameterPtr)
+		[AOT.MonoPInvokeCallback(typeof(EVENT_CALLBACK))]
+		private RESULT FMODEventCallback(EVENT_CALLBACK_TYPE type, EventInstance instance, IntPtr parameterPtr)
 		{
 			switch(type)
 			{
 				case EVENT_CALLBACK_TYPE.TIMELINE_MARKER:
 					if(onMarker != null)
 					{
-						var parameter = (TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(TIMELINE_MARKER_PROPERTIES));
+						var parameter = (TIMELINE_MARKER_PROPERTIES)System.Runtime.InteropServices.Marshal.PtrToStructure(parameterPtr, typeof(TIMELINE_MARKER_PROPERTIES));
 						onMarker.Invoke(this, parameter.name);
 					}
 					break;
@@ -192,14 +187,14 @@ namespace SwinguinGames.FMOD
 					if(onProgrammerSoundCreated != null)
 					{
 						UnityEngine.Debug.Log("CREATE_PROGRAMMER_SOUND");
-						var parameter = (PROGRAMMER_SOUND_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(PROGRAMMER_SOUND_PROPERTIES));
+						var parameter = (PROGRAMMER_SOUND_PROPERTIES)System.Runtime.InteropServices.Marshal.PtrToStructure(parameterPtr, typeof(PROGRAMMER_SOUND_PROPERTIES));
 
 						Sound sound = onProgrammerSoundCreated.Invoke(this, parameter.name);
 						if(sound.hasHandle())
 						{
 							parameter.sound = sound.handle;
 							parameter.subsoundIndex = -1;
-							Marshal.StructureToPtr(parameter, parameterPtr, false);
+						System.Runtime.InteropServices.Marshal.StructureToPtr(parameter, parameterPtr, false);
 						}
 					}
 					break;
@@ -301,13 +296,12 @@ namespace SwinguinGames.FMOD
 				return this;
 			}
 
-			int ms;
-			if(markers.TryGetValue(marker, out ms))
-			  TimeMilliseconds = ms;
-			else
-				UnityEngine.Debug.LogError($"Can't find marker named \"{marker}\"!");
+      if(markers.TryGetValue(marker, out int ms))
+        TimeMilliseconds = ms;
+      else
+        UnityEngine.Debug.LogError($"Can't find marker named \"{marker}\"!");
 
-			return this;
+      return this;
 		}
 
 		public static void PlayOneShot(string eventPath) => FMODUnity.RuntimeManager.PlayOneShot(eventPath);
