@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float damage;
-    [SerializeField]
     private float moveSpeed;
     [SerializeField]
     private float characterRotationSpeed;
     [SerializeField]
     private float cameraRotationSpeed;
+    private float cameraRadius;
+
+    [SerializeField]
+    private float damage;
     [SerializeField]
     private float towerDistance = 10;
     [SerializeField]
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
                 break;
             }
         }
+        cameraRadius = Math.Abs(characterCam.transform.localPosition.z);
         //Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;
     }
@@ -158,7 +161,9 @@ public class PlayerController : MonoBehaviour
 
     private void RotateCam()
     {
+        characterCam.transform.Translate(new Vector3(0, 0, cameraRadius));
         characterCam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * cameraRotationSpeed * Time.deltaTime,0,0), Space.Self);
+        characterCam.transform.Translate(new Vector3(0, 0, -cameraRadius));
     }
     private void SelectTower()
     {

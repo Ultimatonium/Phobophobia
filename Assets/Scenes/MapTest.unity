@@ -5507,10 +5507,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100a14335e2dd2d4fa7e86412966cec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
   moveSpeed: 10
   characterRotationSpeed: 20
   cameraRotationSpeed: 5
+  damage: 5
   towerDistance: 5
   towerPrefab: {fileID: 7818326793803307219, guid: 44c0054ef29751048b3e69086c65fb57,
     type: 3}
