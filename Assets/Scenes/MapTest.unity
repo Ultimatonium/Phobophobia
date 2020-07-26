@@ -5507,7 +5507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100a14335e2dd2d4fa7e86412966cec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  invertYAxis: 0
+  moveSpeed: 5
   characterRotationSpeed: 20
   cameraRotationSpeed: 5
   damage: 5
@@ -17882,7 +17883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3715166516967931223, guid: 9beb7b4259328264a813613753db2642,
     type: 3}
-  spawnIntervall: 1
+  spawnIntervall: 999
   target: {fileID: 757191340}
   spawns:
   - {fileID: 1948923766}

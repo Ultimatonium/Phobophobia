@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private bool invertYAxis;
+    [SerializeField]
     private float moveSpeed;
     [SerializeField]
     private float characterRotationSpeed;
@@ -161,8 +163,10 @@ public class PlayerController : MonoBehaviour
 
     private void RotateCam()
     {
+        float invertion = 1;
+        if (invertYAxis) invertion = -1;
         characterCam.transform.Translate(new Vector3(0, 0, cameraRadius));
-        characterCam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * cameraRotationSpeed * Time.deltaTime,0,0), Space.Self);
+        characterCam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * cameraRotationSpeed * Time.deltaTime * invertion,0,0), Space.Self);
         characterCam.transform.Translate(new Vector3(0, 0, -cameraRadius));
     }
     private void SelectTower()
