@@ -1,7 +1,10 @@
-﻿using Unity.Entities;
+﻿using Unity.Collections;
+using Unity.Entities;
+using UnityEngine;
 
 public class HealthModifySystem : SystemBase
 {
+    /*
     EndSimulationEntityCommandBufferSystem endSimulationEntityCommandBuffer;
 
     protected override void OnCreate()
@@ -9,18 +12,57 @@ public class HealthModifySystem : SystemBase
         base.OnCreate();
         endSimulationEntityCommandBuffer = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
     }
+    */
+
     protected override void OnUpdate()
     {
-        EntityCommandBuffer.Concurrent ECS = endSimulationEntityCommandBuffer.CreateCommandBuffer().ToConcurrent();
+        //EntityCommandBuffer.Concurrent ECS = endSimulationEntityCommandBuffer.CreateCommandBuffer().ToConcurrent();
 
-        Entities.ForEach((Entity entity, int entityInQueryIndex, ref HealthData healthData, ref DynamicBuffer<HealthModifierBufferElement> healthModifiers) => {
+        ComponentDataFromEntity<EnemyTag> enemyTags = GetComponentDataFromEntity<EnemyTag>();
+        ComponentDataFromEntity<BaseTag> baseTags = GetComponentDataFromEntity<BaseTag>();
+        ComponentDataFromEntity<TowerTag> towerTags = GetComponentDataFromEntity<TowerTag>();
+        ComponentDataFromEntity<PlayerTag> playerTag = GetComponentDataFromEntity<PlayerTag>();
+        ComponentDataFromEntity<HealthData> healthData = GetComponentDataFromEntity<HealthData>();
+
+        //NativeList<Entity> entities = new NativeList<Entity>(Allocator.TempJob);
+
+        Entities.ForEach((Entity entity, Animator animator, HealthBar healthBar, int entityInQueryIndex, ref HealthData healthDataChange, ref DynamicBuffer<HealthModifierBufferElement> healthModifiers) =>
+        {
             for (int i = 0; i < healthModifiers.Length; i++)
             {
-                healthData.health += healthModifiers[i].value;
+                healthDataChange.health += healthModifiers[i].value;
+                //entities.Add(entity);
+                healthBar.SetHealth(healthData[entity].health, healthData[entity].maxHealth);
+                /*
+                if (baseTags.Exists(entity))
+                {
+                    HUD.Instance.SetBaseHealth(healthData[entity].health, healthData[entity].maxHealth);
+                }
+                if (playerTag.Exists(entity))
+                {
+                    HUD.Instance.SetPlayerHealth(healthData[entity].health, healthData[entity].maxHealth);
+                }
+                */
+                animator.SetTrigger("getHit");
             }
-            ECS.SetBuffer<HealthModifierBufferElement>(entityInQueryIndex, entity);
+            healthModifiers.Clear();
+            //ECS.SetBuffer<HealthModifierBufferElement>(entityInQueryIndex, entity);
         }
-        ).Schedule();
-        endSimulationEntityCommandBuffer.AddJobHandleForProducer(Dependency);
+        ).WithoutBurst().Run();
+
+        //endSimulationEntityCommandBuffer.AddJobHandleForProducer(Dependency);
+        //Dependency.Complete();
+
+        /*
+        for (int i = 0; i < entities.Length; i++)
+        {
+            if (HUD.Instance != null)
+            {
+                
+            }
+        }
+
+        entities.Dispose();
+        */
     }
 }

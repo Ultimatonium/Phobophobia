@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
+    private float damage;
+    [SerializeField]
     private float moveSpeed;
     [SerializeField]
     private float characterRotationSpeed;
@@ -16,15 +18,24 @@ public class PlayerController : MonoBehaviour
     private GameObject towerPrefab;
     [SerializeField]
     private GameObject towerPlaceholderPrefab;
+    [SerializeField]
+    private GameObject[] targets;
 
     private GameObject selectedTower;
     private GameObject characterCam;
+
+    private Animator animator;
 
     private EntityManager entityManager;
     private Entity gameStateEntity;
 
     private void Start()
     {
+        GetComponent<Rigidbody>().mass = float.MaxValue;
+        GetComponent<Rigidbody>().drag = float.MaxValue;
+
+        animator = GetComponentInChildren<Animator>();
+
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
         for (int i = 0; i < transform.childCount; i++)
@@ -47,12 +58,35 @@ public class PlayerController : MonoBehaviour
         FlipPause();
         if (entityManager.GetComponentData<GameStateData>(gameStateEntity).gameState == GameState.Running)
         {
-            transform.position += GetMoveDir();
-            transform.rotation *= GetRotation();
+            Move();
             RotateCam();
             SelectTower();
             SetTowerPosition();
             ActiveTower();
+            Attack();
+        }
+    }
+
+    private void Move()
+    {
+        Vector3 moveDir = GetMoveDir();
+        transform.rotation *= GetRotation();
+        if (moveDir == Vector3.zero)
+        {
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            animator.SetBool("isRunning", true);
+            transform.position += moveDir;
+        }
+    }
+
+    private void Attack()
+    {
+        if (Input.GetMouseButtonDown(0) && selectedTower == null)
+        {
+            animator.SetTrigger("attack");
         }
     }
 
@@ -134,7 +168,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void SetTowerPosition()
     {
         if (selectedTower == null) return;
@@ -149,5 +182,33 @@ public class PlayerController : MonoBehaviour
             tower.GetComponent<Animator>().SetBool("isAttacking", false);
             Destroy(selectedTower);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag != "Enemy") return;
+        //if (collision.gameObject.transform.root.gameObject == gameObject.transform.root.gameObject) return;
+        Entity enemyEntity = GetEntityOfGameObject(collision.gameObject);
+        entityManager.GetBuffer<HealthModifierBufferElement>(enemyEntity).Add(new HealthModifierBufferElement { value = -damage });
+    }
+
+    private Entity GetEntityOfGameObject(GameObject gameObject)
+    {
+        Unity.Collections.NativeArray<Entity> entities = entityManager.GetAllEntities();
+
+        for (int i = 0; i < entities.Length; i++)
+        {
+            if (entityManager.HasComponent<Transform>(entities[i]))
+            {
+                if (entityManager.GetComponentObject<Transform>(entities[i]).gameObject == gameObject)
+                {
+                    return entities[i];
+                }
+            }
+        }
+
+        entities.Dispose();
+
+        return Entity.Null;
     }
 }

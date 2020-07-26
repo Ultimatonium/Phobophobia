@@ -13,6 +13,7 @@ public class Spawner : MonoBehaviour
     private GameObject[] spawns;
 
     private float timeTillSpawn;
+    private Animator animator;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class Spawner : MonoBehaviour
             timeTillSpawn = spawnIntervall;
             GameObject enemy = Instantiate(enemyPrefab, spawns[UnityEngine.Random.Range(0,spawns.Length)].transform.position, Quaternion.identity);
             enemy.GetComponent<NavMeshAgent>().SetDestination(target.transform.position);
+            enemy.GetComponent<Animator>().SetBool("isWalking", true);
         }
     }
 }

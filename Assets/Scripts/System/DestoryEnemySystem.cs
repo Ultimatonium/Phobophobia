@@ -32,13 +32,14 @@ public class DestoryEnemySystem : SystemBase
         }
         ).Schedule();
 
-        Entities.WithAll<EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, Transform transform, in HealthData healthData) =>
+        Entities.WithAll<EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, Transform transform, Animator animator, in HealthData healthData) =>
         {
             if (healthData.health < 0)
             {
                 //ECS.DestroyEntity(entityInQueryIndex, entity);
+                animator.SetBool("isDying", true);
                 EntityManager.DestroyEntity(entity);                
-                Object.Destroy(transform.gameObject, 0.1f);
+                Object.Destroy(transform.gameObject, 3f);
             }
         }
         ).WithoutBurst().WithStructuralChanges().Run();
