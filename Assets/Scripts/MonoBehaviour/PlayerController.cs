@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject towerPlaceholderPrefab;
     [SerializeField]
+    private int towerCost;
+    [SerializeField]
     private GameObject[] targets;
 
     private GameObject selectedTower;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private EntityManager entityManager;
     private Entity gameStateEntity;
+    private Entity bank;
 
     private void Start()
     {
@@ -52,7 +55,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (gameStateEntity == Entity.Null) GetGameState();
+        if (gameStateEntity == Entity.Null) gameStateEntity = GetEntityOfComponent(typeof(GameStateData));
+        if (bank == Entity.Null) bank = GetEntityOfComponent(typeof(MoneyData));
         if (gameStateEntity == Entity.Null) return;
 
         FlipPause();
@@ -90,24 +94,26 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void GetGameState()
+    private Entity GetEntityOfComponent(ComponentType componentType)
     {
         Unity.Collections.NativeArray<Entity> entities = entityManager.GetAllEntities();
 
         for (int i = 0; i < entities.Length; i++)
         {
-            if (entityManager.HasComponent<GameStateData>(entities[i]))
+            if (entityManager.HasComponent(entities[i], componentType))
             {
-                gameStateEntity = entities[i];
+                return entities[i];
             }
         }
 
         entities.Dispose();
+
+        return Entity.Null;
     }
 
     private void FlipPause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (entityManager.GetComponentData<GameStateData>(gameStateEntity).gameState == GameState.Running)
             {
@@ -177,10 +183,19 @@ public class PlayerController : MonoBehaviour
     private void ActiveTower()
     {
         if (selectedTower == null) return;
-        if (Input.GetMouseButtonDown(0)) {
-            GameObject tower = Instantiate(towerPrefab, selectedTower.transform.position, selectedTower.transform.rotation);
-            tower.GetComponent<Animator>().SetBool("isAttacking", false);
-            Destroy(selectedTower);
+        if (Input.GetMouseButtonDown(0))
+        {
+            int currentMoney = entityManager.GetComponentData<MoneyData>(bank).money;
+            if (currentMoney >= towerCost)
+            {
+                entityManager.SetComponentData<MoneyData>(bank, new MoneyData { money = currentMoney - towerCost });
+                GameObject tower = Instantiate(towerPrefab, selectedTower.transform.position, selectedTower.transform.rotation);
+                tower.GetComponent<Animator>().SetBool("isAttacking", false);
+                Destroy(selectedTower);
+            }else
+            {
+                Debug.Log("no cash");
+            }
         }
     }
 
@@ -189,7 +204,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag != "Enemy") return;
         //if (collision.gameObject.transform.root.gameObject == gameObject.transform.root.gameObject) return;
         Entity enemyEntity = GetEntityOfGameObject(collision.gameObject);
-        entityManager.GetBuffer<HealthModifierBufferElement>(enemyEntity).Add(new HealthModifierBufferElement { value = -damage });
+        if (enemyEntity != Entity.Null)
+        {
+            entityManager.GetBuffer<HealthModifierBufferElement>(enemyEntity).Add(new HealthModifierBufferElement { value = -damage });
+        }
     }
 
     private Entity GetEntityOfGameObject(GameObject gameObject)
@@ -198,12 +216,11 @@ public class PlayerController : MonoBehaviour
 
         for (int i = 0; i < entities.Length; i++)
         {
-            if (entityManager.HasComponent<Transform>(entities[i]))
+            //if (!entityManager.Exists(entities[i])) continue;
+            if (!entityManager.HasComponent<Transform>(entities[i])) continue;
+            if (entityManager.GetComponentObject<Transform>(entities[i]).gameObject == gameObject)
             {
-                if (entityManager.GetComponentObject<Transform>(entities[i]).gameObject == gameObject)
-                {
-                    return entities[i];
-                }
+                return entities[i];
             }
         }
 

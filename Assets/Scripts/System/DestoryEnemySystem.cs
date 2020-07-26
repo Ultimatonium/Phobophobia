@@ -1,6 +1,4 @@
 ﻿using Unity.Entities;
-using Unity.Mathematics;
-using Unity.Transforms;
 using UnityEngine;
 
 public class DestoryEnemySystem : SystemBase
@@ -19,6 +17,8 @@ public class DestoryEnemySystem : SystemBase
 
         ComponentDataFromEntity<HealthData> healthDatas = GetComponentDataFromEntity<HealthData>();
 
+        Entity bank = GetEntityQuery(typeof(MoneyData)).GetSingletonEntity();
+
         Entities.ForEach((Entity entity, int entityInQueryIndex, ref AttackTargetData attackTarget) =>
         {
             if (attackTarget.target != Entity.Null)
@@ -32,7 +32,7 @@ public class DestoryEnemySystem : SystemBase
         }
         ).Schedule();
 
-        Entities.WithAll<EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, Transform transform, Animator animator, in HealthData healthData) =>
+        Entities.WithAll<EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, Transform transform, Animator animator, in HealthData healthData, in ValueData valueData) =>
         {
             if (healthData.health < 0)
             {
@@ -40,6 +40,7 @@ public class DestoryEnemySystem : SystemBase
                 animator.SetBool("isDying", true);
                 EntityManager.DestroyEntity(entity);                
                 Object.Destroy(transform.gameObject, 3f);
+                EntityManager.GetBuffer<MoneyModifierBufferElement>(bank).Add(new MoneyModifierBufferElement { value = valueData.money });
             }
         }
         ).WithoutBurst().WithStructuralChanges().Run();

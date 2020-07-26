@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: -7207710853639696542}
   - component: {fileID: 4532889823872279915}
   - component: {fileID: 7645429366448465628}
+  - component: {fileID: 7125777515283349500}
   m_Layer: 0
   m_Name: PF_CHAR_EnemyRIG
   m_TagString: Enemy
@@ -659,6 +660,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6942311576213592895}
+--- !u!114 &7125777515283349500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715166516967931223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c19b348fefabc24b8827d0d1ce1363b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 3
 --- !u!1 &3792130175637210530
 GameObject:
   m_ObjectHideFlags: 0
