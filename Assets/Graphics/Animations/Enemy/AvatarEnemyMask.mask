@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AvatarEnemyMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: EnemyASRIG:Geometry
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Geometry/EnemyASRIG:model:geo
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Geometry/EnemyASRIG:model:geo/EnemyASRIG:model:GEO_Body
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Geometry/EnemyASRIG:model:geo/EnemyASRIG:model:GEO_Head
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem
+    m_Weight: 1
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M
+    m_Weight: 1
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_L/EnemyASRIG:BackLeg2_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_L/EnemyASRIG:BackLeg2_L/EnemyASRIG:BackLeg3_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_L/EnemyASRIG:BackLeg2_L/EnemyASRIG:BackLeg3_L/EnemyASRIG:BackLeg4_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_L/EnemyASRIG:BackLeg2_L/EnemyASRIG:BackLeg3_L/EnemyASRIG:BackLeg4_L/EnemyASRIG:BackLeg5_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_L/EnemyASRIG:BackLeg2_L/EnemyASRIG:BackLeg3_L/EnemyASRIG:BackLeg4_L/EnemyASRIG:BackLeg5_L/EnemyASRIG:BackLegFoot_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_L/EnemyASRIG:BackLeg2_L/EnemyASRIG:BackLeg3_L/EnemyASRIG:BackLeg4_L/EnemyASRIG:BackLeg5_L/EnemyASRIG:BackLegFoot_L/EnemyASRIG:BackLegFoot_end_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_R/EnemyASRIG:BackLeg2_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_R/EnemyASRIG:BackLeg2_R/EnemyASRIG:BackLeg3_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_R/EnemyASRIG:BackLeg2_R/EnemyASRIG:BackLeg3_R/EnemyASRIG:BackLeg4_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_R/EnemyASRIG:BackLeg2_R/EnemyASRIG:BackLeg3_R/EnemyASRIG:BackLeg4_R/EnemyASRIG:BackLeg5_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_R/EnemyASRIG:BackLeg2_R/EnemyASRIG:BackLeg3_R/EnemyASRIG:BackLeg4_R/EnemyASRIG:BackLeg5_R/EnemyASRIG:BackLegFoot_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:BackLeg1_R/EnemyASRIG:BackLeg2_R/EnemyASRIG:BackLeg3_R/EnemyASRIG:BackLeg4_R/EnemyASRIG:BackLeg5_R/EnemyASRIG:BackLegFoot_R/EnemyASRIG:BackLegFoot_end_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_L/EnemyASRIG:FrontLeg2_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_L/EnemyASRIG:FrontLeg2_L/EnemyASRIG:FrontLeg3_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_L/EnemyASRIG:FrontLeg2_L/EnemyASRIG:FrontLeg3_L/EnemyASRIG:FrontLeg4_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_L/EnemyASRIG:FrontLeg2_L/EnemyASRIG:FrontLeg3_L/EnemyASRIG:FrontLeg4_L/EnemyASRIG:FrontLeg5_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_L/EnemyASRIG:FrontLeg2_L/EnemyASRIG:FrontLeg3_L/EnemyASRIG:FrontLeg4_L/EnemyASRIG:FrontLeg5_L/EnemyASRIG:FrontLegFoot_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_L/EnemyASRIG:FrontLeg2_L/EnemyASRIG:FrontLeg3_L/EnemyASRIG:FrontLeg4_L/EnemyASRIG:FrontLeg5_L/EnemyASRIG:FrontLegFoot_L/EnemyASRIG:FrontLegFoot_end_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_R/EnemyASRIG:FrontLeg2_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_R/EnemyASRIG:FrontLeg2_R/EnemyASRIG:FrontLeg3_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_R/EnemyASRIG:FrontLeg2_R/EnemyASRIG:FrontLeg3_R/EnemyASRIG:FrontLeg4_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_R/EnemyASRIG:FrontLeg2_R/EnemyASRIG:FrontLeg3_R/EnemyASRIG:FrontLeg4_R/EnemyASRIG:FrontLeg5_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_R/EnemyASRIG:FrontLeg2_R/EnemyASRIG:FrontLeg3_R/EnemyASRIG:FrontLeg4_R/EnemyASRIG:FrontLeg5_R/EnemyASRIG:FrontLegFoot_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:FrontLeg1_R/EnemyASRIG:FrontLeg2_R/EnemyASRIG:FrontLeg3_R/EnemyASRIG:FrontLeg4_R/EnemyASRIG:FrontLeg5_R/EnemyASRIG:FrontLegFoot_R/EnemyASRIG:FrontLegFoot_end_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:Head_M
+    m_Weight: 1
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:Head_M/EnemyASRIG:HeadEnd_M
+    m_Weight: 1
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_L/EnemyASRIG:MiddleLeg2_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_L/EnemyASRIG:MiddleLeg2_L/EnemyASRIG:MiddleLeg3_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_L/EnemyASRIG:MiddleLeg2_L/EnemyASRIG:MiddleLeg3_L/EnemyASRIG:MiddleLeg4_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_L/EnemyASRIG:MiddleLeg2_L/EnemyASRIG:MiddleLeg3_L/EnemyASRIG:MiddleLeg4_L/EnemyASRIG:MiddleLeg5_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_L/EnemyASRIG:MiddleLeg2_L/EnemyASRIG:MiddleLeg3_L/EnemyASRIG:MiddleLeg4_L/EnemyASRIG:MiddleLeg5_L/EnemyASRIG:MiddleLegFoot_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_L/EnemyASRIG:MiddleLeg2_L/EnemyASRIG:MiddleLeg3_L/EnemyASRIG:MiddleLeg4_L/EnemyASRIG:MiddleLeg5_L/EnemyASRIG:MiddleLegFoot_L/EnemyASRIG:MiddleLegFoot_end_L
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_R/EnemyASRIG:MiddleLeg2_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_R/EnemyASRIG:MiddleLeg2_R/EnemyASRIG:MiddleLeg3_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_R/EnemyASRIG:MiddleLeg2_R/EnemyASRIG:MiddleLeg3_R/EnemyASRIG:MiddleLeg4_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_R/EnemyASRIG:MiddleLeg2_R/EnemyASRIG:MiddleLeg3_R/EnemyASRIG:MiddleLeg4_R/EnemyASRIG:MiddleLeg5_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_R/EnemyASRIG:MiddleLeg2_R/EnemyASRIG:MiddleLeg3_R/EnemyASRIG:MiddleLeg4_R/EnemyASRIG:MiddleLeg5_R/EnemyASRIG:MiddleLegFoot_R
+    m_Weight: 0
+  - m_Path: EnemyASRIG:Main/EnemyASRIG:DeformationSystem/EnemyASRIG:Root_M/EnemyASRIG:MiddleLeg1_R/EnemyASRIG:MiddleLeg2_R/EnemyASRIG:MiddleLeg3_R/EnemyASRIG:MiddleLeg4_R/EnemyASRIG:MiddleLeg5_R/EnemyASRIG:MiddleLegFoot_R/EnemyASRIG:MiddleLegFoot_end_R
+    m_Weight: 0
