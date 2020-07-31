@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: f3924ea5df71009438b7b2573183f7f7
+guid: 155d060d3c2b1294f8bf77b034d1de28
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -8905068881809413962
-    second: Dying
+      74: 2548471325339952274
+    second: StrafeR
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -21,17 +21,15 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Dying' has import animation warnings that might
-      lower retargeting quality:\n\t'PhoboRIG:ShoulderPart1_R' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart2_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart2_L'
+    animationImportWarnings: "\nClip 'StrafeR' has import animation warnings that
+      might lower retargeting quality:\n\t'PhoboRIG:ShoulderPart1_L' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'PhoboRIG:ShoulderPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 0
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -40,18 +38,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Dying
-      takeName: Dying
+      name: StrafeR
+      takeName: StrafeR
       internalID: 0
-      firstFrame: 131
-      lastFrame: 147
+      firstFrame: 431
+      lastFrame: 462
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
@@ -67,7 +65,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 131
+      additiveReferencePoseFrame: 430.80002
     isReadable: 0
   meshes:
     lODScreenPercentages: []
