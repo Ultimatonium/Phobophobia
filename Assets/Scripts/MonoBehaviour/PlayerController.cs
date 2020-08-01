@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Unity.Entities;
 using UnityEngine;
 
@@ -28,20 +29,30 @@ public class PlayerController : MonoBehaviour
     private GameObject[] targets;
 
     private GameObject selectedTower;
-    private GameObject characterCam;
+    //public GameObject characterCam;
+
+    public GameObject characterCam { get; private set; }
 
     private Animator animator;
+    private ParticleSystem feather;
 
-    private EntityManager entityManager;
+    public EntityManager entityManager { get; private set; }
     private Entity gameStateEntity;
     private Entity bank;
+    public Entity player { get; private set; }
+
+    //private Transform cameraSpawnTransform;
+    //private Transform playerSpawnTransform;
+    public Vector3 spawnPostion { get; private set; }
+    public Quaternion spawnRotation { get; private set; }
 
     private void Start()
     {
         GetComponent<Rigidbody>().mass = float.MaxValue;
-        GetComponent<Rigidbody>().drag = float.MaxValue;
+        //GetComponent<Rigidbody>().drag = float.MaxValue;
 
         animator = GetComponentInChildren<Animator>();
+        feather = GetComponentInChildren<ParticleSystem>();
 
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
@@ -56,23 +67,38 @@ public class PlayerController : MonoBehaviour
         cameraRadius = Math.Abs(characterCam.transform.localPosition.z);
         //Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;
+        //cameraSpawnTransform = characterCam.gameObject.transform;
+        //playerSpawnTransform = transform;
+        spawnPostion = transform.position;
+        spawnRotation = transform.rotation;
     }
 
     private void Update()
     {
         if (gameStateEntity == Entity.Null) gameStateEntity = GetEntityOfComponent(typeof(GameStateData));
         if (bank == Entity.Null) bank = GetEntityOfComponent(typeof(MoneyData));
+        if (player == Entity.Null) player = GetEntityOfComponent(typeof(PlayerTag));
         if (gameStateEntity == Entity.Null) return;
+        if (bank == Entity.Null) return;
+        if (player == Entity.Null) return;
 
         FlipPause();
         if (entityManager.GetComponentData<GameStateData>(gameStateEntity).gameState == GameState.Running)
         {
-            Move();
-            RotateCam();
-            SelectTower();
-            SetTowerPosition();
-            ActiveTower();
-            Attack();
+            if (entityManager.GetComponentData<HealthData>(player).health > 0)
+            {
+                Move();
+                RotateCam();
+                SelectTower();
+                SetTowerPosition();
+                ActiveTower();
+                Block();
+                Attack();
+            }
+            else
+            {
+                Respawn();
+            }
         }
     }
 
@@ -87,7 +113,16 @@ public class PlayerController : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", true);
+            //GetComponent<CharacterController>().Move(moveDir);
             transform.position += moveDir;
+        }
+    }
+
+    private void Block()
+    {
+        if (Input.GetMouseButtonDown(1) && selectedTower == null)
+        {
+            //animator.SetTrigger("");
         }
     }
 
@@ -208,6 +243,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Respawn()
+    {
+        animator.SetTrigger("dead");
+        //animator.SetBool("isHit", true); //hack only
+        //animator.SetBool("isDying", true);
+        //animator.SetBool("isHit", false); //hack only
+        //StartCoroutine(ExecuteRespawn());
+    }
+
+    private IEnumerator ExecuteRespawn()
+    {
+        yield return new WaitForSeconds(3);
+        transform.position = spawnPostion;
+        transform.rotation = spawnRotation;
+        characterCam.transform.parent = null;
+        //transform.Translate(new Vector3(0, 5, 0));
+        transform.position += new Vector3(0, 5, 0);
+        animator.SetBool("isRespawning", true);
+        float maxHealth = entityManager.GetComponentData<HealthData>(player).maxHealth;
+        entityManager.SetComponentData(player, new HealthData { health = maxHealth, maxHealth = maxHealth });
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag != "Enemy") return;
@@ -216,6 +273,8 @@ public class PlayerController : MonoBehaviour
         if (enemyEntity != Entity.Null)
         {
             entityManager.GetBuffer<HealthModifierBufferElement>(enemyEntity).Add(new HealthModifierBufferElement { value = -damage });
+            feather.Stop();
+            feather.Play();
         }
     }
 

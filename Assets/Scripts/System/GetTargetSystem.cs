@@ -2,6 +2,7 @@
 using Unity.Transforms;
 using Unity.Collections;
 using Unity.Mathematics;
+using UnityEngine;
 
 public class GetTargetSystem : SystemBase
 {
@@ -18,17 +19,18 @@ public class GetTargetSystem : SystemBase
         //EntityCommandBuffer.Concurrent ECB = entityCommandBufferSystem.CreateCommandBuffer().ToConcurrent();
         NativeArray<Entity> targets = GetEntityQuery(new EntityQueryDesc
         {
-            Any = new ComponentType[] { typeof(EnemyTag), typeof(BaseTag) }
+            Any = new ComponentType[] { typeof(EnemyTag), typeof(BaseTag), typeof(PlayerTag) }
         }).ToEntityArray(Allocator.TempJob);
         ComponentDataFromEntity<Translation> positions = GetComponentDataFromEntity<Translation>();
         ComponentDataFromEntity<HealthData> healthDatas = GetComponentDataFromEntity<HealthData>();
         ComponentDataFromEntity<EnemyTag> enemyTags = GetComponentDataFromEntity<EnemyTag>();
         ComponentDataFromEntity<BaseTag> baseTags = GetComponentDataFromEntity<BaseTag>();
         ComponentDataFromEntity<TowerTag> towerTags = GetComponentDataFromEntity<TowerTag>();
+        ComponentDataFromEntity<PlayerTag> playerTags = GetComponentDataFromEntity<PlayerTag>();
 
         Entities.WithAny<TowerTag, EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, ref AttackTargetData attackTargetData, in RangeAttackData rangeAttackData) =>
         {
-            attackTargetData.target = GetLowestTargetInRange(entity, targets, rangeAttackData.range, positions, healthDatas, enemyTags, baseTags, towerTags);
+            attackTargetData.target = GetLowestTargetInRange(entity, targets, rangeAttackData.range, positions, healthDatas, enemyTags, baseTags, towerTags, playerTags);
 
             /*
             if (target != Entity.Null)
@@ -45,13 +47,26 @@ public class GetTargetSystem : SystemBase
         //entityCommandBufferSystem.AddJobHandleForProducer(Dependency);
     }
 
-    private static Entity GetLowestTargetInRange(Entity source, NativeArray<Entity> targets, float towerRange, ComponentDataFromEntity<Translation> positions, ComponentDataFromEntity<HealthData> healthDatas, ComponentDataFromEntity<EnemyTag> enemyTags, ComponentDataFromEntity<BaseTag> baseTags, ComponentDataFromEntity<TowerTag> towerTags)
+    private static Entity GetLowestTargetInRange(Entity source, NativeArray<Entity> targets, float towerRange, ComponentDataFromEntity<Translation> positions
+        , ComponentDataFromEntity<HealthData> healthDatas
+        , ComponentDataFromEntity<EnemyTag> enemyTags
+        , ComponentDataFromEntity<BaseTag> baseTags
+        , ComponentDataFromEntity<TowerTag> towerTags
+        , ComponentDataFromEntity<PlayerTag> playerTags
+        )
     {
         Entity target = Entity.Null;
         for (int i = 0; i < targets.Length; i++)
         {
+            /*
             if (enemyTags.Exists(source) && enemyTags.Exists(targets[i])) continue;
             if (towerTags.Exists(source) && baseTags.Exists(targets[i])) continue;
+            if (towerTags.Exists(source) && towerTags.Exists(targets[i])) continue;
+            */
+            if (!(enemyTags.Exists(source) && baseTags.Exists(targets[i])
+              || enemyTags.Exists(source) && playerTags.Exists(targets[i])
+              || towerTags.Exists(source) && enemyTags.Exists(targets[i])
+              )) continue;
             //Debug.Log("Find target");
             //Debug.Log((math.distancesq(positions[enemies[i]].Value, positions[tower].Value) + "|" + (towerRange * towerRange)));
             if (math.distancesq(positions[targets[i]].Value, positions[source].Value) < towerRange * towerRange)

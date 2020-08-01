@@ -1,4 +1,5 @@
-﻿using Unity.Entities;
+﻿using Unity.Collections;
+using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
@@ -8,21 +9,47 @@ public class EnemySystem : SystemBase
 {
     protected override void OnUpdate()
     {
-        Entity target = GetEntityQuery(typeof(BaseTag)).GetSingletonEntity();
+        Entity baseTarget = GetEntityQuery(typeof(BaseTag)).GetSingletonEntity();
+        /*
+        NativeArray<Entity> targets = GetEntityQuery(new EntityQueryDesc
+        {
+            Any = new ComponentType[] { typeof(PlayerTag), typeof(BaseTag) }
+        }).ToEntityArray(Allocator.TempJob);*/
+
         ComponentDataFromEntity<Translation> positions = GetComponentDataFromEntity<Translation>();
 
-        Entities.WithAll<EnemyTag>().ForEach((NavMeshAgent agent, Animator animator, ref RangeAttackData rangeAttackData, in Translation translation, in HealthData healthData) =>
+        Entities.WithAll<EnemyTag>().ForEach((NavMeshAgent agent, Animator animator, ref RangeAttackData rangeAttackData, in Translation translation, in HealthData healthData, in AttackTargetData attackTargetData) =>
         {
+            if (attackTargetData.target != Entity.Null)
+            {
+                agent.SetDestination(positions[attackTargetData.target].Value);
+            }
+            else
+            {
+                agent.SetDestination(positions[baseTarget].Value);
+            }
+
+            if (agent.velocity == Vector3.zero)
+            {
+                animator.SetBool("isWalking", false);
+
+            } else
+            {
+                animator.SetBool("isWalking", true);
+
+            }
+            /*
             if (math.distancesq(positions[target].Value, translation.Value) < rangeAttackData.range * rangeAttackData.range)
             {
-                agent.isStopped = true;
+                //agent.isStopped = true;
                 animator.SetBool("isWalking", false);
             }
             else
             {
-                agent.isStopped = false;
+                //agent.isStopped = false;
                 animator.SetBool("isWalking", true);
             }
+            */
 
             if (healthData.health <= 0)
             {

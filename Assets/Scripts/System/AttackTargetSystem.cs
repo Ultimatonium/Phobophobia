@@ -25,8 +25,9 @@ public class AttackTargetSystem : SystemBase
                     rotation.Value = quaternion.LookRotation(positions[attackTarget.target].Value - positions[entity].Value, localToWorld.Up);
                     rotation.Value.value.x = 0;
                     rotation.Value.value.z = 0;
-                    DrawShot(positions[entity].Value, positions[attackTarget.target].Value);
+                    //DrawShot(positions[entity].Value, positions[attackTarget.target].Value);
                     animator.SetBool("isAttacking", true);
+                    animator.SetBool("attack", true);
                     transform.rotation = rotation.Value;
                 }
             }
