@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
                 ActiveTower();
                 if (!Block())
                 {
-                Attack();
+                    Attack();
                 }
             }
             else
@@ -172,7 +172,8 @@ public class PlayerController : MonoBehaviour
             {
                 entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Pause });
                 Time.timeScale = 0;
-            } else
+            }
+            else
             {
                 entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Running });
                 Time.timeScale = 1;
@@ -214,7 +215,7 @@ public class PlayerController : MonoBehaviour
         float invertion = 1;
         if (invertYAxis) invertion = -1;
         characterCam.transform.Translate(new Vector3(0, 0, cameraRadius));
-        characterCam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * cameraRotationSpeed * Time.deltaTime * invertion,0,0), Space.Self);
+        characterCam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * cameraRotationSpeed * Time.deltaTime * invertion, 0, 0), Space.Self);
         characterCam.transform.Translate(new Vector3(0, 0, -cameraRadius));
     }
     private void SelectTower()
@@ -249,7 +250,8 @@ public class PlayerController : MonoBehaviour
                 GameObject tower = Instantiate(towerPrefab, selectedTower.transform.position, selectedTower.transform.rotation);
                 tower.GetComponent<Animator>().SetBool("isAttacking", false);
                 Destroy(selectedTower);
-            }else
+            }
+            else
             {
                 Debug.Log("no cash");
             }
@@ -259,64 +261,17 @@ public class PlayerController : MonoBehaviour
     private void Respawn()
     {
         animator.SetTrigger("die");
-        //animator.SetBool("isHit", true); //hack only
-        //animator.SetBool("isDying", true);
-        //animator.SetBool("isHit", false); //hack only
-        //StartCoroutine(ExecuteRespawn());
-    }
-
-    private IEnumerator ExecuteRespawn()
-    {
-        yield return new WaitForSeconds(3);
-        transform.position = spawnPostion;
-        transform.rotation = spawnRotation;
-        characterCam.transform.parent = null;
-        //transform.Translate(new Vector3(0, 5, 0));
-        transform.position += new Vector3(0, 5, 0);
-        animator.SetBool("isRespawning", true);
-        float maxHealth = entityManager.GetComponentData<HealthData>(player).maxHealth;
-        entityManager.SetComponentData(player, new HealthData { health = maxHealth, maxHealth = maxHealth });
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag != "Enemy") return;
         enemies.Add(collision.gameObject);
-        //if (collision.gameObject.transform.root.gameObject == gameObject.transform.root.gameObject) return;
-
-        return;
-        Entity enemyEntity = GetEntityOfGameObject(collision.gameObject);
-        if (enemyEntity != Entity.Null)
-        {
-            entityManager.GetBuffer<HealthModifierBufferElement>(enemyEntity).Add(new HealthModifierBufferElement { value = -damage });
-            feather.Stop();
-            feather.Play();
-        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag != "Enemy") return;
         enemies.Remove(collision.gameObject);
-    }
-
-
-    private Entity GetEntityOfGameObject(GameObject gameObject)
-    {
-        Unity.Collections.NativeArray<Entity> entities = entityManager.GetAllEntities();
-
-        for (int i = 0; i < entities.Length; i++)
-        {
-            //if (!entityManager.Exists(entities[i])) continue;
-            if (!entityManager.HasComponent<Transform>(entities[i])) continue;
-            if (entityManager.GetComponentObject<Transform>(entities[i]).gameObject == gameObject)
-            {
-                return entities[i];
-            }
-        }
-
-        entities.Dispose();
-
-        return Entity.Null;
     }
 }
