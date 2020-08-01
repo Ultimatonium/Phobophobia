@@ -33,7 +33,7 @@ public class PhoboDoesDmg : StateMachineBehaviour
         playerController = animator.gameObject.GetComponent<PlayerController>();
         foreach (GameObject item in hittedEnemies)
         {
-            Entity enemyEntity = GetEntityOfGameObject(item);
+            Entity enemyEntity = EntityHelper.GetEntityOfGameObject(item, entityManager);
             if (enemyEntity != Entity.Null)
             {
                 entityManager.GetBuffer<HealthModifierBufferElement>(enemyEntity).Add(new HealthModifierBufferElement { value = -playerController.damage });
@@ -41,51 +41,5 @@ public class PhoboDoesDmg : StateMachineBehaviour
         }
     }
 
-    private Entity GetEntityOfGameObject(GameObject gameObject)
-    {
-        NativeArray<Entity> entities = entityManager.GetAllEntities();
 
-        for (int i = 0; i < entities.Length; i++)
-        {
-            if (!entityManager.HasComponent<Transform>(entities[i])) continue;
-            if (entityManager.GetComponentObject<Transform>(entities[i]).gameObject == gameObject)
-            {
-                return entities[i];
-            }
-        }
-
-        entities.Dispose();
-
-        return Entity.Null;
-    }
-
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
-
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
