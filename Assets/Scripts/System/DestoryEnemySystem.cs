@@ -32,12 +32,14 @@ public class DestoryEnemySystem : SystemBase
         }
         ).Schedule();
 
-        Entities.WithAll<EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, Transform transform, Animator animator, in HealthData healthData, in ValueData valueData) =>
+        Entities.WithAll<EnemyTag>().ForEach((Entity entity, int entityInQueryIndex, Transform transform/*, Animator animator*/, ref AnimationPlayData animationData, in HealthData healthData, in ValueData valueData) =>
         {
             if (healthData.health < 0)
             {
                 //ECS.DestroyEntity(entityInQueryIndex, entity);
-                animator.SetBool("isDying", true);
+                animationData.setterType = SetterType.Trigger;
+                animationData.parameter = AnimationParameter.die;
+                //animator.SetBool("isDying", true);
                 EntityManager.DestroyEntity(entity);                
                 Object.Destroy(transform.gameObject, 3f);
                 EntityManager.GetBuffer<MoneyModifierBufferElement>(bank).Add(new MoneyModifierBufferElement { value = valueData.money });

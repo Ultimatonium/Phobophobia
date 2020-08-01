@@ -1482,6 +1482,7 @@ GameObject:
   - component: {fileID: 5725661598388281665}
   - component: {fileID: 7143567493546592639}
   - component: {fileID: -7600223644749488778}
+  - component: {fileID: 9130642868148314318}
   m_Layer: 0
   m_Name: PF_CHAR_TowerRIG_v2
   m_TagString: Untagged
@@ -1608,6 +1609,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &9130642868148314318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818326793803307219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5374e4a54823a44a96103cbd1a64a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatValue: 0
+  intValue: 0
+  boolValue: 0
+  setterType: 0
+  parameter: 0
 --- !u!1 &7818326793824462268
 GameObject:
   m_ObjectHideFlags: 0

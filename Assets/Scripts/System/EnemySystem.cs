@@ -18,7 +18,7 @@ public class EnemySystem : SystemBase
 
         ComponentDataFromEntity<Translation> positions = GetComponentDataFromEntity<Translation>();
 
-        Entities.WithAll<EnemyTag>().ForEach((NavMeshAgent agent, Animator animator, ref RangeAttackData rangeAttackData, in Translation translation, in HealthData healthData, in AttackTargetData attackTargetData) =>
+        Entities.WithAll<EnemyTag>().ForEach((NavMeshAgent agent, /*Animator animator,*/ ref RangeAttackData rangeAttackData, ref AnimationPlayData animationData, in Translation translation, in HealthData healthData, in AttackTargetData attackTargetData) =>
         {
             if (attackTargetData.target != Entity.Null)
             {
@@ -29,13 +29,18 @@ public class EnemySystem : SystemBase
                 agent.SetDestination(positions[baseTarget].Value);
             }
 
+            animationData.setterType = SetterType.Bool;
+            animationData.parameter = AnimationParameter.isWalking;
             if (agent.velocity == Vector3.zero)
             {
-                animator.SetBool("isWalking", false);
+                animationData.boolValue = false;
+                //animator.SetBool("isWalking", false);
 
-            } else
+            }
+            else
             {
-                animator.SetBool("isWalking", true);
+                animationData.boolValue = true;
+                //animator.SetBool("isWalking", true);
 
             }
             /*

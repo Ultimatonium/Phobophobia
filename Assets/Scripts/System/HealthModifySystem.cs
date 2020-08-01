@@ -26,7 +26,7 @@ public class HealthModifySystem : SystemBase
 
         //NativeList<Entity> entities = new NativeList<Entity>(Allocator.TempJob);
 
-        Entities.ForEach((Entity entity, Animator animator, HealthBar healthBar, int entityInQueryIndex, ref HealthData healthDataChange, ref DynamicBuffer<HealthModifierBufferElement> healthModifiers, in CombatStatusData combatStatus) =>
+        Entities.ForEach((Entity entity, /*Animator animator,*/ HealthBar healthBar, int entityInQueryIndex, ref HealthData healthDataChange, ref DynamicBuffer<HealthModifierBufferElement> healthModifiers, ref AnimationPlayData animationData, in CombatStatusData combatStatus) =>
         {
             if (combatStatus.status != CombatStatus.Blocking)
             {
@@ -45,7 +45,9 @@ public class HealthModifySystem : SystemBase
                         HUD.Instance.SetPlayerHealth(healthData[entity].health, healthData[entity].maxHealth);
                     }
                     */
-                    animator.SetTrigger("getHit");
+                    animationData.setterType = SetterType.Trigger;
+                    animationData.parameter = AnimationParameter.hitted;
+                    //animator.SetTrigger("isHitted");
                 }
             }
             healthModifiers.Clear();

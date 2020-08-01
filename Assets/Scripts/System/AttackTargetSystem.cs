@@ -12,7 +12,7 @@ public class AttackTargetSystem : SystemBase
         BufferFromEntity<HealthModifierBufferElement> healthModifiersBuffers = GetBufferFromEntity<HealthModifierBufferElement>();
         float dt = Time.DeltaTime;
 
-        Entities.WithAny<TowerTag, EnemyTag>().ForEach((Entity entity, Animator animator, Transform transform, ref RangeAttackData rangeAttackData, ref Rotation rotation, in LocalToWorld localToWorld, in AttackTargetData attackTarget) =>
+        Entities.WithAny<TowerTag, EnemyTag>().ForEach((Entity entity, /*Animator animator,*/ Transform transform, ref RangeAttackData rangeAttackData, ref Rotation rotation, ref AnimationPlayData animationData, in LocalToWorld localToWorld, in AttackTargetData attackTarget) =>
         {
             if (attackTarget.target != Entity.Null)
             {
@@ -26,14 +26,18 @@ public class AttackTargetSystem : SystemBase
                     rotation.Value.value.x = 0;
                     rotation.Value.value.z = 0;
                     //DrawShot(positions[entity].Value, positions[attackTarget.target].Value);
-                    animator.SetBool("isAttacking", true);
-                    animator.SetBool("attack", true);
+
+                    animationData.setterType = SetterType.Bool;
+                    animationData.parameter = AnimationParameter.attack;
+
+                    //animator.SetBool("isAttacking", true);
+                    //animator.SetBool("attack", true);
                     transform.rotation = rotation.Value;
                 }
             }
             else
             {
-                animator.SetBool("isAttacking", false);
+                //animator.SetBool("isAttacking", false);
                 rangeAttackData.timeUntilShoot = 0;
             }
         }
