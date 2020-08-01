@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 7645429366448465628}
   - component: {fileID: 7125777515283349500}
   - component: {fileID: 5017559757972626931}
+  - component: {fileID: 1896909499607684885}
   m_Layer: 0
   m_Name: PF_CHAR_EnemyRIG
   m_TagString: Enemy
@@ -688,6 +689,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleSystem: {fileID: 777543670573489646}
+--- !u!114 &1896909499607684885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715166516967931223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605beff7cf18a9448a78e4b9defe5a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 0
 --- !u!1 &3792130175637210530
 GameObject:
   m_ObjectHideFlags: 0

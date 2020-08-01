@@ -26,24 +26,27 @@ public class HealthModifySystem : SystemBase
 
         //NativeList<Entity> entities = new NativeList<Entity>(Allocator.TempJob);
 
-        Entities.ForEach((Entity entity, Animator animator, HealthBar healthBar, int entityInQueryIndex, ref HealthData healthDataChange, ref DynamicBuffer<HealthModifierBufferElement> healthModifiers) =>
+        Entities.ForEach((Entity entity, Animator animator, HealthBar healthBar, int entityInQueryIndex, ref HealthData healthDataChange, ref DynamicBuffer<HealthModifierBufferElement> healthModifiers, in CombatStatusData combatStatus) =>
         {
-            for (int i = 0; i < healthModifiers.Length; i++)
+            if (combatStatus.status != CombatStatus.Blocking)
             {
-                healthDataChange.health += healthModifiers[i].value;
-                //entities.Add(entity);
-                healthBar.SetHealth(healthData[entity].health, healthData[entity].maxHealth);
-                /*
-                if (baseTags.Exists(entity))
+                for (int i = 0; i < healthModifiers.Length; i++)
                 {
-                    HUD.Instance.SetBaseHealth(healthData[entity].health, healthData[entity].maxHealth);
+                    healthDataChange.health += healthModifiers[i].value;
+                    //entities.Add(entity);
+                    healthBar.SetHealth(healthData[entity].health, healthData[entity].maxHealth);
+                    /*
+                    if (baseTags.Exists(entity))
+                    {
+                        HUD.Instance.SetBaseHealth(healthData[entity].health, healthData[entity].maxHealth);
+                    }
+                    if (playerTag.Exists(entity))
+                    {
+                        HUD.Instance.SetPlayerHealth(healthData[entity].health, healthData[entity].maxHealth);
+                    }
+                    */
+                    animator.SetTrigger("getHit");
                 }
-                if (playerTag.Exists(entity))
-                {
-                    HUD.Instance.SetPlayerHealth(healthData[entity].health, healthData[entity].maxHealth);
-                }
-                */
-                animator.SetTrigger("getHit");
             }
             healthModifiers.Clear();
             //ECS.SetBuffer<HealthModifierBufferElement>(entityInQueryIndex, entity);

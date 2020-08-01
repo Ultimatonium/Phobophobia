@@ -131,9 +131,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButton(1) && selectedTower == null)
         {
             animator.SetBool("isBlocking", true);
+            entityManager.SetComponentData<CombatStatusData>(player, new CombatStatusData { status = CombatStatus.Blocking });
             return true;
         }
-
+        entityManager.SetComponentData<CombatStatusData>(player, new CombatStatusData { status = CombatStatus.NONE });
         animator.SetBool("isBlocking", false);
         return false;
     }
