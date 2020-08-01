@@ -258,7 +258,7 @@ public class PlayerController : MonoBehaviour
 
     private void Respawn()
     {
-        animator.SetTrigger("dead");
+        animator.SetTrigger("die");
         //animator.SetBool("isHit", true); //hack only
         //animator.SetBool("isDying", true);
         //animator.SetBool("isHit", false); //hack only

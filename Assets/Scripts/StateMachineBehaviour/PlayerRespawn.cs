@@ -19,12 +19,12 @@ public class PlayerRespawn : StateMachineBehaviour
         PlayerController playerController = animator.gameObject.GetComponent<PlayerController>();
         float maxHealth = playerController.entityManager.GetComponentData<HealthData>(playerController.player).maxHealth;
         playerController.entityManager.SetComponentData(playerController.player, new HealthData { health = maxHealth, maxHealth = maxHealth });
-        animator.ResetTrigger("dead");
+        animator.ResetTrigger("die");
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetTrigger("landed");
+        animator.SetTrigger("land");
     }
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

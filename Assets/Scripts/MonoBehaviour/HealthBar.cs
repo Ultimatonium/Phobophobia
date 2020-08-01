@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
     public void SetHealth(float health, float maxHealth)
     {
         if (healthBar == null) GetHealthBar();
+        if (healthBar == null) return;
         healthBar.maxValue = maxHealth;
         healthBar.value = health;
     }
@@ -17,10 +18,12 @@ public class HealthBar : MonoBehaviour
     {
         if (name == "Player")
         {
+            if (HUD.Instance == null) { Debug.LogWarning("HUD not loaded"); return; }
             healthBar = HUD.Instance.GetHealthBarPlayer();
         }
         if (name == "Bett")
         {
+            if (HUD.Instance == null) { Debug.LogWarning("HUD not loaded"); return; }
             healthBar = HUD.Instance.GetHealthBarBase();
         }
         if (healthBar == null)

@@ -356,7 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a76a4cac7a4f54c86b6262916da73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxNames: []
+  vfxNames:
+  - VFXEnemyShot
 --- !u!1101 &1828995634419762270
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

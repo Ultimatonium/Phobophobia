@@ -1,4 +1,4 @@
-﻿public enum SetterType
+﻿public enum AnimationSetterType
 {
     NONE,
     Float,

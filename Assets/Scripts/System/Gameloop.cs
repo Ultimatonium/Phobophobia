@@ -1,8 +1,7 @@
-﻿using UnityEngine;
-using Unity.Entities;
+﻿using Unity.Entities;
 
 public class Gameloop : SystemBase
-{
+{ 
     protected override void OnUpdate()
     {
         Entity gameStateEntity = GetEntityQuery(typeof(GameStateData)).GetSingletonEntity();

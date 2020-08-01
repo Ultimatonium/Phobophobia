@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
 
 [GenerateAuthoringComponent]
-public class CombatStatusData : IComponentData
+public struct CombatStatusData : IComponentData
 {
     public CombatStatus status;
 }

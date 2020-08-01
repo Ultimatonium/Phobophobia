@@ -11,6 +11,11 @@ public class MoneySystem : SystemBase
                 moneyData.money += moneyModifiers[i].value;
             }
             moneyModifiers.Clear();
+        }
+        ).Schedule();
+
+        Entities.ForEach((ref MoneyData moneyData) =>
+        {
             if (HUD.Instance != null)
             {
                 HUD.Instance.SetMoney(moneyData.money);

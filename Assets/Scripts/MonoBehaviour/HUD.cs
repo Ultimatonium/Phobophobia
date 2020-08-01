@@ -25,7 +25,6 @@ public class HUD : MonoBehaviour
         }
     }
 
-    /*
     public void SetBaseHealth(float health, float maxHealth)
     {
         healthBarBase.maxValue = maxHealth;
@@ -37,7 +36,6 @@ public class HUD : MonoBehaviour
         healthBarPlayer.maxValue = maxHealth;
         healthBarPlayer.value = health;
     }
-    */
 
     public void SetMoney(int money)
     {

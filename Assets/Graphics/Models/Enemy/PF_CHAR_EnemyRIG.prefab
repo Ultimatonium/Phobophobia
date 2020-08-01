@@ -472,7 +472,6 @@ GameObject:
   - component: {fileID: 4532889823872279915}
   - component: {fileID: 7645429366448465628}
   - component: {fileID: 7125777515283349500}
-  - component: {fileID: 5017559757972626931}
   - component: {fileID: 1896909499607684885}
   - component: {fileID: 8336867195646009275}
   m_Layer: 0
@@ -596,7 +595,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 7
   health: 7
-  tag: 0
 --- !u!114 &-6898497134700296623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,19 +675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 3
---- !u!114 &5017559757972626931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3715166516967931223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c23083e8257138e4187ead914c783969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleSystem: {fileID: 777543670573489646}
 --- !u!114 &1896909499607684885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2662,12 +2647,6 @@ PrefabInstance:
 --- !u!4 &3500973865523151701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7026955039807491844, guid: 567c2b26b7f089d449d0769c6793ce96,
-    type: 3}
-  m_PrefabInstance: {fileID: 5841511001403608145}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &777543670573489646 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6618977085267382719, guid: 567c2b26b7f089d449d0769c6793ce96,
     type: 3}
   m_PrefabInstance: {fileID: 5841511001403608145}
   m_PrefabAsset: {fileID: 0}

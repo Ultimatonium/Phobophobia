@@ -10,7 +10,7 @@ using UnityEngine.AI;
 [DisableAutoCreation]
 public class PathfindingSystem : SystemBase
 {
-    EndSimulationEntityCommandBufferSystem endSimulationEntityCommandBuffer;
+    EndSimulationEntityCommandBufferSystem commandBufferSystem;
 
     private NativeArray<float3> navMeshVertices;
     private NativeMultiHashMap<int, int> neighbourIndices;
@@ -19,10 +19,7 @@ public class PathfindingSystem : SystemBase
     {
         base.OnCreate();
 
-        endSimulationEntityCommandBuffer = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
-
-        //todo: remove on build
-        NativeLeakDetection.Mode = NativeLeakDetectionMode.EnabledWithStackTrace;
+        commandBufferSystem = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
 
         NavMeshTriangulation navMeshTriangulation = NavMesh.CalculateTriangulation();
 
@@ -50,7 +47,7 @@ public class PathfindingSystem : SystemBase
 
     protected override void OnUpdate()
     {
-        EntityCommandBuffer.Concurrent ECS = endSimulationEntityCommandBuffer.CreateCommandBuffer().ToConcurrent();
+        EntityCommandBuffer.Concurrent entityCommandBuffer = commandBufferSystem.CreateCommandBuffer().ToConcurrent();
 
         NativeArray<float3> navMeshVertices = this.navMeshVertices;
         NativeMultiHashMap<int, int> neighbourIndices = this.neighbourIndices;
@@ -58,13 +55,13 @@ public class PathfindingSystem : SystemBase
         Entities.ForEach((Entity entity, int entityInQueryIndex, ref PathfindingParamsData pathfindingParamsData) =>
             {
                 NativeArray<PathNode> path = CalculatePath(pathfindingParamsData.startPosition, pathfindingParamsData.endPosition, navMeshVertices, neighbourIndices);
-                DynamicBuffer<PathNode> dynamicBuffers = ECS.SetBuffer<PathNode>(entityInQueryIndex, entity);
+                DynamicBuffer<PathNode> dynamicBuffers = entityCommandBuffer.SetBuffer<PathNode>(entityInQueryIndex, entity);
                 dynamicBuffers.AddRange(path);
-                ECS.RemoveComponent<PathfindingParamsData>(entityInQueryIndex, entity);
+                entityCommandBuffer.RemoveComponent<PathfindingParamsData>(entityInQueryIndex, entity);
             }
             ).Schedule();
 
-        endSimulationEntityCommandBuffer.AddJobHandleForProducer(Dependency);
+        commandBufferSystem.AddJobHandleForProducer(Dependency);
     }
 
     protected override void OnDestroy()

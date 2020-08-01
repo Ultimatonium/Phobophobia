@@ -9,15 +9,15 @@ public class AnimationPlaySystem : SystemBase
         {
             switch (animationData.setterType)
             {
-                case SetterType.NONE:
+                case AnimationSetterType.NONE:
                     break;
-                case SetterType.Float:
+                case AnimationSetterType.Float:
                     Debug.LogError(animationData.setterType + " is not implemented");
                     break;
-                case SetterType.Int:
+                case AnimationSetterType.Int:
                     Debug.LogError(animationData.setterType + " is not implemented");
                     break;
-                case SetterType.Bool:
+                case AnimationSetterType.Bool:
                     switch (animationData.parameter)
                     {
                         case AnimationParameter.NONE:
@@ -39,7 +39,7 @@ public class AnimationPlaySystem : SystemBase
                             break;
                     }
                     break;
-                case SetterType.Trigger:
+                case AnimationSetterType.Trigger:
                     switch (animationData.parameter)
                     {
                         case AnimationParameter.die:
@@ -59,7 +59,7 @@ public class AnimationPlaySystem : SystemBase
                 default:
                     break;
             }
-            animationData.parameter = AnimationParameter.NONE;
+            animationData.setterType = AnimationSetterType.NONE;
         }
         ).WithoutBurst().Run();
     }

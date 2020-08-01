@@ -7,6 +7,6 @@ public struct AnimationPlayData : IComponentData
     public float floatValue;
     public int intValue;
     public bool boolValue;
-    public SetterType setterType;
+    public AnimationSetterType setterType;
     public AnimationParameter parameter;
 }
