@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: ee718a42bb53fa64cb4c7472a387dab2, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 81837ebddea823f42938b7b572269611, type: 2}
 --- !u!1001 &67300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2666,7 +2666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &258157504
 Transform:
   m_ObjectHideFlags: 0
@@ -5724,7 +5724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  health: 1
+  health: 20
   tag: 0
 --- !u!95 &548660720
 Animator:
@@ -11222,6 +11222,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4.7783
       objectReference: {fileID: 0}
+    - target: {fileID: -7029948723529949830, guid: a88c7ebc3b38e41278f343427b6b6fdd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a88c7ebc3b38e41278f343427b6b6fdd,
         type: 3}
       propertyPath: m_Name
@@ -15801,7 +15806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1615744936
 Transform:
   m_ObjectHideFlags: 0

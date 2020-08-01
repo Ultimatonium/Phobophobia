@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class PlayVFX : StateMachineBehaviour
 {
-    public string[] vfxName;
+    public string[] vfxNames;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log(animator + "|" + stateInfo + "|" + layerIndex);
-        ParticleSystem[] particleSystems = animator.gameObject.transform.root.gameObject.GetComponentsInChildren<ParticleSystem>();
+        OneShot(animator.gameObject.transform.root.gameObject, vfxNames);   
+    }
+
+    public static void OneShot(GameObject rootGameObject, string[] vfxNames)
+    {
+        ParticleSystem[] particleSystems = rootGameObject.GetComponentsInChildren<ParticleSystem>();
         for (int i = 0; i < particleSystems.Length; i++)
         {
-            for (int ii = 0; ii < vfxName.Length; ii++)
+            for (int ii = 0; ii < vfxNames.Length; ii++)
             {
-                
-            if (particleSystems[i].gameObject.name.Contains(vfxName[ii]))
+
+                if (particleSystems[i].gameObject.name.Contains(vfxNames[ii]))
                 {
                     particleSystems[i].Stop();
                     particleSystems[i].Play();

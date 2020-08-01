@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float cameraRadius;
 
     [SerializeField]
-    private float damage;
+    public float damage;
     [SerializeField]
     private float towerDistance = 10;
     [SerializeField]
@@ -32,7 +33,6 @@ public class PlayerController : MonoBehaviour
     //public GameObject characterCam;
 
     public GameObject characterCam { get; private set; }
-
     private Animator animator;
     private ParticleSystem feather;
 
@@ -40,11 +40,17 @@ public class PlayerController : MonoBehaviour
     private Entity gameStateEntity;
     private Entity bank;
     public Entity player { get; private set; }
+    public List<GameObject> enemies { get; private set; }
 
     //private Transform cameraSpawnTransform;
     //private Transform playerSpawnTransform;
     public Vector3 spawnPostion { get; private set; }
     public Quaternion spawnRotation { get; private set; }
+
+    private void Awake()
+    {
+        enemies = new List<GameObject>();
+    }
 
     private void Start()
     {
@@ -92,8 +98,10 @@ public class PlayerController : MonoBehaviour
                 SelectTower();
                 SetTowerPosition();
                 ActiveTower();
-                Block();
+                if (!Block())
+                {
                 Attack();
+                }
             }
             else
             {
@@ -118,12 +126,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Block()
+    private bool Block()
     {
-        if (Input.GetMouseButtonDown(1) && selectedTower == null)
+        if (Input.GetMouseButton(1) && selectedTower == null)
         {
-            //animator.SetTrigger("");
+            animator.SetBool("isBlocking", true);
+            return true;
         }
+
+        animator.SetBool("isBlocking", false);
+        return false;
     }
 
     private void Attack()
@@ -268,7 +280,10 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag != "Enemy") return;
+        enemies.Add(collision.gameObject);
         //if (collision.gameObject.transform.root.gameObject == gameObject.transform.root.gameObject) return;
+
+        return;
         Entity enemyEntity = GetEntityOfGameObject(collision.gameObject);
         if (enemyEntity != Entity.Null)
         {
@@ -277,6 +292,13 @@ public class PlayerController : MonoBehaviour
             feather.Play();
         }
     }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag != "Enemy") return;
+        enemies.Remove(collision.gameObject);
+    }
+
 
     private Entity GetEntityOfGameObject(GameObject gameObject)
     {
