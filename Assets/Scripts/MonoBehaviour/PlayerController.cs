@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
@@ -67,10 +66,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         cameraRadius = Math.Abs(characterCam.transform.localPosition.z);
-        /*
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
-        */
+
         spawnPostion = transform.position;
         spawnRotation = transform.rotation;
     }
