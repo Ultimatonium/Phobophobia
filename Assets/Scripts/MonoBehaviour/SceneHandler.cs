@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.Entities;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -79,5 +80,10 @@ public class SceneHandler : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void Resume()
+    {
+        FindObjectOfType<PlayerController>().Resume();
     }
 }

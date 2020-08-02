@@ -164,15 +164,25 @@ public class PlayerController : MonoBehaviour
         {
             if (entityManager.GetComponentData<GameStateData>(gameStateEntity).gameState == GameState.Running)
             {
-                entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Pause });
-                Time.timeScale = 0;
+                Pause();
             }
             else
             {
-                entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Running });
-                Time.timeScale = 1;
+                Resume();
             }
         }
+    }
+
+    private void Pause()
+    {
+        entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Pause });
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Running });
+        Time.timeScale = 1;
     }
 
     private Vector3 GetMoveDir()
