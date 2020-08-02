@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
         {
             timeTillSpawn = waveSpawnInterval;
             enemyPerWave += increasePerWave;
-            int spawn = UnityEngine.Random.Range(0, spawns.Length);
+            int spawn = Random.Range(0, spawns.Length);
             for (int i = 0; i < enemyPerWave; i++)
             {
                 Instantiate(enemyPrefab, spawns[spawn].transform.position, Quaternion.identity);

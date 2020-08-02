@@ -1,5 +1,4 @@
 ﻿using Unity.Entities;
-using Unity.Entities.UniversalDelegates;
 using Unity.Transforms;
 using UnityEngine;
 using UnityEngine.AI;
@@ -23,6 +22,12 @@ public class EnemySystem : SystemBase
                 agent.SetDestination(positions[attackTargetData.target].Value);
             }
             else
+            {
+                agent.SetDestination(positions[baseTarget].Value);
+            }
+
+            /*50% chance to keep focusing the base*/
+            if (UnityEngine.Random.Range(0,1) == 0)
             {
                 agent.SetDestination(positions[baseTarget].Value);
             }

@@ -28,7 +28,6 @@ public class GetTargetSystem : SystemBase
 
         Entities.WithAny<TowerTag, EnemyTag>().ForEach((Entity entity, ref AttackTargetData attackTargetData, in RangeAttackData rangeAttackData) =>
         {
-            //attackTargetData.target = GetLowestTargetInRange(entity, targets, rangeAttackData.range, positions, healthDatas, enemyTags, baseTags, towerTags, playerTags);
             attackTargetData.target = Entity.Null;
             for (int i = 0; i < targets.Length; i++)
             {
@@ -38,9 +37,15 @@ public class GetTargetSystem : SystemBase
                   )) continue;
                 if (math.distancesq(positions[targets[i]].Value, positions[entity].Value) < rangeAttackData.range * rangeAttackData.range)
                 {
+                    /*set target if empty*/
                     if (attackTargetData.target == Entity.Null) attackTargetData.target = targets[i];
+                    /*set lowest health target*/
                     if (healthDatas[attackTargetData.target].health > healthDatas[targets[i]].health)
                     {
+                        attackTargetData.target = targets[i];
+                    }
+                    /*focus base*/
+                    if (baseTags.Exists(targets[i])) {
                         attackTargetData.target = targets[i];
                     }
                 }
@@ -49,33 +54,5 @@ public class GetTargetSystem : SystemBase
         ).WithoutBurst().Run();
 
         targets.Dispose();
-    }
-
-    private static Entity GetLowestTargetInRange(Entity source, NativeArray<Entity> targets, float towerRange
-        , ComponentDataFromEntity<Translation> positions
-        , ComponentDataFromEntity<HealthData> healthDatas
-        , ComponentDataFromEntity<EnemyTag> enemyTags
-        , ComponentDataFromEntity<BaseTag> baseTags
-        , ComponentDataFromEntity<TowerTag> towerTags
-        , ComponentDataFromEntity<PlayerTag> playerTags
-        )
-    {
-        Entity target = Entity.Null;
-        for (int i = 0; i < targets.Length; i++)
-        {
-            if (!(enemyTags.Exists(source) && baseTags.Exists(targets[i])
-              || enemyTags.Exists(source) && playerTags.Exists(targets[i])
-              || towerTags.Exists(source) && enemyTags.Exists(targets[i])
-              )) continue;
-            if (math.distancesq(positions[targets[i]].Value, positions[source].Value) < towerRange * towerRange)
-            {
-                if (target == Entity.Null) target = targets[i];
-                if (healthDatas[target].health > healthDatas[targets[i]].health)
-                {
-                    target = targets[i];
-                }
-            }
-        }
-        return target;
     }
 }
