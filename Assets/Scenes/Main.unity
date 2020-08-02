@@ -18071,10 +18071,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3715166516967931223, guid: 9beb7b4259328264a813613753db2642,
     type: 3}
-  spawnIntervall: 5
+  waveSpawnInterval: 10
   spawns:
   - {fileID: 1729467266}
   - {fileID: 1339922363}
+  increasePerWave: 5
 --- !u!1001 &1819966906
 PrefabInstance:
   m_ObjectHideFlags: 0

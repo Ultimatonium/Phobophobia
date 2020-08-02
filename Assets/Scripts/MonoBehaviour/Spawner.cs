@@ -1,20 +1,23 @@
-﻿using Unity.Entities;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject enemyPrefab;
     [SerializeField]
-    private float spawnIntervall;
+    private int increasePerWave;
+    [SerializeField]
+    private float waveSpawnInterval;
     [SerializeField]
     private GameObject[] spawns;
 
     private float timeTillSpawn;
+    private int enemyPerWave;
 
     private void Start()
     {
-        timeTillSpawn = spawnIntervall;
+        enemyPerWave = 0;
+        timeTillSpawn = waveSpawnInterval;
     }
 
     private void Update()
@@ -22,8 +25,13 @@ public class Spawner : MonoBehaviour
         timeTillSpawn -= Time.deltaTime;
         if (timeTillSpawn < 0)
         {
-            timeTillSpawn = spawnIntervall;
-            Instantiate(enemyPrefab, spawns[UnityEngine.Random.Range(0,spawns.Length)].transform.position, Quaternion.identity);
+            timeTillSpawn = waveSpawnInterval;
+            enemyPerWave += increasePerWave;
+            int spawn = UnityEngine.Random.Range(0, spawns.Length);
+            for (int i = 0; i < enemyPerWave; i++)
+            {
+                Instantiate(enemyPrefab, spawns[spawn].transform.position, Quaternion.identity);
+            }
         }
     }
 }
