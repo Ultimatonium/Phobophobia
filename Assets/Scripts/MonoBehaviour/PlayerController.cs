@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     private GameObject[] targets;
 
     private GameObject selectedTower;
-    //public GameObject characterCam;
 
     public GameObject characterCam { get; private set; }
     private Animator animator;
@@ -42,8 +41,6 @@ public class PlayerController : MonoBehaviour
     public Entity player { get; private set; }
     public List<GameObject> enemies { get; private set; }
 
-    //private Transform cameraSpawnTransform;
-    //private Transform playerSpawnTransform;
     public Vector3 spawnPostion { get; private set; }
     public Quaternion spawnRotation { get; private set; }
 
@@ -55,7 +52,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         GetComponent<Rigidbody>().mass = float.MaxValue;
-        //GetComponent<Rigidbody>().drag = float.MaxValue;
 
         animator = GetComponentInChildren<Animator>();
         feather = GetComponentInChildren<ParticleSystem>();
@@ -73,8 +69,6 @@ public class PlayerController : MonoBehaviour
         cameraRadius = Math.Abs(characterCam.transform.localPosition.z);
         //Cursor.lockState = CursorLockMode.Confined;
         //Cursor.visible = false;
-        //cameraSpawnTransform = characterCam.gameObject.transform;
-        //playerSpawnTransform = transform;
         spawnPostion = transform.position;
         spawnRotation = transform.rotation;
     }
@@ -114,9 +108,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 moveDir = GetMoveDir();
         transform.rotation *= GetRotation();
-        Debug.Log(moveDir);
-        animator.SetFloat("Move", moveDir.x * -1);
-        animator.SetFloat("Strafe", moveDir.z);
         transform.position += moveDir * moveSpeed * Time.deltaTime;
     }
 
@@ -188,24 +179,30 @@ public class PlayerController : MonoBehaviour
     private Vector3 GetMoveDir()
     {
         Vector3 moveDir = Vector3.zero;
+        animator.SetFloat("Move", 0);
+        animator.SetFloat("Strafe", 0);
 
         if (Input.GetKey(KeyCode.W))
         {
             moveDir += transform.forward;
+            animator.SetFloat("Move", 1);
         }
         if (Input.GetKey(KeyCode.A))
         {
             moveDir += -transform.right;
+            animator.SetFloat("Strafe", -1);
         }
         if (Input.GetKey(KeyCode.S))
         {
             moveDir += -transform.forward;
+            animator.SetFloat("Move", -1);
         }
         if (Input.GetKey(KeyCode.D))
         {
             moveDir += transform.right;
+            animator.SetFloat("Strafe", 1);
         }
-        
+
         return moveDir.normalized;
     }
 
