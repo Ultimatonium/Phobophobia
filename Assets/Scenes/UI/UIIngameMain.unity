@@ -1100,6 +1100,7 @@ MonoBehaviour:
   healthBarBase: {fileID: 230839}
   healthBarPlayer: {fileID: 1141736437}
   money: {fileID: 320881276}
+  displayText: {fileID: 1594109003}
 --- !u!1 &939935497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,7 +1546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1594109002
 RectTransform:
   m_ObjectHideFlags: 0

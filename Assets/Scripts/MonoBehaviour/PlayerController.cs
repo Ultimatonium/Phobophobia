@@ -253,6 +253,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                HUD.Instance.SetDisplayText("You need " + towerCost + " Axoloons");
                 Debug.Log("no cash");
             }
         }

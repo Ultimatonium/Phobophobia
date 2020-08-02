@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ public class HUD : MonoBehaviour
     private Slider healthBarPlayer;
     [SerializeField]
     private TextMeshProUGUI money;
+    [SerializeField]
+    private TextMeshProUGUI displayText;
 
     private void Awake()
     {
@@ -50,5 +53,18 @@ public class HUD : MonoBehaviour
     public Slider GetHealthBarPlayer()
     {
         return healthBarPlayer;
+    }
+
+    public void SetDisplayText(string text)
+    {
+        displayText.gameObject.SetActive(true);
+        displayText.text = text;
+        StartCoroutine(DisableDisplayText(3));
+    }
+
+    private IEnumerator DisableDisplayText(float time)
+    {
+        yield return new WaitForSeconds(time);
+        displayText.gameObject.SetActive(false);
     }
 }
