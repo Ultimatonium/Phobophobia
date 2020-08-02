@@ -73,7 +73,7 @@ AnimatorStateMachine:
     m_Position: {x: 340, y: -570, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6462357233389771993}
-    m_Position: {x: 650, y: -420, z: 0}
+    m_Position: {x: 730, y: -490, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -181,9 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a76a4cac7a4f54c86b6262916da73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxName:
-  - VFXTowerShotAfterburn_L
-  - VFXTowerShotProjectile_L
+  vfxNames: []
 --- !u!1101 &-4598984127976410238
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -296,9 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a76a4cac7a4f54c86b6262916da73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxName:
-  - VFXTowerShotAfterburn_R
-  - VFXTowerShotProjectile_R
+  vfxNames: []
 --- !u!1102 &3352266571486363657
 AnimatorState:
   serializedVersion: 5
