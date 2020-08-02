@@ -143,6 +143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFXCharacterFeathers
       objectReference: {fileID: 0}
+    - target: {fileID: 3101568228629295425, guid: fa1e142e4ab020b41ac3400adf243093,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6109388087966555620, guid: fa1e142e4ab020b41ac3400adf243093,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -70242,7 +70247,7 @@ PrefabInstance:
     - target: {fileID: 726694537432905154, guid: 567c2b26b7f089d449d0769c6793ce96,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3127649013804033025, guid: 567c2b26b7f089d449d0769c6793ce96,
         type: 3}
@@ -70268,6 +70273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime0
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3127649013804033025, guid: 567c2b26b7f089d449d0769c6793ce96,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3723069388391670563, guid: 567c2b26b7f089d449d0769c6793ce96,
         type: 3}
@@ -70297,6 +70307,16 @@ PrefabInstance:
     - target: {fileID: 4551767439835370097, guid: 567c2b26b7f089d449d0769c6793ce96,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551767439835370097, guid: 567c2b26b7f089d449d0769c6793ce96,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618977085267382719, guid: 567c2b26b7f089d449d0769c6793ce96,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6698666074242092351, guid: 567c2b26b7f089d449d0769c6793ce96,
@@ -70418,6 +70438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: TrailModule.colorOverLifetime.maxColor.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402793251968061947, guid: 567c2b26b7f089d449d0769c6793ce96,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 567c2b26b7f089d449d0769c6793ce96, type: 3}
