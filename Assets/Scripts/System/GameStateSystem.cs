@@ -15,16 +15,26 @@ public class GameStateSystem : SystemBase
                     case GameState.None:
                         break;
                     case GameState.Running:
+                        Cursor.lockState = CursorLockMode.Confined;
+                        Cursor.visible = false;
                         World.GetExistingSystem<AttackTargetSystem>().Enabled = true;
+                        World.GetExistingSystem<HealthModifySystem>().Enabled = true;
+                        World.GetExistingSystem<MoneySystem>().Enabled = true;
                         Object.FindObjectOfType<Spawner>().enabled = true;
                         sceneHandler.TryUnloadScene("UIIngameESC");
                         break;
                     case GameState.Pause:
+                        Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                         World.GetExistingSystem<AttackTargetSystem>().Enabled = false;
+                        World.GetExistingSystem<HealthModifySystem>().Enabled = false;
+                        World.GetExistingSystem<MoneySystem>().Enabled = false;
                         Object.FindObjectOfType<Spawner>().enabled = false;
                         sceneHandler.LoadSceneAdditive("UIIngameESC");
                         break;
                     case GameState.GameOver:
+                        Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
                         sceneHandler.TryUnloadScene("UIIngameMain");
                         sceneHandler.LoadScene("UIIngameEndscreen");
                         DestroyAllEntities();

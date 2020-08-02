@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using Unity.Entities;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneHandler : MonoBehaviour
 {
     [SerializeField]
-    private Object scene;
+    private string scene;
     [SerializeField]
     private float time;
     [SerializeField]
@@ -15,14 +14,16 @@ public class SceneHandler : MonoBehaviour
 
     private void Start()
     {
-        if (scene != null)
+        if (scene.Trim() != "")
             DelayedLoadScene(scene, time, additive);
     }
 
+    /*
     public void TryUnloadScene(Object scene)
     {
         TryUnloadScene(scene.name);
     }
+    */
 
     public void TryUnloadScene(string scene)
     {
@@ -35,32 +36,36 @@ public class SceneHandler : MonoBehaviour
         }
     }
 
+    /*
     public void LoadScene(Object scene)
     {
         LoadScene(scene.name);
     }
+    */
 
     public void LoadScene(string scene)
     {
         SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
     }
 
+    /*
     public void LoadSceneAdditive(Object scene)
     {
         LoadSceneAdditive(scene.name);
     }
+    */
 
     public void LoadSceneAdditive(string scene)
     {
         SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
     }
 
-    public void DelayedLoadScene(Object scene, float time, bool additive)
+    public void DelayedLoadScene(string scene, float time, bool additive)
     {
         StartCoroutine(WaitForSceneLoad(scene, time, additive));
     }
 
-    private IEnumerator WaitForSceneLoad(Object scene, float time, bool additive)
+    private IEnumerator WaitForSceneLoad(string scene, float time, bool additive)
     {
         yield return new WaitForSeconds(time);
         if (additive)

@@ -67,8 +67,10 @@ public class PlayerController : MonoBehaviour
             }
         }
         cameraRadius = Math.Abs(characterCam.transform.localPosition.z);
-        //Cursor.lockState = CursorLockMode.Confined;
-        //Cursor.visible = false;
+        /*
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+        */
         spawnPostion = transform.position;
         spawnRotation = transform.rotation;
     }
@@ -255,7 +257,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 HUD.Instance.SetDisplayText("You need " + towerCost + " Axoloons");
-                Debug.Log("no cash");
             }
         }
     }

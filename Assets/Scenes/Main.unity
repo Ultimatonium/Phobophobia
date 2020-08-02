@@ -4914,9 +4914,8 @@ PrefabInstance:
     - target: {fileID: 6491858463149627780, guid: c4cbb29e9f64cbc43b1e3f1e418f48f2,
         type: 3}
       propertyPath: scene
-      value: 
-      objectReference: {fileID: 102900000, guid: f2db1e1fadb174749bb4f373c105551f,
-        type: 3}
+      value: UIIngameMain
+      objectReference: {fileID: 0}
     - target: {fileID: 6491858463149627781, guid: c4cbb29e9f64cbc43b1e3f1e418f48f2,
         type: 3}
       propertyPath: m_Name
@@ -5620,8 +5619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invertYAxis: 1
   moveSpeed: 5
-  characterRotationSpeed: 20
-  cameraRotationSpeed: 5
+  characterRotationSpeed: 40
+  cameraRotationSpeed: 10
   damage: 5
   towerDistance: 5
   towerPrefab: {fileID: 7818326793803307219, guid: 44c0054ef29751048b3e69086c65fb57,
@@ -11090,7 +11089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cc497770f73e3745b3b45f786b6ef68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 0}
+  scene: 
   time: 0
   additive: 0
 --- !u!114 &1152932680
