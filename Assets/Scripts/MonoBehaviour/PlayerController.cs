@@ -114,16 +114,10 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 moveDir = GetMoveDir();
         transform.rotation *= GetRotation();
-        if (moveDir == Vector3.zero)
-        {
-            animator.SetBool("isRunning", false);
-        }
-        else
-        {
-            animator.SetBool("isRunning", true);
-            //GetComponent<CharacterController>().Move(moveDir);
-            transform.position += moveDir;
-        }
+        Debug.Log(moveDir);
+        animator.SetFloat("Move", moveDir.x * -1);
+        animator.SetFloat("Strafe", moveDir.z);
+        transform.position += moveDir * moveSpeed * Time.deltaTime;
     }
 
     private bool Block()
@@ -201,8 +195,8 @@ public class PlayerController : MonoBehaviour
         {
             moveDir += transform.right;
         }
-
-        return moveDir.normalized * moveSpeed * Time.deltaTime;
+        
+        return moveDir.normalized;
     }
 
     private Quaternion GetRotation()
