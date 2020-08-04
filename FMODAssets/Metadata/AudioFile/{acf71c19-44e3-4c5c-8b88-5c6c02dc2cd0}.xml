@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{acf71c19-44e3-4c5c-8b88-5c6c02dc2cd0}">
+		<property name="assetPath">
+			<value>Phobo/Vox/KillingEnemies/5/Phobo/3.Killing_5_Phobo_Vox.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.2825850340136054</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9075f065-8e5c-490b-9ec8-b244e4d0f21f}</destination>
+		</relationship>
+	</object>
+</objects>

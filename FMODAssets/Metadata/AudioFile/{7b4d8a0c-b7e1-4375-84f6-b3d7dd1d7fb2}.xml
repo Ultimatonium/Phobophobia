@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{7b4d8a0c-b7e1-4375-84f6-b3d7dd1d7fb2}">
+		<property name="assetPath">
+			<value>Phobo/Vox/StartofWave/1/Phobo2/2.StartWave_1b_Phobo_Vox.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.2505668934240362</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9075f065-8e5c-490b-9ec8-b244e4d0f21f}</destination>
+		</relationship>
+	</object>
+</objects>

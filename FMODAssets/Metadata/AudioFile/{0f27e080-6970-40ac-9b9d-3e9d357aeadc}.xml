@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{0f27e080-6970-40ac-9b9d-3e9d357aeadc}">
+		<property name="assetPath">
+			<value>Homebase/Alarm/Homebase Alarm S1_1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.9721541950113379</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9075f065-8e5c-490b-9ec8-b244e4d0f21f}</destination>
+		</relationship>
+	</object>
+</objects>

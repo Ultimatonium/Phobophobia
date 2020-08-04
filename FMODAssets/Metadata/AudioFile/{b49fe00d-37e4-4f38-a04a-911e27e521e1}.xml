@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b49fe00d-37e4-4f38-a04a-911e27e521e1}">
+		<property name="assetPath">
+			<value>Atmos/Thunder/SFX_Thunder_oneshot_bearbeitet.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9075f065-8e5c-490b-9ec8-b244e4d0f21f}</destination>
+		</relationship>
+	</object>
+</objects>

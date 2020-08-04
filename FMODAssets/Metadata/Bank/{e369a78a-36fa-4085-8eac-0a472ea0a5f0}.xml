@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="Bank" id="{e369a78a-36fa-4085-8eac-0a472ea0a5f0}">
+		<property name="name">
+			<value>HPregeneration</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4f5a5083-ab23-4492-9da8-af17183e4805}</destination>
+		</relationship>
+	</object>
+</objects>

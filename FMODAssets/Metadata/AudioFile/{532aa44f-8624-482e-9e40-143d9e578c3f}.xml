@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{532aa44f-8624-482e-9e40-143d9e578c3f}">
+		<property name="assetPath">
+			<value>Anamis/Eyeblub/SFX_EYEBLUB_bearbeitet.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.9019501133786848</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{9075f065-8e5c-490b-9ec8-b244e4d0f21f}</destination>
+		</relationship>
+	</object>
+</objects>

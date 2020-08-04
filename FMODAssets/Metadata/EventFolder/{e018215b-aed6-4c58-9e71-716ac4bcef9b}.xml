@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EventFolder" id="{e018215b-aed6-4c58-9e71-716ac4bcef9b}">
+		<property name="name">
+			<value>StartofWave</value>
+		</property>
+		<relationship name="folder">
+			<destination>{394ec2e0-93e4-40ad-be15-263e8e2bcf90}</destination>
+		</relationship>
+	</object>
+</objects>
