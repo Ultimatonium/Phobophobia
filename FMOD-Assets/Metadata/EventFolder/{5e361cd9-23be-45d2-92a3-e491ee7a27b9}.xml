@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EventFolder" id="{5e361cd9-23be-45d2-92a3-e491ee7a27b9}">
+		<property name="name">
+			<value>Repaier</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c19bd47c-8b71-4bed-a157-ea7a8dbf96bf}</destination>
+		</relationship>
+	</object>
+</objects>

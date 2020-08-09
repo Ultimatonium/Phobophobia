@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="Bank" id="{9fe07115-a786-4c6a-9103-9fb3102d405d}">
+		<property name="name">
+			<value>PhoboPlacingTower</value>
+		</property>
+		<relationship name="folder">
+			<destination>{26255997-e1cf-4a9f-8be6-c5caaf66b092}</destination>
+		</relationship>
+	</object>
+</objects>
