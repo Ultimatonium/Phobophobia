@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
@@ -570,9 +571,7 @@ namespace FMODUnity
             }
             EditorGUILayout.EndHorizontal();
 
-            StringBuilder builder = new StringBuilder();
-            selectedEvent.Banks.ForEach((x) => { builder.Append(Path.GetFileNameWithoutExtension(x.Path)); builder.Append(", "); });
-            EditorGUILayout.LabelField("Banks", builder.ToString(0, Math.Max(0, builder.Length - 2)), style);
+            EditorGUILayout.LabelField("Banks", string.Join(", ", selectedEvent.Banks.Select(x => x.Name).ToArray()), style);
 
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField("Panning", selectedEvent.Is3D ? "3D" : "2D", style);

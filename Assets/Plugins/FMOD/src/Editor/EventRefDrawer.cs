@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEditor;
@@ -116,9 +117,7 @@ namespace FMODUnity
                     valueRect.y += baseHeight;
 
                     GUI.Label(labelRect, new GUIContent("<b>Banks</b>"), style);
-                    StringBuilder builder = new StringBuilder();
-                    eventRef.Banks.ForEach((x) => { builder.Append(Path.GetFileNameWithoutExtension(x.Path)); builder.Append(", "); });
-                    GUI.Label(valueRect, builder.ToString(0, builder.Length - 2));
+                    GUI.Label(valueRect, string.Join(", ", eventRef.Banks.Select(x => x.Name).ToArray()));
                     labelRect.y += baseHeight;
                     valueRect.y += baseHeight;
 

@@ -1115,7 +1115,7 @@ retry:
 
         public static bool HasBankLoaded(string loadedBank)
         {
-            return (instance.loadedBanks.ContainsKey(loadedBank));
+            return (Instance.loadedBanks.ContainsKey(loadedBank));
         }
 
         private void LoadPlugins(Settings fmodSettings)

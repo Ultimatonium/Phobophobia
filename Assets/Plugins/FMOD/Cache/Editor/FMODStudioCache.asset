@@ -1,6 +1,597 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9161482619142221026
+--- !u!114 &-9146043363605822862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ScaredGettinghurt.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/ScaredGettinghurt.bank
+  Name: ScaredGettinghurt
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-9102108812359304221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/ScaredGettinghurt/1
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/ScaredGettinghurt/1
+  guid: 188943faf43dc345848c140642c90f71
+  Banks:
+  - {fileID: -9146043363605822862}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1661
+--- !u!114 &-8726134732632987208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Footsteps/Sand
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Footsteps/Sand
+  guid: 30c377980dcf2b418e32b9f3c6b04aff
+  Banks:
+  - {fileID: 9098583059141772025}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 544
+--- !u!114 &-8686455984490883568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/StartofWave/3
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/StartofWave/3
+  guid: 8b43e4d8376c3646a0080b3b0f05543d
+  Banks:
+  - {fileID: 2169978533681239050}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12582
+--- !u!114 &-8667668566012274035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/ShootingHomebase.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/ShootingHomebase.bank
+  Name: ShootingHomebase
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-8011283627744529521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/13
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/13
+  guid: 48d6771f61bddd4caf0ad2576e857855
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8213
+--- !u!114 &-7789247650707548185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Spawn.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Spawn.bank
+  Name: Spawn
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7683747695542334948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Game/Game
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Game/Game
+  guid: 147f7dd3699f304e9d2ef79255df1dba
+  Banks:
+  - {fileID: 8888714520613551028}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 322560
+--- !u!114 &-7230367078932157205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/12
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/12
+  guid: d28cf490e0c1ab46bff63c5c4b55989c
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6146
+--- !u!114 &-6645178705374626467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/2
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/2
+  guid: bc6963d40ba70a418d0e42a3642661dd
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2592
+--- !u!114 &-6616591969103020973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tower/Repaier/Repair
+  m_EditorClassIdentifier: 
+  Path: event:/Tower/Repaier/Repair
+  guid: cf6ba1cb1f85464a99adce39c5cc2c41
+  Banks:
+  - {fileID: 8711346974561395477}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5588
+--- !u!114 &-6410208765733095146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Atmo.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Atmo.bank
+  Name: Atmo
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6277693100265477497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Homebase/Shooting/Shooting
+  m_EditorClassIdentifier: 
+  Path: event:/Homebase/Shooting/Shooting
+  guid: 9c909688855b9a48b85648ead3188249
+  Banks:
+  - {fileID: -8667668566012274035}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4458
+--- !u!114 &-6119667987412811747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Credit/Credit
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Credit/Credit
+  guid: 84e0ea8b242f98498dd9028a254d83b7
+  Banks:
+  - {fileID: -1522962489602740417}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 38454
+--- !u!114 &-5960860779500188369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Confirmedselction.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Confirmedselction.bank
+  Name: Confirmedselction
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5906412442350700214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/PlacingTower/3
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/PlacingTower/3
+  guid: d5050ca86dd46f4b874f2d20050fd86a
+  Banks:
+  - {fileID: 7581407401871775760}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5749
+--- !u!114 &-5878507538268732604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/resurrection/Resurrectionsound
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/resurrection/Resurrectionsound
+  guid: 9353d681fa90a94490a251565020d66c
+  Banks:
+  - {fileID: 4823830923527668969}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4493
+--- !u!114 &-5814871249051650400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Footsteps/Wood
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Footsteps/Wood
+  guid: 39a7824de79bec44bc7266c50890a478
+  Banks:
+  - {fileID: 9098583059141772025}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 130
+--- !u!114 &-5663305290311163049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Men\xFC/Click/Confirmed"
+  m_EditorClassIdentifier: 
+  Path: "event:/Men\xFC/Click/Confirmed"
+  guid: def18ee75411594187b44495e7c688b7
+  Banks:
+  - {fileID: 8089739107578486604}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 300
+--- !u!114 &-5510088615900015660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/HaHuHoFuck/Burp
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/HaHuHoFuck/Burp
+  guid: 96d82ceea38ab14986660eb3d5e9df05
+  Banks:
+  - {fileID: -1821589147426321892}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 562
+--- !u!114 &-5306956932611227350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/KillingEnemies/5
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/KillingEnemies/5
+  guid: e8d887722d00de46b154dba009c6dedb
+  Banks:
+  - {fileID: 4666572411825085961}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5774
+--- !u!114 &-4976505139806825587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Men\xFC/Confirmedselction/MainMenu"
+  m_EditorClassIdentifier: 
+  Path: "event:/Men\xFC/Confirmedselction/MainMenu"
+  guid: ea1333211a0beb4ca947854934399e65
+  Banks:
+  - {fileID: -5960860779500188369}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4458
+--- !u!114 &-4915553115031869271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/14
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/14
+  guid: e814cff07f12c442b51bdeadb8bd0705
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8063
+--- !u!114 &-4775124931698524141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/1
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/1
+  guid: 5a7543c97e1bb24d8780b74c13f233b7
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12837
+--- !u!114 &-4524382545966369512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/11
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/11
+  guid: b8f6030caf139a4b85a949a223653d78
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4112
+--- !u!114 &-4065834675742218873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/Thunder\xA8.bank"
+  m_EditorClassIdentifier: 
+  Path: "FMODAssets/Build/Desktop/Thunder\xA8.bank"
+  Name: "Thunder\xA8"
+  lastModified: 637325806830000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3667648123089303772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Spawn/Spawn
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Spawn/Spawn
+  guid: 180476a4f955434692add98526c94a6b
+  Banks:
+  - {fileID: -7789247650707548185}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 150
+--- !u!114 &-3323093227048439844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,12 +604,12 @@ MonoBehaviour:
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
   Path: FMODAssets/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637298973270000000
+  Name: Master
+  lastModified: 637325806830000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-8960462747607630561
+--- !u!114 &-3259973394465393993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,20 +619,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Weapons/RocketFire
+  m_Name: event:/Phobo/Vox/Dead/3
   m_EditorClassIdentifier: 
-  Path: event:/Weapons/RocketFire
-  guid: 5f291b4f2f9f1948a525e46af34e036b
+  Path: event:/Phobo/Vox/Dead/3
+  guid: e11f8954e7dac449a8849935ab34d19f
   Banks:
-  - {fileID: -8486081928373244622}
+  - {fileID: 8064130198814513593}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1821
---- !u!114 &-8897866019130270322
+  Length: 2887
+--- !u!114 &-3216526630984296494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,100 +642,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SentryDroneNoises
+  m_Name: event:/Phobo/Vox/ScaredGettinghurt/2
   m_EditorClassIdentifier: 
-  Path: event:/Enemy/SentryDroneNoises
-  guid: b0c95896559240429e1901dc72931b93
+  Path: event:/Phobo/Vox/ScaredGettinghurt/2
+  guid: cc7874bb9e824a44aba39e5586464fd2
   Banks:
-  - {fileID: 414281514433669769}
-  - {fileID: -6816164788437188147}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 4539
---- !u!114 &-8629544453427763801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/BattlegroundMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Music/BattlegroundMusic
-  guid: 5f3171ec56d2964d92d28b63902db6c4
-  Banks:
-  - {fileID: 1965152466481059419}
-  - {fileID: -1442253836630220061}
+  - {fileID: -9146043363605822862}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6582784743024659285}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 14601
---- !u!114 &-8519241545009434735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/MusicBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/MusicBank.bank
-  SubDir: 
-  lastModified: 637302629871269542
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-8500715217264681289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SentryBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/SentryBank.bank
-  SubDir: 
-  lastModified: 637302629871349330
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-8486081928373244622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BattlegroundBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/BattlegroundBank.bank
-  SubDir: 
-  lastModified: 637302629871080040
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-8434118685591011651
+  Length: 1417
+--- !u!114 &-2812332345277652423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,20 +665,130 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/LaserHit
+  m_Name: event:/Phobo/Vox/StartGameResume/1
   m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/LaserHit
-  guid: db946bb24745654b835662ab73678ce0
+  Path: event:/Phobo/Vox/StartGameResume/1
+  guid: 6a2d621bb5c3244a8caaf7867abb1d77
   Banks:
-  - {fileID: 765296761189295312}
+  - {fileID: 7834256328824866433}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2202
+--- !u!114 &-2801171518243261062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Block/phoboBlock
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Block/phoboBlock
+  guid: 2e0ac97144c45042a50a1f993d84e905
+  Banks:
+  - {fileID: 1768953518974344370}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 148
+--- !u!114 &-2765140363208502549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/GameOver/GameOver
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/GameOver/GameOver
+  guid: 58d4aa91f0f3a341a32028b9a91edaf2
+  Banks:
+  - {fileID: 3556255264900058318}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 7430
+--- !u!114 &-2445525252490617523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/KillingEnemies/2
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/KillingEnemies/2
+  guid: eed4be623e61d643a24ebe975ac690f1
+  Banks:
+  - {fileID: 4666572411825085961}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1701
+--- !u!114 &-2354188381197921158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/TowerVoice.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/TowerVoice.bank
+  Name: TowerVoice
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2017464959178408058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/15
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/15
+  guid: ecc0d24b1aefc342b7b896ca5158d558
+  Banks:
+  - {fileID: 6591786287891709015}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3000
---- !u!114 &-8406017010916223713
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6429
+--- !u!114 &-1868443986313317194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,46 +798,120 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/YouWin
+  m_Name: event:/Sounds/Timeclock/TimeClock
   m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/YouWin
-  guid: 1efd99782e01f844a65b7e9220473e79
+  Path: event:/Sounds/Timeclock/TimeClock
+  guid: b6a5df0d8eb7604486df780e5e69b8cb
   Banks:
-  - {fileID: 4359793669569991961}
+  - {fileID: 3560265025649362034}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
+--- !u!114 &-1821589147426321892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/HahohuFuckBurp.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/HahohuFuckBurp.bank
+  Name: HahohuFuckBurp
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1664657667085362286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Atmo/Anamis Atmo
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Atmo/Anamis Atmo
+  guid: 716e6ebc63e4954b966e61b8362f9461
+  Banks:
+  - {fileID: -6410208765733095146}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5050
+--- !u!114 &-1522962489602740417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Creditmusic.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Creditmusic.bank
+  Name: Creditmusic
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1257711407045161580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Music/Men\xFC/Men\xFC"
+  m_EditorClassIdentifier: 
+  Path: "event:/Music/Men\xFC/Men\xFC"
+  guid: 0006042bf35c8148ad49211d0f924921
+  Banks:
+  - {fileID: 333413264699829496}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 33537
---- !u!114 &-8348696235881991748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/InFort
-  m_EditorClassIdentifier: 
-  Path: snapshot:/InFort
-  guid: 5c3dd04309281749a68748c314984f34
-  Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: 1798545227961147338}
-  - {fileID: -4391777640746617584}
-  - {fileID: -9161482619142221026}
-  IsStream: 0
-  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
---- !u!114 &-8061247862265803000
+  Length: 120000
+--- !u!114 &-1108323225161345713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/EnemisDead.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/EnemisDead.bank
+  Name: EnemisDead
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-964643579688078108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,45 +921,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SentryDroneAlert
+  m_Name: "event:/Men\xFC/Click/Menuclick"
   m_EditorClassIdentifier: 
-  Path: event:/Enemy/SentryDroneAlert
-  guid: f9f2e70d6d570e44aa432f80a70be397
+  Path: "event:/Men\xFC/Click/Menuclick"
+  guid: c65c47cff88a83468c48b6def633c3b5
   Banks:
-  - {fileID: 414281514433669769}
-  - {fileID: -6816164788437188147}
+  - {fileID: 8089739107578486604}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 743
+--- !u!114 &-596098848675909602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/PlacingTower/2
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/PlacingTower/2
+  guid: 423fa8e0aef6da41a8bb850edb8b0177
+  Banks:
+  - {fileID: 7581407401871775760}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 9500
---- !u!114 &-7944206999794157059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Footsteps/FootstepsMetal
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Footsteps/FootstepsMetal
-  guid: c15f3ef33ac3ef49aae4dfa57ea01a5f
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 918
---- !u!114 &-7489473303775355209
+  Length: 5835
+--- !u!114 &-546096448780050408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -274,304 +967,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Footsteps/FootstepsMetal
+  m_Name: event:/Phobo/Vox/RandomCommentary/8
   m_EditorClassIdentifier: 
-  Path: event:/Player/Footsteps/FootstepsMetal
-  guid: c15f3ef33ac3ef49aae4dfa57ea01a5f
+  Path: event:/Phobo/Vox/RandomCommentary/8
+  guid: e050bb7218998f4d9317ffeabad885ee
   Banks:
-  - {fileID: 765296761189295312}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 918
---- !u!114 &-7305473840387996188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Weapons/RocketTrail
-  m_EditorClassIdentifier: 
-  Path: event:/Weapons/RocketTrail
-  guid: 354e1560635f844e8a222350e6e79d3d
-  Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: -4391777640746617584}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1578
---- !u!114 &-7229007919425546057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Footsteps/FootstepsGround
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Footsteps/FootstepsGround
-  guid: 3793113130b0464e889c8ed2e0744ba0
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 918
---- !u!114 &-7163614730208067587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/KeyPressCorrect
-  m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/KeyPressCorrect
-  guid: 66cb471bf624be44aad698dfddf2a114
-  Banks:
-  - {fileID: -2505745409748597184}
-  - {fileID: 4144311550801890160}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 272
---- !u!114 &-6914791962011875370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/AmbienceReceiver
-  m_EditorClassIdentifier: 
-  Path: event:/Props/AmbienceReceiver
-  guid: a2fe036eb04ae149950890683734831e
-  Banks:
-  - {fileID: -8486081928373244622}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &-6816164788437188147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SentryBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/SentryBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-6384887443757325050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/PlayerBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/PlayerBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-6218890698379341720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/PlayerBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/PlayerBank.bank
-  SubDir: 
-  lastModified: 637302629871319406
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5992540653516110395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BattlegroundMusic/GameScore
-  m_EditorClassIdentifier: 
-  Name: GameScore
-  Min: 0
-  Max: 6
-  Default: 0
-  Exists: 1
---- !u!114 &-5826623985895732464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Vocals/Jump
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Vocals/Jump
-  guid: 115b0c40f01a7a4a886e408f00e690f3
-  Banks:
-  - {fileID: 765296761189295312}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 166
---- !u!114 &-5764807771939893079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SentryDroneAlert
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SentryDroneAlert
-  guid: f9f2e70d6d570e44aa432f80a70be397
-  Banks:
-  - {fileID: 8126106500340118548}
+  - {fileID: 6591786287891709015}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 9500
---- !u!114 &-5648557837569622220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/KeyPressError
-  m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/KeyPressError
-  guid: 53c803b89c27884bb63d50a73b15dbe8
-  Banks:
-  - {fileID: -2505745409748597184}
-  - {fileID: 4144311550801890160}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1579
---- !u!114 &-5627244199410358900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/LandGround
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/LandGround
-  guid: 6cbabd8c78a44c44b051d77e03f775c1
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-4890853510626650404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/LandMetal
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/LandMetal
-  guid: 1d0443cc9a18c24fab09c379f8f37d95
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-4709309927743265983
+  Length: 4453
+--- !u!114 &-503072642175383940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -581,33 +990,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/GameOverBank.bank
+  m_Name: bank:/enemisFootstep.bank
   m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/GameOverBank.bank
-  SubDir: 
-  lastModified: 637302629871169810
+  Path: FMODAssets/Build/Desktop/enemisFootstep.bank
+  Name: enemisFootstep
+  lastModified: 637325806840000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-4391777640746617584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BattlegroundBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/BattlegroundBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4335727090048148654
+--- !u!114 &-333532880409934685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -617,53 +1008,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Vocals/Heartbeat
+  m_Name: event:/Atmos/Thunder/Thunder
   m_EditorClassIdentifier: 
-  Path: event:/Player/Vocals/Heartbeat
-  guid: 2e6aff6c46f76846a1278675bb2fa9e3
+  Path: event:/Atmos/Thunder/Thunder
+  guid: d6612bf1d8c8b54b9a2a1d38e0c16f48
   Banks:
-  - {fileID: 765296761189295312}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 630
---- !u!114 &-3895326088627257932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BattlegroundMusic/GameScore
-  m_EditorClassIdentifier: 
-  Name: GameScore
-  Min: 0
-  Max: 6
-  Default: 0
-  Exists: 1
---- !u!114 &-3569151019058612773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/LaserHit
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/LaserHit
-  guid: db946bb24745654b835662ab73678ce0
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
+  - {fileID: -4065834675742218873}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -671,264 +1021,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3000
---- !u!114 &-3224090096267901690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Vocals/Jump
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Vocals/Jump
-  guid: 115b0c40f01a7a4a886e408f00e690f3
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 166
---- !u!114 &-2986795369715939540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/InFort
-  m_EditorClassIdentifier: 
-  Path: snapshot:/InFort
-  guid: 5c3dd04309281749a68748c314984f34
-  Banks:
-  - {fileID: -8486081928373244622}
-  - {fileID: 1841767767052238506}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-2521880698834617048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/LandGround
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/LandGround
-  guid: 6cbabd8c78a44c44b051d77e03f775c1
-  Banks:
-  - {fileID: 765296761189295312}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-2505745409748597184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/GameOverBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/GameOverBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-2342956781007724854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GameOverMusic/SceneTime
-  m_EditorClassIdentifier: 
-  Name: SceneTime
-  Min: 0
-  Max: 180
-  Default: 0
-  Exists: 1
---- !u!114 &-2331139271786472394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Vocals/Land
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Vocals/Land
-  guid: 91856a8fd8c0ad41895a796596998a76
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 749
---- !u!114 &-2096003681640591746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/SentryDroneNoises
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/SentryDroneNoises
-  guid: b0c95896559240429e1901dc72931b93
-  Banks:
-  - {fileID: 8126106500340118548}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 4539
---- !u!114 &-1878268752580206130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/LaserBolt
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/LaserBolt
-  guid: 5d1c7c6ad7bcb340bebe1f9daa1ca17a
-  Banks:
-  - {fileID: 8126106500340118548}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1541
---- !u!114 &-1683961461400873580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GameOverMusic/SceneTime
-  m_EditorClassIdentifier: 
-  Name: SceneTime
-  Min: 0
-  Max: 180
-  Default: 0
-  Exists: 1
---- !u!114 &-1588032531410057114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/HitFilter
-  m_EditorClassIdentifier: 
-  Path: snapshot:/HitFilter
-  guid: 7528c16fb387b44abb058754fb4a6030
-  Banks:
-  - {fileID: 1841767767052238506}
-  - {fileID: 765296761189295312}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-1442253836630220061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/MusicBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/MusicBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-1287911559644695586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/KeyPressCorrect
-  m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/KeyPressCorrect
-  guid: 66cb471bf624be44aad698dfddf2a114
-  Banks:
-  - {fileID: 4359793669569991961}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 272
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,50 +1034,129 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6501615938307217099}
-  - {fileID: -4391777640746617584}
-  - {fileID: 4144311550801890160}
-  - {fileID: -9161482619142221026}
-  - {fileID: -1442253836630220061}
-  - {fileID: 4381780918980712178}
-  - {fileID: -6816164788437188147}
+  - {fileID: 207733043648430248}
+  - {fileID: 3079850374023732278}
+  - {fileID: 5092169613082636160}
+  - {fileID: -6410208765733095146}
+  - {fileID: 1768953518974344370}
+  - {fileID: 8089739107578486604}
+  - {fileID: 6477615868792236810}
+  - {fileID: -5960860779500188369}
+  - {fileID: -1522962489602740417}
+  - {fileID: -1108323225161345713}
+  - {fileID: -503072642175383940}
+  - {fileID: 8149066913432868828}
+  - {fileID: 9098583059141772025}
+  - {fileID: 8888714520613551028}
+  - {fileID: 3556255264900058318}
+  - {fileID: -1821589147426321892}
+  - {fileID: 476147340568664610}
+  - {fileID: 1420069641256528345}
+  - {fileID: 1785686723918135680}
+  - {fileID: 4666572411825085961}
+  - {fileID: -3323093227048439844}
+  - {fileID: 333413264699829496}
+  - {fileID: 8064130198814513593}
+  - {fileID: 7581407401871775760}
+  - {fileID: 6591786287891709015}
+  - {fileID: 4823830923527668969}
+  - {fileID: -9146043363605822862}
+  - {fileID: 5579855769782255885}
+  - {fileID: -8667668566012274035}
+  - {fileID: -7789247650707548185}
+  - {fileID: 7834256328824866433}
+  - {fileID: 2169978533681239050}
+  - {fileID: -4065834675742218873}
+  - {fileID: 3560265025649362034}
+  - {fileID: 6592495006478709441}
+  - {fileID: 8527134930826248596}
+  - {fileID: 8711346974561395477}
+  - {fileID: 3739968872067263096}
+  - {fileID: -2354188381197921158}
   EditorEvents:
-  - {fileID: -7305473840387996188}
-  - {fileID: -8348696235881991748}
-  - {fileID: 4572487927536470542}
-  - {fileID: 5718274825513599908}
-  - {fileID: 1308925999218557820}
-  - {fileID: 8621466954633874958}
-  - {fileID: 4379220171514286221}
-  - {fileID: 1503915632487908681}
-  - {fileID: 3351600394648791287}
-  - {fileID: 9106340563764326302}
-  - {fileID: -5648557837569622220}
-  - {fileID: -7163614730208067587}
-  - {fileID: 1168994734002554019}
-  - {fileID: 2680395329090810582}
-  - {fileID: -8629544453427763801}
-  - {fileID: -3224090096267901690}
-  - {fileID: -4890853510626650404}
-  - {fileID: 6385317438723007197}
-  - {fileID: -7229007919425546057}
-  - {fileID: -5627244199410358900}
-  - {fileID: 7179898410769134384}
-  - {fileID: -2331139271786472394}
-  - {fileID: 2851771313118226705}
-  - {fileID: -7944206999794157059}
-  - {fileID: -3569151019058612773}
-  - {fileID: 7262095074004439567}
-  - {fileID: -8897866019130270322}
-  - {fileID: -8061247862265803000}
+  - {fileID: 4017726401109402790}
+  - {fileID: 3574468206039034053}
+  - {fileID: -1664657667085362286}
+  - {fileID: -2801171518243261062}
+  - {fileID: 2066660022859804727}
+  - {fileID: -964643579688078108}
+  - {fileID: -5663305290311163049}
+  - {fileID: 6950705524291190059}
+  - {fileID: -4976505139806825587}
+  - {fileID: -6119667987412811747}
+  - {fileID: 540832150987254998}
+  - {fileID: 1289136102235023832}
+  - {fileID: 633244351793164236}
+  - {fileID: 2688866874686280561}
+  - {fileID: 1601343123414104872}
+  - {fileID: 2979492229021363695}
+  - {fileID: -8726134732632987208}
+  - {fileID: -5814871249051650400}
+  - {fileID: -7683747695542334948}
+  - {fileID: -2765140363208502549}
+  - {fileID: 2765598005425647429}
+  - {fileID: -5510088615900015660}
+  - {fileID: 5560559021282182513}
+  - {fileID: 3775671190045552502}
+  - {fileID: 8759321914481649724}
+  - {fileID: 6120199050908634253}
+  - {fileID: 7096954198270517207}
+  - {fileID: 7020294046567801026}
+  - {fileID: 7422531741375813822}
+  - {fileID: -5306956932611227350}
+  - {fileID: -2445525252490617523}
+  - {fileID: -1257711407045161580}
+  - {fileID: 5493481199152883212}
+  - {fileID: 6676881413119294067}
+  - {fileID: -3259973394465393993}
+  - {fileID: 1178346609357032537}
+  - {fileID: -596098848675909602}
+  - {fileID: 7072913623409096592}
+  - {fileID: -5906412442350700214}
+  - {fileID: 8103206825346780920}
+  - {fileID: 6394681116452524992}
+  - {fileID: 76551864887538436}
+  - {fileID: 3779132004046487283}
+  - {fileID: -8011283627744529521}
+  - {fileID: 8480406186600265606}
+  - {fileID: -4775124931698524141}
+  - {fileID: 1657326186511020567}
+  - {fileID: 3072547403149678499}
+  - {fileID: -4524382545966369512}
+  - {fileID: -6645178705374626467}
+  - {fileID: -7230367078932157205}
+  - {fileID: -546096448780050408}
+  - {fileID: -4915553115031869271}
+  - {fileID: -2017464959178408058}
+  - {fileID: -5878507538268732604}
+  - {fileID: -9102108812359304221}
+  - {fileID: 1156137273061894783}
+  - {fileID: 1629040088249300534}
+  - {fileID: -3216526630984296494}
+  - {fileID: 6858026955985773061}
+  - {fileID: 8640801851194035513}
+  - {fileID: -6277693100265477497}
+  - {fileID: -3667648123089303772}
+  - {fileID: 7021076684075933754}
+  - {fileID: -2812332345277652423}
+  - {fileID: 749771431184305591}
+  - {fileID: -8686455984490883568}
+  - {fileID: 291660491566394470}
+  - {fileID: -333532880409934685}
+  - {fileID: -1868443986313317194}
+  - {fileID: 1426795297730456151}
+  - {fileID: 7120179647209155011}
+  - {fileID: -6616591969103020973}
+  - {fileID: 4712666892610847472}
+  - {fileID: 6854181948895219855}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -9161482619142221026}
+  - {fileID: -3323093227048439844}
   StringsBanks:
-  - {fileID: 6501615938307217099}
-  stringsBankWriteTime: 637298973270000000
-  cacheVersion: 3
---- !u!114 &114942494150296759
+  - {fileID: 207733043648430248}
+  stringsBankWriteTime: 637325806830000000
+  cacheVersion: 4
+--- !u!114 &76551864887538436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -995,73 +1166,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/AmbienceEmitter
+  m_Name: event:/Phobo/Vox/RandomCommentary/5
   m_EditorClassIdentifier: 
-  Path: event:/Props/AmbienceEmitter
-  guid: b3b52cc597e59c48990ca5786ecc5722
+  Path: event:/Phobo/Vox/RandomCommentary/5
+  guid: 0bd8cd29901a59498b71694c07a81839
   Banks:
-  - {fileID: -8486081928373244622}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 55118
---- !u!114 &414281514433669769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SentryBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/SentryBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &635944941733722875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BattlegroundMusic/GameScore
-  m_EditorClassIdentifier: 
-  Name: GameScore
-  Min: 0
-  Max: 6
-  Default: 0
-  Exists: 0
---- !u!114 &765296761189295312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/PlayerBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/PlayerBank.bank
-  SubDir: 
-  lastModified: 637302629871319406
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &815970334470071352
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3897
+--- !u!114 &207733043648430248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1074,14 +1192,14 @@ MonoBehaviour:
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
   Path: FMODAssets/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637302629871229649
+  Name: Master.strings
+  lastModified: 637325806830000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3386
+    Value: 5806
   Exists: 1
---- !u!114 &1168994734002554019
+--- !u!114 &291660491566394470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1091,46 +1209,258 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/GameOverMusic
+  m_Name: event:/Phobo/Vox/StartofWave/1
   m_EditorClassIdentifier: 
-  Path: event:/Music/GameOverMusic
-  guid: fcf06252a8fc7e42a6b04236b6c6a4a1
+  Path: event:/Phobo/Vox/StartofWave/1
+  guid: f6ac7d7fa7ac7d4fb3559146f267b00e
   Banks:
-  - {fileID: -2505745409748597184}
-  - {fileID: 4144311550801890160}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -2342956781007724854}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 17454
---- !u!114 &1308925999218557820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/AmbienceReceiver
-  m_EditorClassIdentifier: 
-  Path: event:/Props/AmbienceReceiver
-  guid: a2fe036eb04ae149950890683734831e
-  Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: -4391777640746617584}
+  - {fileID: 2169978533681239050}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5483
+--- !u!114 &333413264699829496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/Menu\u0308music.bank"
+  m_EditorClassIdentifier: 
+  Path: "FMODAssets/Build/Desktop/Menu\u0308music.bank"
+  Name: "Menu\u0308music"
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &476147340568664610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Heartsound.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Heartsound.bank
+  Name: Heartsound
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &540832150987254998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Dead/Dead
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Dead/Dead
+  guid: a68081082f71f143909562861438e638
+  Banks:
+  - {fileID: -1108323225161345713}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5911
+--- !u!114 &633244351793164236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Footsteps/Wood
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Footsteps/Wood
+  guid: 755fc13fbf2aa349855fb817ec09e81b
+  Banks:
+  - {fileID: -503072642175383940}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 905
+--- !u!114 &749771431184305591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/StartofWave/2
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/StartofWave/2
+  guid: 86d645d392848a46ba210eda8a11caaa
+  Banks:
+  - {fileID: 2169978533681239050}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6114
+--- !u!114 &1156137273061894783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/ScaredGettinghurt/4
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/ScaredGettinghurt/4
+  guid: 1bacabbe2f87854dab2d00922d97e4f0
+  Banks:
+  - {fileID: -9146043363605822862}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 639
+--- !u!114 &1178346609357032537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/PlacingTower/1
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/PlacingTower/1
+  guid: 254409f7b76ae9468507983eeac4594a
+  Banks:
+  - {fileID: 7581407401871775760}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2040
+--- !u!114 &1289136102235023832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Footsteps/Metal
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Footsteps/Metal
+  guid: 0a6bbaa944196d418307f0f6cb3fa711
+  Banks:
+  - {fileID: -503072642175383940}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 732
+--- !u!114 &1420069641256528345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Hitsound.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Hitsound.bank
+  Name: Hitsound
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1426795297730456151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tower/Build/Build
+  m_EditorClassIdentifier: 
+  Path: event:/Tower/Build/Build
+  guid: 5c615b25b6ab7f488d7bd18fb8f454d7
+  Banks:
+  - {fileID: 6592495006478709441}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4817
+--- !u!114 &1601343123414104872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Hitsound/Hitsound
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Hitsound/Hitsound
+  guid: decb62acd0037945afb56f6202e1fdf6
+  Banks:
+  - {fileID: 8149066913432868828}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &1393882285771075163
+--- !u!114 &1629040088249300534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1140,20 +1470,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/LandMetal
+  m_Name: event:/Phobo/Vox/ScaredGettinghurt/3
   m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/LandMetal
-  guid: 1d0443cc9a18c24fab09c379f8f37d95
+  Path: event:/Phobo/Vox/ScaredGettinghurt/3
+  guid: b12c669e20f4c848a6603a8bb5ac4c3d
   Banks:
-  - {fileID: 765296761189295312}
+  - {fileID: -9146043363605822862}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
---- !u!114 &1503915632487908681
+  Length: 440
+--- !u!114 &1657326186511020567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1163,139 +1493,120 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FortReverbZoneEvent
+  m_Name: event:/Phobo/Vox/RandomCommentary/3
   m_EditorClassIdentifier: 
-  Path: event:/FortReverbZoneEvent
-  guid: c4cee25a6d8fc64493f854fc7abad57f
+  Path: event:/Phobo/Vox/RandomCommentary/3
+  guid: 6fe1be1a045e9f4a9e51d9abed7b8e32
   Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: -4391777640746617584}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
---- !u!114 &1766917170928099726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BattlegroundBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/BattlegroundBank.bank
-  SubDir: 
-  lastModified: 637302629871080040
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &1789669804379076691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Footsteps/FootstepsGround
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Footsteps/FootstepsGround
-  guid: 3793113130b0464e889c8ed2e0744ba0
-  Banks:
-  - {fileID: 765296761189295312}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 918
---- !u!114 &1798545227961147338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &1841767767052238506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637302629871199735
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &1965152466481059419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/MusicBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/MusicBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &2452736287450361800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Weapons/RocketTrail
-  m_EditorClassIdentifier: 
-  Path: event:/Weapons/RocketTrail
-  guid: 354e1560635f844e8a222350e6e79d3d
-  Banks:
-  - {fileID: -8486081928373244622}
+  - {fileID: 6591786287891709015}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 10221
+--- !u!114 &1768953518974344370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Block.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Block.bank
+  Name: Block
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1785686723918135680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/HPregeneration.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/HPregeneration.bank
+  Name: HPregeneration
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2066660022859804727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Men\xFC/Click/Back"
+  m_EditorClassIdentifier: 
+  Path: "event:/Men\xFC/Click/Back"
+  guid: b7ebafc78c66c747be7222fc3eb8fcfc
+  Banks:
+  - {fileID: 8089739107578486604}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 600
+--- !u!114 &2169978533681239050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/StartofWave.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/StartofWave.bank
+  Name: StartofWave
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2688866874686280561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Footsteps/Sand
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Footsteps/Sand
+  guid: ea28be06e70e9b4c98829c5bd75d7d7a
+  Banks:
+  - {fileID: -503072642175383940}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1578
---- !u!114 &2680395329090810582
+  Length: 732
+--- !u!114 &2765598005425647429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1305,64 +1616,66 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/HitFilter
+  m_Name: event:/Phobo/Vox/HaHuHoFuck/Fuck
   m_EditorClassIdentifier: 
-  Path: snapshot:/HitFilter
-  guid: 7528c16fb387b44abb058754fb4a6030
+  Path: event:/Phobo/Vox/HaHuHoFuck/Fuck
+  guid: 834b8bc8ce606045adcddd99d1b3204e
   Banks:
-  - {fileID: 1798545227961147338}
-  - {fileID: -6384887443757325050}
-  - {fileID: -9161482619142221026}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2695314576098043077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GameOverMusic/SceneTime
-  m_EditorClassIdentifier: 
-  Name: SceneTime
-  Min: 0
-  Max: 180
-  Default: 0
-  Exists: 1
---- !u!114 &2851771313118226705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/HealthPickup
-  m_EditorClassIdentifier: 
-  Path: event:/Props/HealthPickup
-  guid: b77c5f47f6398842a3e06fcb0c7679ea
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
+  - {fileID: -1821589147426321892}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1095
---- !u!114 &2861826225693433978
+  Length: 1059
+--- !u!114 &2979492229021363695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Footsteps/Metal
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Footsteps/Metal
+  guid: 0bfa221ee0415f41862decd62872cd1c
+  Banks:
+  - {fileID: 9098583059141772025}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 350
+--- !u!114 &3072547403149678499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/6
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/6
+  guid: 9710784db25c25459078f9b8f2d3e82b
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4806
+--- !u!114 &3079850374023732278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1372,15 +1685,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/MusicBank.bank
+  m_Name: bank:/Alarm.bank
   m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/MusicBank.bank
-  SubDir: 
-  lastModified: 637302629871269542
+  Path: FMODAssets/Build/Desktop/Alarm.bank
+  Name: Alarm
+  lastModified: 637325806840000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &2878250773905234169
+--- !u!114 &3556255264900058318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/GameOver.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/GameOver.bank
+  Name: GameOver
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3560265025649362034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Timeclock.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Timeclock.bank
+  Name: Timeclock
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3574468206039034053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1390,145 +1739,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Vocals/Land
+  m_Name: event:/Atmos/Natur/Ambient
   m_EditorClassIdentifier: 
-  Path: event:/Player/Vocals/Land
-  guid: 91856a8fd8c0ad41895a796596998a76
+  Path: event:/Atmos/Natur/Ambient
+  guid: 606db9cd7e69d44c932d88edcaa1b32a
   Banks:
-  - {fileID: 765296761189295312}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 749
---- !u!114 &2959950557714430579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/GameOverImpact
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/GameOverImpact
-  guid: 516d4ad1b6d01e49bdd521ef5a87e7ca
-  Banks:
-  - {fileID: 4359793669569991961}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1575
---- !u!114 &3351600394648791287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/YouWin
-  m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/YouWin
-  guid: 1efd99782e01f844a65b7e9220473e79
-  Banks:
-  - {fileID: -2505745409748597184}
-  - {fileID: 4144311550801890160}
+  - {fileID: 5092169613082636160}
   IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 33537
---- !u!114 &4144311550801890160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/GameOverBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/GameOverBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4199313730730512413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BattlegroundBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/BattlegroundBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4359793669569991961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/GameOverBank.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/GameOverBank.bank
-  SubDir: 
-  lastModified: 637302629871169810
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4379220171514286221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/AmbienceEmitter
-  m_EditorClassIdentifier: 
-  Path: event:/Props/AmbienceEmitter
-  guid: b3b52cc597e59c48990ca5786ecc5722
-  Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: -4391777640746617584}
-  IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 55118
---- !u!114 &4381780918980712178
+  Length: 60000
+--- !u!114 &3739968872067263096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1538,15 +1762,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/PlayerBank.bank
+  m_Name: bank:/TowerShooting.bank
   m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/PlayerBank.bank
-  SubDir: 
-  lastModified: 637298973270000000
+  Path: FMODAssets/Build/Desktop/TowerShooting.bank
+  Name: TowerShooting
+  lastModified: 637325806840000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &4572487927536470542
+--- !u!114 &3775671190045552502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1556,125 +1780,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Weapons/RocketFire
+  m_Name: event:/Phobo/Heartsound/Heartsound
   m_EditorClassIdentifier: 
-  Path: event:/Weapons/RocketFire
-  guid: 5f291b4f2f9f1948a525e46af34e036b
+  Path: event:/Phobo/Heartsound/Heartsound
+  guid: b9b8fac3775ca24b9b5ba6d016341801
   Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: -4391777640746617584}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1821
---- !u!114 &4631447693261074169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/CrateImpacts
-  m_EditorClassIdentifier: 
-  Path: event:/Props/CrateImpacts
-  guid: aeddc023b3f4954f9f52a2fb3df42773
-  Banks:
-  - {fileID: -8486081928373244622}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 183
---- !u!114 &4641203422440122622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637302629871199735
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &5244753653307914351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Weapons/Explosions/ExplosionSFX
-  m_EditorClassIdentifier: 
-  Path: event:/Weapons/Explosions/ExplosionSFX
-  guid: 6c4b2fef8243b847bde826749520de91
-  Banks:
-  - {fileID: -8486081928373244622}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1169
---- !u!114 &5349058844640632562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/SpeakCount
-  m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/SpeakCount
-  guid: 6f5863001158f44ebab3e159db25a1d4
-  Banks:
-  - {fileID: 765296761189295312}
+  - {fileID: 476147340568664610}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 5828
---- !u!114 &5593256873558867320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/GameOverMusic/SceneTime
-  m_EditorClassIdentifier: 
-  Name: SceneTime
-  Min: 0
-  Max: 180
-  Default: 0
-  Exists: 0
---- !u!114 &5718274825513599908
+  Length: 600
+--- !u!114 &3779132004046487283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1684,21 +1803,120 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Weapons/Explosions/ExplosionSFX
+  m_Name: event:/Phobo/Vox/RandomCommentary/7
   m_EditorClassIdentifier: 
-  Path: event:/Weapons/Explosions/ExplosionSFX
-  guid: 6c4b2fef8243b847bde826749520de91
+  Path: event:/Phobo/Vox/RandomCommentary/7
+  guid: 2de2ca7187f6f743af1318e47ca4c51d
   Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: -4391777640746617584}
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 5621
+--- !u!114 &4017726401109402790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Homebase/Alarm/Alarmsound
+  m_EditorClassIdentifier: 
+  Path: event:/Homebase/Alarm/Alarmsound
+  guid: c4e4e83d998d314bbed26e7638a8bb3f
+  Banks:
+  - {fileID: 3079850374023732278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3715
+--- !u!114 &4666572411825085961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/KillingEnemies.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/KillingEnemies.bank
+  Name: KillingEnemies
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4712666892610847472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tower/Shooting/Shooting
+  m_EditorClassIdentifier: 
+  Path: event:/Tower/Shooting/Shooting
+  guid: c189cac6e13785499637fc61ae14eb93
+  Banks:
+  - {fileID: 3739968872067263096}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1169
---- !u!114 &5870437286133813205
+  Length: 2001
+--- !u!114 &4823830923527668969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/resurrection.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/resurrection.bank
+  Name: resurrection
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5092169613082636160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambient.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Ambient.bank
+  Name: Ambient
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5493481199152883212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1708,20 +1926,368 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FortReverbZoneEvent
+  m_Name: event:/Phobo/Vox/Dead/1
   m_EditorClassIdentifier: 
-  Path: event:/FortReverbZoneEvent
-  guid: c4cee25a6d8fc64493f854fc7abad57f
+  Path: event:/Phobo/Vox/Dead/1
+  guid: 0436326fa0d4f447b03264fabc3f7949
   Banks:
-  - {fileID: -8486081928373244622}
+  - {fileID: 8064130198814513593}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 1885
+--- !u!114 &5560559021282182513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/HaHuHoFuck/Hahohu
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/HaHuHoFuck/Hahohu
+  guid: b81d1ffae0582b49baaf339e880f8ee7
+  Banks:
+  - {fileID: -1821589147426321892}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 544
+--- !u!114 &5579855769782255885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Shooting.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Shooting.bank
+  Name: Shooting
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6120199050908634253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/HPregeneration/HP01
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/HPregeneration/HP01
+  guid: cf6cb70619af3141a06b262f9b96d0aa
+  Banks:
+  - {fileID: 1785686723918135680}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1373
+--- !u!114 &6394681116452524992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/10
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/10
+  guid: 09d9f08a2a0e5948acdc665c85c7932a
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3814
+--- !u!114 &6477615868792236810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/CloseCombat.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/CloseCombat.bank
+  Name: CloseCombat
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6591786287891709015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/RandomCommentary.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/RandomCommentary.bank
+  Name: RandomCommentary
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6592495006478709441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Towerbuild.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Towerbuild.bank
+  Name: Towerbuild
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6676881413119294067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/Dead/2
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/Dead/2
+  guid: 148012b32370a0488453e6b56ccff8f7
+  Banks:
+  - {fileID: 8064130198814513593}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1923
+--- !u!114 &6854181948895219855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tower/Voice/TowerVoice
+  m_EditorClassIdentifier: 
+  Path: event:/Tower/Voice/TowerVoice
+  guid: 9c7435e022521043b84ccd9b15e93b90
+  Banks:
+  - {fileID: -2354188381197921158}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5281
+--- !u!114 &6858026955985773061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Lazershots/Lazershot2
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Lazershots/Lazershot2
+  guid: a8031cd78cd38d4a82a99cc99c74cb25
+  Banks:
+  - {fileID: 5579855769782255885}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
+--- !u!114 &6950705524291190059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/CloseCombat/Combat
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/CloseCombat/Combat
+  guid: 0aadd9bc55c8644dac8838938d7be6e0
+  Banks:
+  - {fileID: 6477615868792236810}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 350
+--- !u!114 &7020294046567801026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/KillingEnemies/4
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/KillingEnemies/4
+  guid: cc0774e67db68d4da2f0d8b504cb6b2c
+  Banks:
+  - {fileID: 4666572411825085961}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1138
+--- !u!114 &7021076684075933754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/StartGameResume/2
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/StartGameResume/2
+  guid: 57178706b8844b40856d0e91eb25c670
+  Banks:
+  - {fileID: 7834256328824866433}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1517
+--- !u!114 &7072913623409096592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/PlacingTower/4
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/PlacingTower/4
+  guid: 442ecd200c9a8d47a888b4a20f6781e2
+  Banks:
+  - {fileID: 7581407401871775760}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1778
+--- !u!114 &7096954198270517207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/KillingEnemies/1
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/KillingEnemies/1
+  guid: 69c54457bcaa3b45b1049aa6ddd63925
+  Banks:
+  - {fileID: 4666572411825085961}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2737
+--- !u!114 &7120179647209155011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Tower/Move/Move
+  m_EditorClassIdentifier: 
+  Path: event:/Tower/Move/Move
+  guid: abf5cd7c79574948ad30f7e40e2e7827
+  Banks:
+  - {fileID: 8527134930826248596}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 2000
---- !u!114 &6370211964161068954
+--- !u!114 &7422531741375813822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1731,44 +2297,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/HealthPickup
+  m_Name: event:/Phobo/Vox/KillingEnemies/3
   m_EditorClassIdentifier: 
-  Path: event:/Props/HealthPickup
-  guid: b77c5f47f6398842a3e06fcb0c7679ea
+  Path: event:/Phobo/Vox/KillingEnemies/3
+  guid: e131f8ee80ddd843a1113e1ab847d691
   Banks:
-  - {fileID: 765296761189295312}
+  - {fileID: 4666572411825085961}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1095
---- !u!114 &6385317438723007197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/Vocals/Heartbeat
-  m_EditorClassIdentifier: 
-  Path: event:/Player/Vocals/Heartbeat
-  guid: 2e6aff6c46f76846a1278675bb2fa9e3
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 630
---- !u!114 &6501615938307217099
+  Length: 2501
+--- !u!114 &7581407401871775760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1778,127 +2320,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/PhoboPlacingTower.bank
   m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637298973270000000
+  Path: FMODAssets/Build/Desktop/PhoboPlacingTower.bank
+  Name: PhoboPlacingTower
+  lastModified: 637325806840000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &6582784743024659285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BattlegroundMusic/GameScore
-  m_EditorClassIdentifier: 
-  Name: GameScore
-  Min: 0
-  Max: 6
-  Default: 0
-  Exists: 1
---- !u!114 &7057355003938021195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/BattlegroundMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Music/BattlegroundMusic
-  guid: 5f3171ec56d2964d92d28b63902db6c4
-  Banks:
-  - {fileID: -8519241545009434735}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -3895326088627257932}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 14601
---- !u!114 &7179898410769134384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/SpeakCount
-  m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/SpeakCount
-  guid: 6f5863001158f44ebab3e159db25a1d4
-  Banks:
-  - {fileID: -6384887443757325050}
-  - {fileID: 4381780918980712178}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 5828
---- !u!114 &7262095074004439567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Enemy/LaserBolt
-  m_EditorClassIdentifier: 
-  Path: event:/Enemy/LaserBolt
-  guid: 5d1c7c6ad7bcb340bebe1f9daa1ca17a
-  Banks:
-  - {fileID: 414281514433669769}
-  - {fileID: -6816164788437188147}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1541
---- !u!114 &7325190136802868450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI_ SFX/KeyPressError
-  m_EditorClassIdentifier: 
-  Path: event:/UI_ SFX/KeyPressError
-  guid: 53c803b89c27884bb63d50a73b15dbe8
-  Banks:
-  - {fileID: 4359793669569991961}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1579
---- !u!114 &8126106500340118548
+--- !u!114 &7834256328824866433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1908,15 +2338,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SentryBank.bank
+  m_Name: bank:/StartGameResume.bank
   m_EditorClassIdentifier: 
-  Path: FMODAssets/Build/Desktop/SentryBank.bank
-  SubDir: 
-  lastModified: 637302629871349330
+  Path: FMODAssets/Build/Desktop/StartGameResume.bank
+  Name: StartGameResume
+  lastModified: 637325806840000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &8621466954633874958
+--- !u!114 &8064130198814513593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PhoboDead.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/PhoboDead.bank
+  Name: PhoboDead
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8089739107578486604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Click.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Click.bank
+  Name: Click
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8103206825346780920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1926,21 +2392,120 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Props/CrateImpacts
+  m_Name: event:/Phobo/Vox/RandomCommentary/9
   m_EditorClassIdentifier: 
-  Path: event:/Props/CrateImpacts
-  guid: aeddc023b3f4954f9f52a2fb3df42773
+  Path: event:/Phobo/Vox/RandomCommentary/9
+  guid: 00c94996966f244e934d1d286f805ec3
   Banks:
-  - {fileID: 4199313730730512413}
-  - {fileID: -4391777640746617584}
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2235
+--- !u!114 &8149066913432868828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/EnemisHitsound.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/EnemisHitsound.bank
+  Name: EnemisHitsound
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8480406186600265606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Phobo/Vox/RandomCommentary/4
+  m_EditorClassIdentifier: 
+  Path: event:/Phobo/Vox/RandomCommentary/4
+  guid: 5930e1a92efe344ebaa3e9e80c586027
+  Banks:
+  - {fileID: 6591786287891709015}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1432
+--- !u!114 &8527134930826248596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/TowerMove.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/TowerMove.bank
+  Name: TowerMove
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8640801851194035513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Lazershots/Lazershots
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Lazershots/Lazershots
+  guid: f5a9986f3658c94482a8b1b4177952aa
+  Banks:
+  - {fileID: 5579855769782255885}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 183
---- !u!114 &9105415134964993288
+  Length: 350
+--- !u!114 &8711346974561395477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/TowerRepaier.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/TowerRepaier.bank
+  Name: TowerRepaier
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8759321914481649724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1950,41 +2515,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/GameOverMusic
+  m_Name: event:/Phobo/Hitsound/Hitsound
   m_EditorClassIdentifier: 
-  Path: event:/Music/GameOverMusic
-  guid: fcf06252a8fc7e42a6b04236b6c6a4a1
+  Path: event:/Phobo/Hitsound/Hitsound
+  guid: 84947d030777124e903d377eeb7a4f80
   Banks:
-  - {fileID: 4359793669569991961}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 2695314576098043077}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 17454
---- !u!114 &9106340563764326302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/PlayerImpacts/GameOverImpact
-  m_EditorClassIdentifier: 
-  Path: event:/Player/PlayerImpacts/GameOverImpact
-  guid: 516d4ad1b6d01e49bdd521ef5a87e7ca
-  Banks:
-  - {fileID: -2505745409748597184}
-  - {fileID: 4144311550801890160}
+  - {fileID: 1420069641256528345}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1575
+  Length: 582
+--- !u!114 &8888714520613551028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Gamemusic.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Gamemusic.bank
+  Name: Gamemusic
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &9098583059141772025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Footsteps.bank
+  m_EditorClassIdentifier: 
+  Path: FMODAssets/Build/Desktop/Footsteps.bank
+  Name: Footsteps
+  lastModified: 637325806840000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
