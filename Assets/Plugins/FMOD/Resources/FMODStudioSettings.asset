@@ -76,45 +76,7 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks:
-  - Master
-  Banks:
-  - Alarm
-  - Ambient
-  - Atmo
-  - Block
-  - Click
-  - CloseCombat
-  - Confirmedselction
-  - Creditmusic
-  - EnemisDead
-  - enemisFootstep
-  - EnemisHitsound
-  - Footsteps
-  - Gamemusic
-  - GameOver
-  - HahohuFuckBurp
-  - Heartsound
-  - Hitsound
-  - HPregeneration
-  - KillingEnemies
-  - "Menu\u0308music"
-  - PhoboDead
-  - PhoboPlacingTower
-  - RandomCommentary
-  - resurrection
-  - ScaredGettinghurt
-  - Shooting
-  - ShootingHomebase
-  - Spawn
-  - StartGameResume
-  - StartofWave
-  - "Thunder\xA8"
-  - Timeclock
-  - Towerbuild
-  - TowerMove
-  - TowerRepaier
-  - TowerShooting
-  - TowerVoice
+  MasterBanks: []
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
