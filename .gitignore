@@ -59,7 +59,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 # FMOD
-Assets/FMODStudioCache.asset
-Assets/StreamingAssets/*.bank
+/Assets/FMODStudioCache.asset
+/Assets/StreamingAssets/*.bank
 fmod.log
 fmod_editor.log

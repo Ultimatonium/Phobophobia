@@ -1,5 +1,4 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 <<<<<<< HEAD:Assets/StreamingAssets/Atmo.bank.meta
 guid: 4fe154b6ce47b924b8d6bd0859403b63
 labels:
@@ -7,9 +6,6 @@ labels:
 =======
 guid: adacc679a6406694dbcf389e0d5eca4a
 >>>>>>> 3ffd402804d422eb562eb8b8fedb8a5e342a51ff:Assets/StreamingAssets/Atmos.bank.meta
-=======
-guid: c9723f4e168f2b945a52a1e9fee95dd9
->>>>>>> 3ffd402804d422eb562eb8b8fedb8a5e342a51ff
 DefaultImporter:
   externalObjects: {}
   userData: 
