@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int towerCost;
     [SerializeField]
+    private int towerCostAbsoluteIncrease;
+    [SerializeField]
+    private float towerCostRelativeIncrease;
+    [SerializeField]
     private GameObject[] targets;
 
     [SerializeField] private PlayerAudioData playerAudio;
@@ -355,6 +359,7 @@ public class PlayerController : MonoBehaviour
             if (currentMoney >= towerCost)
             {
                 entityManager.SetComponentData<MoneyData>(bank, new MoneyData { money = currentMoney - towerCost });
+                towerCost = (int)(towerCost * (1 + towerCostRelativeIncrease)) + towerCostAbsoluteIncrease;
                 GameObject tower = Instantiate(towerPrefab, selectedTower.transform.position, selectedTower.transform.rotation);
                 tower.GetComponent<Animator>().SetBool("isAttacking", false);
                 Destroy(selectedTower);

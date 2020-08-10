@@ -5668,6 +5668,8 @@ MonoBehaviour:
   towerPlaceholderPrefab: {fileID: 919132149155446097, guid: e448f461e99a3684298d19313c6e0e56,
     type: 3}
   towerCost: 20
+  towerCostAbsoluteIncrease: 5
+  towerCostRelativeIncrease: 0.1
   targets:
   - {fileID: 3715166516967931223, guid: 9beb7b4259328264a813613753db2642, type: 3}
   playerAudio: {fileID: 11400000, guid: 7f9890e404e637847bb7540e13eef1a2, type: 2}
