@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: FMODAssets/Phobophobia_GameSound.fspro
-  sourceBankPath: FMODAssets\Build
+  sourceProjectPath: FMOD-Assets/Phobophobia_GameSound.fspro
+  sourceBankPath: FMOD-Assets\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   - Hitsound
   - HPregeneration
   - KillingEnemies
-  - "Menu\u0308music"
+  - Menumusic
   - PhoboDead
   - PhoboPlacingTower
   - RandomCommentary
@@ -109,11 +109,11 @@ MonoBehaviour:
   - Spawn
   - StartGameResume
   - StartofWave
-  - "Thunder\xA8"
+  - Thunder
   - Timeclock
   - Towerbuild
   - TowerMove
-  - TowerRepaier
+  - TowerRepair
   - TowerShooting
   - TowerVoice
   BanksToLoad: []

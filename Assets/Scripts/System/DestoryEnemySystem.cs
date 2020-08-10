@@ -40,6 +40,8 @@ public class DestoryEnemySystem : SystemBase
                 EntityManager.DestroyEntity(entity);
                 Object.Destroy(transform.gameObject, 3f);
                 EntityManager.GetBuffer<MoneyModifierBufferElement>(bank).Add(new MoneyModifierBufferElement { value = valueData.money });
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Enemies/Dead/Dead");
             }
         }
         ).WithoutBurst().WithStructuralChanges().Run();

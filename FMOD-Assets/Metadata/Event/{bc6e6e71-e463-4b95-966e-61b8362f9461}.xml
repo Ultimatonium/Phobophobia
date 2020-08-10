@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{bc6e6e71-e463-4b95-966e-61b8362f9461}">
 		<property name="name">
-			<value>Anamis Atmo</value>
+			<value>Enemis Atmo</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -54,7 +54,7 @@
 			<destination>{72e7cf35-9901-4330-9bf5-5571cd047138}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fd8b6cb8-8eb7-42ce-8eb3-447316f35589}</destination>
+			<destination>{48ea558b-cd58-4883-a30e-69e96048f3fa}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{cdd245c1-ba76-4194-8862-a67d5637bb17}" />

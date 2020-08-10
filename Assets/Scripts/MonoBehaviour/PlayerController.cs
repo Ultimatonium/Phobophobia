@@ -28,7 +28,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject[] targets;
 
-    private GameObject selectedTower;
+    [SerializeField] private PlayerAudioData playerAudio;
+    [SerializeField] private float footstepSpeed = 0.275f;
+    [SerializeField] private TowerAudioData towerAudio;
+
+    private FMOD.Studio.EventInstance heartbeating;
+    private FMOD.Studio.EventInstance movingTower;
+    private enum CURRENT_TERRAIN {Metal, Sand, Wood, Untagged};
+    private CURRENT_TERRAIN currentTerrain;
+    
+    private float timer = 0f;
+    private bool isWalking = false;
+    private bool alreadyBeating = false;
+    private bool alreadyDead = false;
+    private bool waveAlreadyHere = false;
+    private bool movingTowerSound = false;
+
+  private GameObject selectedTower;
 
     public GameObject characterCam { get; private set; }
     private Animator animator;
@@ -42,6 +58,9 @@ public class PlayerController : MonoBehaviour
 
     public Vector3 spawnPostion { get; private set; }
     public Quaternion spawnRotation { get; private set; }
+
+    private GameObject spawner;
+    private float timeTilWave;
 
     private void Awake()
     {
@@ -57,6 +76,9 @@ public class PlayerController : MonoBehaviour
 
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
+        spawner = GameObject.FindWithTag("Spawner");
+        timeTilWave = spawner.GetComponent<Spawner>().WaveSpawnInterval;
+
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).GetComponent<Camera>() != null)
@@ -69,6 +91,36 @@ public class PlayerController : MonoBehaviour
 
         spawnPostion = transform.position;
         spawnRotation = transform.rotation;
+
+        PlayOneShotRandomEvent(new int[] {1, 2}, "/Phobo/Vox/StartGameResume/", false);
+    }
+
+    private void PlayFootstepAudio()
+    {
+      if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 10f))
+      {
+        switch(hitInfo.collider.tag)
+        {
+          case "Metal":
+            currentTerrain = CURRENT_TERRAIN.Metal;
+            FMODUnity.RuntimeManager.PlayOneShot(playerAudio.FootstepsMetal);
+            break;
+          case "Sand":
+            currentTerrain = CURRENT_TERRAIN.Sand;
+            FMODUnity.RuntimeManager.PlayOneShot(playerAudio.FootstepsSand);
+            break;
+          case "Wood":
+            currentTerrain = CURRENT_TERRAIN.Wood;
+            FMODUnity.RuntimeManager.PlayOneShot(playerAudio.FootstepsWood);
+            break;
+          default: //If there is no tag, use what probably is most adequate.
+            currentTerrain = CURRENT_TERRAIN.Untagged;
+            FMODUnity.RuntimeManager.PlayOneShot(playerAudio.FootstepsSand);
+            break;
+        }
+      }
+
+      //Debug.Log("Terrain: " + currentTerrain);
     }
 
     private void Update()
@@ -94,11 +146,50 @@ public class PlayerController : MonoBehaviour
                 {
                     Attack();
                 }
+
+                if(animator.GetBool("hitted"))
+                  FMODUnity.RuntimeManager.PlayOneShot(playerAudio.Hitsounds); //Event Macro - Cooldown: 240 ms!
+
+                if(entityManager.GetComponentData<HealthData>(player).health < 2f)
+                {
+                  if(!alreadyBeating) //If the instance is already playing, then calling "start()" will restart the event.
+                  { 
+                    heartbeating = FMODUnity.RuntimeManager.CreateInstance(playerAudio.Heartbeats);
+                    heartbeating.start();
+                    alreadyBeating = true;
+                  }
+                }
+                else
+                {
+                  heartbeating.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                  heartbeating.release();
+                  alreadyBeating = false;
+                }
+
+                alreadyDead = false;
             }
             else
             {
                 Respawn();
             }
+        }
+
+        if(isWalking)
+        {
+          if(timer > footstepSpeed)
+          {
+            PlayFootstepAudio();
+            timer = 0f;
+          }
+
+          timer += Time.deltaTime;
+        }
+
+        timeTilWave -= Time.deltaTime;
+        if(timeTilWave <= 0f && !waveAlreadyHere)
+        {
+          PlayOneShotRandomEvent(new int[] {1, 2, 3}, "/Phobo/Vox/StartofWave/", false);
+          waveAlreadyHere = true;
         }
     }
 
@@ -115,6 +206,8 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isBlocking", true);
             entityManager.SetComponentData<CombatStatusData>(player, new CombatStatusData { status = CombatStatus.Blocking });
+            if(animator.GetBool("hitted"))
+              FMODUnity.RuntimeManager.PlayOneShot(playerAudio.PillowBlock); //Event Macro - Cooldown: 240 ms!
             return true;
         }
         entityManager.SetComponentData<CombatStatusData>(player, new CombatStatusData { status = CombatStatus.NONE });
@@ -124,9 +217,10 @@ public class PlayerController : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && selectedTower == null)
+        if (Input.GetMouseButtonDown(0) && selectedTower == null && !animator.GetBool("attack"))
         {
             animator.SetTrigger("attack");
+            FMODUnity.RuntimeManager.PlayOneShot(playerAudio.PillowAttack);
         }
     }
 
@@ -166,12 +260,14 @@ public class PlayerController : MonoBehaviour
     {
         entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Pause });
         Time.timeScale = 0;
+        PlayOneShotRandomEvent(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, "/Phobo/Vox/RandomCommentary/", false);
     }
 
     public void Resume()
     {
         entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Running });
         Time.timeScale = 1;
+        PlayOneShotRandomEvent(new int[] {1, 2}, "/Phobo/Vox/StartGameResume/", false);
     }
 
     private Vector3 GetMoveDir()
@@ -179,26 +275,31 @@ public class PlayerController : MonoBehaviour
         Vector3 moveDir = Vector3.zero;
         animator.SetFloat("Move", 0);
         animator.SetFloat("Strafe", 0);
+        isWalking = false;
 
         if (Input.GetKey(KeyCode.W))
         {
             moveDir += transform.forward;
             animator.SetFloat("Move", 1);
+            isWalking = true;
         }
         if (Input.GetKey(KeyCode.A))
         {
             moveDir += -transform.right;
             animator.SetFloat("Strafe", -1);
+            isWalking = true;
         }
         if (Input.GetKey(KeyCode.S))
         {
             moveDir += -transform.forward;
             animator.SetFloat("Move", -1);
+            isWalking = true;
         }
         if (Input.GetKey(KeyCode.D))
         {
             moveDir += transform.right;
             animator.SetFloat("Strafe", 1);
+            isWalking = true;
         }
 
         return moveDir.normalized;
@@ -236,7 +337,15 @@ public class PlayerController : MonoBehaviour
         if (selectedTower == null) return;
         selectedTower.transform.position = transform.position + transform.forward * towerDistance;
         selectedTower.transform.rotation = transform.rotation;
+        if(!movingTowerSound)
+        { 
+          movingTower = FMODUnity.RuntimeManager.CreateInstance(towerAudio.TowerMove);
+          movingTower.start();
+          movingTower.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(selectedTower, selectedTower.GetComponent<Rigidbody>()));
+          movingTowerSound = true;
+        }
     }
+
     private void ActiveTower()
     {
         if (selectedTower == null) return;
@@ -249,17 +358,38 @@ public class PlayerController : MonoBehaviour
                 GameObject tower = Instantiate(towerPrefab, selectedTower.transform.position, selectedTower.transform.rotation);
                 tower.GetComponent<Animator>().SetBool("isAttacking", false);
                 Destroy(selectedTower);
+
+                movingTower.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                movingTower.release();
+                movingTowerSound = false;
+
+                FMODUnity.RuntimeManager.PlayOneShot(towerAudio.Build);
+                PlayOneShotRandomEvent(new int[] {1, 2, 3, 4}, "/Phobo/Vox/PlacingTower/", false);
             }
             else
             {
-                HUD.Instance.SetDisplayText("You need " + towerCost + " Axoloons");
+                HUD.Instance.SetDisplayText("You need " + towerCost + " Axoloons!");
             }
         }
     }
 
     private void Respawn()
     {
+      if(!alreadyDead)
+      {
+        PlayOneShotRandomEvent(new int[] { 1, 2, 3}, "/Phobo/Vox/Dead/", false);
         animator.SetTrigger("die");
+        FMODUnity.RuntimeManager.PlayOneShot(playerAudio.Respawn);
+        alreadyDead = true;
+      }
+    }
+
+    //"eventPath" is also optional, but if you specify one, enclose it in slashes - e.g. "/eventPath/"!
+    private void PlayOneShotRandomEvent(int[] eventNames, string eventPath = "/", bool debug = false)
+    {
+      FMODUnity.RuntimeManager.PlayOneShot("event:" + eventPath + eventNames[UnityEngine.Random.Range(0, eventNames.Length)]);
+      if(debug)
+        Debug.Log("event:" + eventPath + eventNames[UnityEngine.Random.Range(0, eventNames.Length)]);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -32,12 +32,16 @@ public class AttackTargetSystem : SystemBase
                     {
                         animationData.setterType = AnimationSetterType.Trigger;
                         animationData.parameter = AnimationParameter.attack;
+                        string[] eventNames = {"Lazershot2", "Lazershots"};
+                        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Enemies/Lazershots/" + eventNames[UnityEngine.Random.Range(0, eventNames.Length)], transform.gameObject);
                     }
                     if (towerTags.Exists(entity))
                     {
                         animationData.setterType = AnimationSetterType.Bool;
                         animationData.parameter = AnimationParameter.isAttacking;
                         animationData.boolValue = true;
+
+                        
                     }
 
                     transform.rotation = rotation.Value;

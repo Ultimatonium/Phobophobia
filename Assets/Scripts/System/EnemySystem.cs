@@ -5,13 +5,38 @@ using UnityEngine.AI;
 
 public class EnemySystem : SystemBase
 {
+    private float timer = 0f;
+    private float footstepSpeed = 0.3f;
+
+    private void PlayFootstepAudio(Transform transform)
+    {
+      if(Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 10f))
+      {
+        switch(hitInfo.collider.tag)
+        {
+          case "Metal":
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Enemies/Footsteps/Metal", transform.gameObject);
+            break;
+          case "Sand":
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Enemies/Footsteps/Sand", transform.gameObject);
+            break;
+          case "Wood":
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Enemies/Footsteps/Wood", transform.gameObject);
+            break;
+          default: //If there is no tag, use what probably is most adequate.
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Enemies/Footsteps/Sand", transform.gameObject);
+            break;
+        }
+      }
+    }
+
     protected override void OnUpdate()
     {
         Entity baseTarget = GetEntityQuery(typeof(BaseTag)).GetSingletonEntity();
 
         ComponentDataFromEntity<Translation> positions = GetComponentDataFromEntity<Translation>();
 
-        Entities.WithAll<EnemyTag>().ForEach((NavMeshAgent agent, ref RangeAttackData rangeAttackData, ref AnimationPlayData animationData, in Translation translation, in HealthData healthData, in AttackTargetData attackTargetData) =>
+        Entities.WithAll<EnemyTag>().ForEach((NavMeshAgent agent, Transform transform, ref RangeAttackData rangeAttackData, ref AnimationPlayData animationData, in Translation translation, in HealthData healthData, in AttackTargetData attackTargetData) =>
         {
             /*set agent stop distance*/
             agent.stoppingDistance = rangeAttackData.range;
@@ -41,7 +66,15 @@ public class EnemySystem : SystemBase
             }
             else
             {
-                animationData.boolValue = true;
+              animationData.boolValue = true;
+
+              if(timer > footstepSpeed)
+              {
+                PlayFootstepAudio(transform);
+                timer = 0f;
+              }
+
+              timer += UnityEngine.Time.deltaTime;
             }
 
             /*stop if dead*/

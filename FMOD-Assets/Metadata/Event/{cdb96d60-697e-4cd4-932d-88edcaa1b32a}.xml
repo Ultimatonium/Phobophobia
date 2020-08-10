@@ -55,7 +55,7 @@
 			<destination>{fb7b1074-eb16-4d2b-84b1-ccd7db2e67da}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fd8b6cb8-8eb7-42ce-8eb3-447316f35589}</destination>
+			<destination>{48ea558b-cd58-4883-a30e-69e96048f3fa}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{321fdfd8-2209-4c6d-b8f1-dc01ba25b2ce}" />
@@ -78,7 +78,7 @@
 	</object>
 	<object class="GroupTrack" id="{c809e04f-9427-4826-a804-921376743e23}">
 		<relationship name="modules">
-			<destination>{f1017edc-ad35-4525-a2dc-e0574ac335a3}</destination>
+			<destination>{0744b346-e4f7-4838-a4eb-6a2445ed585b}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{5af60f6e-7a77-423e-9e94-6f05412b8c4b}</destination>
@@ -88,7 +88,7 @@
 		<relationship name="modules">
 			<destination>{58d79716-1bb4-4632-be4a-ea0075f5e7d2}</destination>
 			<destination>{5702653a-d122-456e-9f23-e4d40e4fe6e5}</destination>
-			<destination>{f1017edc-ad35-4525-a2dc-e0574ac335a3}</destination>
+			<destination>{0744b346-e4f7-4838-a4eb-6a2445ed585b}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{8ea3d3b6-a068-4c3e-9758-e6fd2a125e68}</destination>
@@ -186,33 +186,15 @@
 			<destination>{91c92870-2e03-4b0c-af45-91b8c0cf8aa7}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{f1017edc-ad35-4525-a2dc-e0574ac335a3}">
-		<property name="triggerProbabilityEnabled">
-			<value>true</value>
-		</property>
-		<property name="triggerProbability">
-			<value>29.5</value>
-		</property>
+	<object class="SingleSound" id="{0744b346-e4f7-4838-a4eb-6a2445ed585b}">
 		<property name="start">
 			<value>16</value>
 		</property>
 		<property name="length">
 			<value>8.4774376417233555</value>
 		</property>
-		<property name="startOffset">
-			<value>100</value>
-		</property>
-		<property name="maxVoices">
-			<value>10</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
-		<property name="playCount">
-			<value>16</value>
-		</property>
 		<relationship name="audioFile">
-			<destination>{07b6dd65-df27-4114-9e61-2155c06cfdcd}</destination>
+			<destination>{3bd8f451-e50f-48c9-9724-49d082749c6b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{5af60f6e-7a77-423e-9e94-6f05412b8c4b}">

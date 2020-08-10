@@ -1,11 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 97e3a36466590d642a0e0afb4d9c2495
 labels:
 - FMOD
-=======
-guid: 648b60a936d4571408b5e2541e656379
->>>>>>> 3ffd402804d422eb562eb8b8fedb8a5e342a51ff
 DefaultImporter:
   externalObjects: {}
   userData: 

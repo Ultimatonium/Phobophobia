@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4249cdbe5ed6dc546b035a2bb529bf65, type: 3}
+  m_Name: EnemyAudio
+  m_EditorClassIdentifier: 
+  footstepsMetal: event:/Enemies/Footsteps/Metal
+  footstepsSand: event:/Enemies/Footsteps/Sand
+  footstepsWood: event:/Enemies/Footsteps/Wood
+  lasershotLight: event:/Enemies/Lazershots/Lazershots
+  lasershotDeep: event:/Enemies/Lazershots/Lazershot2
+  spawn: event:/Enemies/Spawn/Spawn
+  hitsounds: event:/Enemies/Hitsound/Hitsound
+  dead: event:/Enemies/Dead/Dead

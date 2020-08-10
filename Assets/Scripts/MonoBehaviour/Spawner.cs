@@ -11,6 +11,8 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private GameObject[] spawns;
 
+    public float WaveSpawnInterval {get => waveSpawnInterval;}
+
     private float timeTillSpawn;
     private int enemyPerWave;
 
@@ -31,6 +33,8 @@ public class Spawner : MonoBehaviour
             for (int i = 0; i < enemyPerWave; i++)
             {
                 Instantiate(enemyPrefab, spawns[spawn].transform.position, Quaternion.identity);
+                //if(i == enemyPerWave / 2)
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Enemies/Spawn/Spawn", enemyPrefab);
             }
         }
     }

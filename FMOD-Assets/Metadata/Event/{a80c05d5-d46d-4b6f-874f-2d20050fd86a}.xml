@@ -5,7 +5,7 @@
 			<value>3</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{655698be-ff3d-47f2-a0b9-ae7f8407e125}</destination>
@@ -54,7 +54,7 @@
 			<destination>{27f8f67b-ae8d-46e2-b5ab-e287c8b72895}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fd8b6cb8-8eb7-42ce-8eb3-447316f35589}</destination>
+			<destination>{48ea558b-cd58-4883-a30e-69e96048f3fa}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{7f71026d-d604-4991-9157-6fa8ed4103e1}" />
@@ -169,7 +169,6 @@
 		<relationship name="effects">
 			<destination>{4416186f-9d80-4a8f-98d8-a7fcca97e1ec}</destination>
 			<destination>{a806db4e-69d8-42c6-9705-af5a6c241e30}</destination>
-			<destination>{a2803bc1-6b29-4551-a006-65648b1b1f66}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{10bda734-a7e8-4bd4-9e74-efd81cb4c3a5}">
@@ -205,5 +204,4 @@
 			<destination>{c4e9bac4-3711-4b87-a170-dfd380e2418f}</destination>
 		</relationship>
 	</object>
-	<object class="SpatialiserEffect" id="{a2803bc1-6b29-4551-a006-65648b1b1f66}" />
 </objects>

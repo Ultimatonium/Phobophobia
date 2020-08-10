@@ -53,7 +53,7 @@
 			<destination>{eb97a0dd-e230-4e7f-ac52-c9dbb7ca3fe5}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{fd8b6cb8-8eb7-42ce-8eb3-447316f35589}</destination>
+			<destination>{48ea558b-cd58-4883-a30e-69e96048f3fa}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{271c6128-9469-46f4-82b8-a30757701d33}" />
@@ -106,6 +106,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{d1abb80b-4558-4701-ae0f-0e806cdd6659}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<property name="name">
 			<value>Lazer</value>
 		</property>
@@ -153,7 +156,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{068f1dcf-f7bc-4a8b-b223-58cdc6956928}" />
 	<object class="MixerBusFader" id="{b90061d4-718e-4cbf-91e6-58945f79dd53}" />
-	<object class="SpatialiserEffect" id="{b7a15d3b-cf02-4cb2-8424-30f34d702edd}" />
+	<object class="SpatialiserEffect" id="{b7a15d3b-cf02-4cb2-8424-30f34d702edd}">
+		<property name="maximumDistance">
+			<value>100</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{bebccdaf-5e0f-42b0-a1d6-0db654eb1697}">
 		<property name="position">
 			<value>0</value>

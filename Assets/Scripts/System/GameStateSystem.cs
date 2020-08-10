@@ -4,7 +4,11 @@ using Unity.Collections;
 
 public class GameStateSystem : SystemBase
 {
-    protected override void OnUpdate()
+  private FMOD.Studio.EventInstance gameMusic;
+  private FMOD.Studio.Bus masterBus;
+  private bool gameSoundPlaying = false;
+
+  protected override void OnUpdate()
     {
         Entities.ForEach((SceneHandler sceneHandler, ref GameStateData gameStateData) =>
         {
@@ -22,6 +26,16 @@ public class GameStateSystem : SystemBase
                         World.GetExistingSystem<MoneySystem>().Enabled = true;
                         Object.FindObjectOfType<Spawner>().enabled = true;
                         sceneHandler.TryUnloadScene("UIIngameESC");
+
+                        if(!gameSoundPlaying)
+                        {
+                          gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Game/Game");
+                          gameMusic.start();
+                        }
+
+                        masterBus.getPaused(out bool paused);
+                        if(paused)
+                          masterBus.setPaused(false);
                         break;
                     case GameState.Pause:
                         Cursor.lockState = CursorLockMode.None;
@@ -31,6 +45,9 @@ public class GameStateSystem : SystemBase
                         World.GetExistingSystem<MoneySystem>().Enabled = false;
                         Object.FindObjectOfType<Spawner>().enabled = false;
                         sceneHandler.LoadSceneAdditive("UIIngameESC");
+                        
+                        masterBus = FMODUnity.RuntimeManager.GetBus("bus:/Master");
+                        masterBus.setPaused(true);
                         break;
                     case GameState.GameOver:
                         Cursor.lockState = CursorLockMode.None;
@@ -38,6 +55,11 @@ public class GameStateSystem : SystemBase
                         sceneHandler.TryUnloadScene("UIIngameMain");
                         sceneHandler.LoadScene("UIIngameEndscreen");
                         DestroyAllEntities();
+
+                        gameMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                        gameMusic.release();
+                        gameSoundPlaying = false;
+
                         World.GetExistingSystem<GameStateSystem>().Enabled = false;
                         break;
                     default:
