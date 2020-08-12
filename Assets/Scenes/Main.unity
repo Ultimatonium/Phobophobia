@@ -18136,7 +18136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3715166516967931223, guid: 9beb7b4259328264a813613753db2642,
     type: 3}
-  increasePerWave: 5
+  increasePerWave: 2
   waveSpawnInterval: 10
   spawns:
   - {fileID: 1729467266}
