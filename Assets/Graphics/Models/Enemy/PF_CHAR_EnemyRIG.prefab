@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
-  damage: 0.1
+  damage: 1
   cadence: 50
   timeUntilShoot: 0
 --- !u!114 &-7207710853639696542
