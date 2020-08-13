@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: b7c70bfccb0743c4b9c3e0027888fefb
-=======
-guid: ff80455bc29bd844eb88aeafdddee8f9
->>>>>>> b2ccb6e1d580ff849b5f568127496d1fa13b495b
 labels:
 - FMOD
 DefaultImporter:
