@@ -1537,7 +1537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa41cccb68802654aa03a9630324c371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 80
+  range: 50
   damage: 3
   cadence: 48
   timeUntilShoot: 0
