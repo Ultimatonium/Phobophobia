@@ -218,6 +218,9 @@
 		<property name="distanceRolloffType">
 			<value>4</value>
 		</property>
+		<property name="maximumDistance">
+			<value>40</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{2bda0788-5d8b-4a24-a12c-5c842dd16568}" />
 	<object class="MixerSend" id="{41a63f0a-dbfe-414b-b157-7d7994facbd8}">

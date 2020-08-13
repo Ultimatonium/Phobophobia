@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject[] targets;
 
-    [SerializeField] private PlayerAudioData playerAudio;
+    [SerializeField] private PlayerAudioData playerAudio = null;
     [SerializeField] private float footstepSpeed = 0.275f;
-    [SerializeField] private TowerAudioData towerAudio;
+    [SerializeField] private TowerAudioData towerAudio = null;
 
     private FMOD.Studio.EventInstance heartbeating;
     private FMOD.Studio.EventInstance movingTower;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     private bool waveAlreadyHere = false;
     private bool movingTowerSound = false;
 
-  private GameObject selectedTower;
+    private GameObject selectedTower;
 
     public GameObject characterCam { get; private set; }
     private Animator animator;
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
         spawnPostion = transform.position;
         spawnRotation = transform.rotation;
 
-        PlayOneShotRandomEvent(new int[] {1, 2}, "/Phobo/Vox/StartGameResume/", false);
+        PlayOneShotRandomEvent(new int[] {1, 2}, "/Phobo/Vox/StartGameResume/");
     }
 
     private void PlayFootstepAudio()
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour
         timeTilWave -= Time.deltaTime;
         if(timeTilWave <= 0f && !waveAlreadyHere)
         {
-          PlayOneShotRandomEvent(new int[] {1, 2, 3}, "/Phobo/Vox/StartofWave/", false);
+          PlayOneShotRandomEvent(new int[] {1, 2, 3}, "/Phobo/Vox/StartofWave/");
           waveAlreadyHere = true;
         }
     }
@@ -260,14 +260,14 @@ public class PlayerController : MonoBehaviour
     {
         entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Pause });
         Time.timeScale = 0;
-        PlayOneShotRandomEvent(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, "/Phobo/Vox/RandomCommentary/", false);
+        PlayOneShotRandomEvent(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, "/Phobo/Vox/RandomCommentary/");
     }
 
     public void Resume()
     {
         entityManager.SetComponentData(gameStateEntity, new GameStateData { gameState = GameState.Running });
         Time.timeScale = 1;
-        PlayOneShotRandomEvent(new int[] {1, 2}, "/Phobo/Vox/StartGameResume/", false);
+        PlayOneShotRandomEvent(new int[] {1, 2}, "/Phobo/Vox/StartGameResume/");
     }
 
     private Vector3 GetMoveDir()
@@ -364,7 +364,7 @@ public class PlayerController : MonoBehaviour
                 movingTowerSound = false;
 
                 FMODUnity.RuntimeManager.PlayOneShot(towerAudio.Build);
-                PlayOneShotRandomEvent(new int[] {1, 2, 3, 4}, "/Phobo/Vox/PlacingTower/", false);
+                PlayOneShotRandomEvent(new int[] {1, 2, 3, 4}, "/Phobo/Vox/PlacingTower/");
             }
             else
             {
@@ -377,9 +377,9 @@ public class PlayerController : MonoBehaviour
     {
       if(!alreadyDead)
       {
-        PlayOneShotRandomEvent(new int[] { 1, 2, 3}, "/Phobo/Vox/Dead/", false);
+        PlayOneShotRandomEvent(new int[] { 1, 2, 3}, "/Phobo/Vox/Dead/");
         animator.SetTrigger("die");
-        FMODUnity.RuntimeManager.PlayOneShot(playerAudio.Respawn);
+        FMODUnity.RuntimeManager.PlayOneShotAttached(playerAudio.Respawn, gameObject);
         alreadyDead = true;
       }
     }

@@ -5,7 +5,7 @@ using Unity.Collections;
 public class GameStateSystem : SystemBase
 {
   private FMOD.Studio.EventInstance gameMusic;
-  private FMOD.Studio.Bus masterBus;
+  private FMOD.Studio.Bus masterBus = FMODUnity.RuntimeManager.GetBus("bus:/Master");
   private bool gameSoundPlaying = false;
 
   protected override void OnUpdate()
@@ -44,9 +44,7 @@ public class GameStateSystem : SystemBase
                         World.GetExistingSystem<HealthModifySystem>().Enabled = false;
                         World.GetExistingSystem<MoneySystem>().Enabled = false;
                         Object.FindObjectOfType<Spawner>().enabled = false;
-                        sceneHandler.LoadSceneAdditive("UIIngameESC");
-                        
-                        masterBus = FMODUnity.RuntimeManager.GetBus("bus:/Master");
+                        sceneHandler.LoadSceneAdditive("UIIngameESC");     
                         masterBus.setPaused(true);
                         break;
                     case GameState.GameOver:

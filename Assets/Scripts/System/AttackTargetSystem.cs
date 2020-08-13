@@ -40,8 +40,7 @@ public class AttackTargetSystem : SystemBase
                         animationData.setterType = AnimationSetterType.Bool;
                         animationData.parameter = AnimationParameter.isAttacking;
                         animationData.boolValue = true;
-
-                        
+                        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Tower/Shooting/Shooting", transform.gameObject);
                     }
 
                     transform.rotation = rotation.Value;
