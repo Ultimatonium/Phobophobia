@@ -384,7 +384,7 @@ public class PlayerController : MonoBehaviour
       {
         PlayOneShotRandomEvent(new int[] { 1, 2, 3}, "/Phobo/Vox/Dead/");
         animator.SetTrigger("die");
-        FMODUnity.RuntimeManager.PlayOneShotAttached(playerAudio.Respawn, gameObject);
+        FMODUnity.RuntimeManager.PlayOneShot(playerAudio.Respawn);
         alreadyDead = true;
       }
     }
