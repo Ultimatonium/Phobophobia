@@ -9,6 +9,7 @@
 
 ## Built With
 * [Unity](https://unity.com/) - real-time 3D development platform
+* [Maya](https://autodesk.com/) - 3D computer graphics application
 
 ## Author
  * [Ultimatonium (me)](https://github.com/Ultimatonium)
