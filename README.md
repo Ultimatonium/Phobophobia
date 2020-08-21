@@ -10,6 +10,8 @@
 * [Unity](https://unity.com/) - real-time 3D development platform
 * [Maya](https://autodesk.com/) - 3D computer graphics application
 * [AdvancedSkeleton](https://www.animationstudios.com.au/advanced-skeleton) - rigging plugin for maya
+* [Substance Painter](https://www.substance3d.com/products/substance-painter/) - Texturing tool
+* [Substance Designer](https://www.substance3d.com/products/substance-designer/) - Texture creation Tool
 
 ## Author
  * [Ultimatonium (me)](https://github.com/Ultimatonium)
