@@ -1,7 +1,7 @@
 # Phobophobia
 3rd person tower defense in a nightmarish, psychedelic setting
 
-![screenshot](./screenshot.PNG)
+![screenshot](./README_ASSETS/presentedBy.png)
 
 ## YouTube
 [![YouTube](https://img.youtube.com/vi/PdmdYKLdwM0/0.jpg)](https://youtu.be/PdmdYKLdwM0)
