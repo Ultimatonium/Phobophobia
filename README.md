@@ -9,3 +9,12 @@
 
 ## Built With
 * [Unity](https://unity.com/) - real-time 3D development platform
+
+## Author
+ * [Ultimatonium (me)](https://github.com/Ultimatonium)
+ * [carozzz](https://github.com/carozzz)
+ * [Homeeer](https://github.com/Homeeer) 
+ * [M3tz1](https://github.com/M3tz1)
+ * [OmegaKoralle](https://github.com/OmegaKoralle)
+ * [Trognic](https://github.com/Trognic)
+ * [Xeais](https://github.com/Xeais) 
