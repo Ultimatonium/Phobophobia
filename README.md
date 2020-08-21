@@ -5,11 +5,11 @@
 
 ## YouTube
 [![YouTube](https://img.youtube.com/vi/PdmdYKLdwM0/0.jpg)](https://youtu.be/PdmdYKLdwM0)
-[![YouTube](https://img.youtube.com/vi/gOVkng7vVDc/0.jpg)](https://youtu.be/gOVkng7vVDc)
-
+[![YouTube](https://img.youtube.com/vi/gOVkng7vVDc/0.jpg)](https://youtu.be/gOVkng7vVDc* 
 ## Built With
 * [Unity](https://unity.com/) - real-time 3D development platform
 * [Maya](https://autodesk.com/) - 3D computer graphics application
+* [AdvancedSkeleton](https://www.animationstudios.com.au/advanced-skeleton) - rigging plugin for maya
 
 ## Author
  * [Ultimatonium (me)](https://github.com/Ultimatonium)
