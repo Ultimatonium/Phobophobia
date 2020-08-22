@@ -14,7 +14,7 @@ public class VolumeChanger : MonoBehaviour
   private void Start()
   {
     masterBus = FMODUnity.RuntimeManager.GetBus(masterBusPath);
-    volumeSlider.value = initialVolume;
+    volumeSlider.value = PlayerPrefs.GetFloat("SoundVolume", initialVolume); //"initialVolume" is used if PlayerPrefs hold no "SoundVolume"-float.
   }
 
   public void ChangeVolume(float newValue)
@@ -22,15 +22,11 @@ public class VolumeChanger : MonoBehaviour
     if(!masterBus.isValid())
       return;
 
-    CheckRESULT(masterBus.setVolume(newValue));
-    CheckRESULT(FMODUnity.RuntimeManager.GetBus(pausePatterBusPath).setVolume(newValue));
+    FMODErrorHandling.CheckRESULT(masterBus.setVolume(newValue));
+    FMODErrorHandling.CheckRESULT(FMODUnity.RuntimeManager.GetBus(pausePatterBusPath).setVolume(newValue));
+
+    PlayerPrefs.SetFloat("SoundVolume", newValue);
 
     //Debug.Log("New volume-value: " + newValue);
-  }
-
-  private void CheckRESULT(FMOD.RESULT returnValue)
-  {
-    if(returnValue != FMOD.RESULT.OK)
-      Debug.LogWarning("FMOD-Error: " + FMOD.Error.String(returnValue));
   }
 }
