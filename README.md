@@ -1,23 +1,25 @@
 # Phobophobia
-3rd person tower defense in a nightmarish, psychedelic setting
+3rd Person Tower Defense in a nightmarish psychedelic Setting
 
 ![screenshot](./README_ASSETS/presentedBy.png)
 
 ## YouTube
 [![YouTube](https://img.youtube.com/vi/PdmdYKLdwM0/0.jpg)](https://youtu.be/PdmdYKLdwM0)
-[![YouTube](https://img.youtube.com/vi/gOVkng7vVDc/0.jpg)](https://youtu.be/gOVkng7vVDc* 
-## Built With
-* [Unity](https://unity.com/) - real-time 3D development platform
-* [Maya](https://autodesk.com/) - 3D computer graphics application
-* [AdvancedSkeleton](https://www.animationstudios.com.au/advanced-skeleton) - rigging plugin for maya
-* [Substance Painter](https://www.substance3d.com/products/substance-painter/) - Texturing tool
-* [Substance Designer](https://www.substance3d.com/products/substance-designer/) - Texture creation Tool
+[![YouTube](https://img.youtube.com/vi/gOVkng7vVDc/0.jpg)](https://youtu.be/gOVkng7vVDc*) 
 
-## Author
+## Built With
+* [Unity](https://unity.com/) - Cross-platform game engine
+* [Maya](https://autodesk.com/) - 3D computer graphics application
+* [AdvancedSkeleton](https://www.animationstudios.com.au/advanced-skeleton) - Rigging plugin for Maya
+* [Substance Painter](https://www.substance3d.com/products/substance-painter/) - Texturing app
+* [Substance Designer](https://www.substance3d.com/products/substance-designer/) - Material creation and scan processing tool
+* [FMOD Studio](https://www.fmod.com/studio/) - Software for creating adaptive game music and sounds
+
+## Authors
  * [Ultimatonium (me)](https://github.com/Ultimatonium)
  * [carozzz](https://github.com/carozzz)
  * [Homeeer](https://github.com/Homeeer) 
  * [M3tz1](https://github.com/M3tz1)
  * [OmegaKoralle](https://github.com/OmegaKoralle)
  * [Trognic](https://github.com/Trognic)
- * [Xeais](https://github.com/Xeais) 
+ * [Xeais](https://github.com/Xeais)
