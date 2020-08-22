@@ -2406,13 +2406,26 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 217052898}
+  - component: {fileID: 217052897}
   m_Layer: 0
   m_Name: FMOD
-  m_TagString: Untagged
+  m_TagString: FMOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &217052897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217052896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033836577830b0b4999cab19b7543d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &217052898
 Transform:
   m_ObjectHideFlags: 0
