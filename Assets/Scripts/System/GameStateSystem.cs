@@ -30,12 +30,12 @@ public class GameStateSystem : SystemBase
                         if(!gameSoundPlaying)
                         {
                           gameMusic = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Game/Game");
-                          gameMusic.start();
+                          FMODErrorHandling.CheckRESULT(gameMusic.start());
                         }
 
-                        masterBus.getPaused(out bool paused);
+                        FMODErrorHandling.CheckRESULT(masterBus.getPaused(out bool paused));
                         if(paused)
-                          masterBus.setPaused(false);
+                          FMODErrorHandling.CheckRESULT(masterBus.setPaused(false));
                         break;
                     case GameState.Pause:
                         Cursor.lockState = CursorLockMode.None;
@@ -44,8 +44,8 @@ public class GameStateSystem : SystemBase
                         World.GetExistingSystem<HealthModifySystem>().Enabled = false;
                         World.GetExistingSystem<MoneySystem>().Enabled = false;
                         Object.FindObjectOfType<Spawner>().enabled = false;
-                        sceneHandler.LoadSceneAdditive("UIIngameESC");     
-                        masterBus.setPaused(true);
+                        sceneHandler.LoadSceneAdditive("UIIngameESC");
+                        FMODErrorHandling.CheckRESULT(masterBus.setPaused(true));
                         break;
                     case GameState.GameOver:
                         Cursor.lockState = CursorLockMode.None;
@@ -54,8 +54,8 @@ public class GameStateSystem : SystemBase
                         sceneHandler.LoadScene("UIIngameEndscreen");
                         DestroyAllEntities();
 
-                        gameMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                        gameMusic.release();
+                        FMODErrorHandling.CheckRESULT(gameMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE));
+                        FMODErrorHandling.CheckRESULT(gameMusic.release());
                         gameSoundPlaying = false;
 
                         World.GetExistingSystem<GameStateSystem>().Enabled = false;

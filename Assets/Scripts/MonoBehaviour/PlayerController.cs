@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
     public Vector3 spawnPostion { get; private set; }
     public Quaternion spawnRotation { get; private set; }
 
-    private GameObject spawner;
     private float timeTilWave;
 
     private void Awake()
@@ -80,8 +79,7 @@ public class PlayerController : MonoBehaviour
 
         entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
-        spawner = GameObject.FindWithTag("Spawner");
-        timeTilWave = spawner.GetComponent<Spawner>().WaveSpawnInterval;
+        timeTilWave = GameObject.FindWithTag("Spawner").GetComponent<Spawner>().WaveSpawnInterval;
 
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -154,20 +152,25 @@ public class PlayerController : MonoBehaviour
                 if(animator.GetBool("hitted"))
                   FMODUnity.RuntimeManager.PlayOneShot(playerAudio.Hitsounds); //Event Macro - Cooldown: 240 ms!
 
-                if(entityManager.GetComponentData<HealthData>(player).health < 2f)
+                //Player-entity is not yet available in "Start()"!
+                if(entityManager.GetComponentData<HealthData>(player).health < entityManager.GetComponentData<HealthData>(player).maxHealth / 5f)
                 {
                   if(!alreadyBeating) //If the instance is already playing, then calling "start()" will restart the event.
                   { 
                     heartbeating = FMODUnity.RuntimeManager.CreateInstance(playerAudio.Heartbeats);
-                    heartbeating.start();
+                    FMODErrorHandling.CheckRESULT(heartbeating.start());
                     alreadyBeating = true;
+                    Debug.Log("Phobo is hurt! Block the enemy's attacks with your right mouse button or take cover.");
                   }
                 }
                 else
                 {
-                  heartbeating.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                  heartbeating.release();
-                  alreadyBeating = false;
+                  if(alreadyBeating)
+                  { 
+                    FMODErrorHandling.CheckRESULT(heartbeating.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT));
+                    FMODErrorHandling.CheckRESULT(heartbeating.release());
+                    alreadyBeating = false;
+                  }
                 }
 
                 alreadyDead = false;
@@ -344,8 +347,8 @@ public class PlayerController : MonoBehaviour
         if(!movingTowerSound)
         { 
           movingTower = FMODUnity.RuntimeManager.CreateInstance(towerAudio.TowerMove);
-          movingTower.start();
-          movingTower.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(selectedTower, selectedTower.GetComponent<Rigidbody>()));
+          FMODErrorHandling.CheckRESULT(movingTower.start());
+          FMODErrorHandling.CheckRESULT(movingTower.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(selectedTower, selectedTower.GetComponent<Rigidbody>())));
           movingTowerSound = true;
         }
     }
@@ -364,8 +367,8 @@ public class PlayerController : MonoBehaviour
                 tower.GetComponent<Animator>().SetBool("isAttacking", false);
                 Destroy(selectedTower);
 
-                movingTower.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                movingTower.release();
+                FMODErrorHandling.CheckRESULT(movingTower.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT));
+                FMODErrorHandling.CheckRESULT(movingTower.release());
                 movingTowerSound = false;
 
                 FMODUnity.RuntimeManager.PlayOneShot(towerAudio.Build);
@@ -382,7 +385,7 @@ public class PlayerController : MonoBehaviour
     {
       if(!alreadyDead)
       {
-        PlayOneShotRandomEvent(new int[] { 1, 2, 3}, "/Phobo/Vox/Dead/");
+        PlayOneShotRandomEvent(new int[] {1, 2, 3}, "/Phobo/Vox/Dead/");
         animator.SetTrigger("die");
         FMODUnity.RuntimeManager.PlayOneShot(playerAudio.Respawn);
         alreadyDead = true;
