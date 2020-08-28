@@ -17,7 +17,7 @@
 
 ## Authors
  * [Ultimatonium (me)](https://github.com/Ultimatonium)
- * [carozzz](https://github.com/carozzz)
+ * [Kevin Brantschen](https://kbrantschen.artstation.com)
  * [Homeeer](https://github.com/Homeeer) 
  * [M3tz1](https://github.com/M3tz1)
  * [OmegaKoralle](https://github.com/OmegaKoralle)
