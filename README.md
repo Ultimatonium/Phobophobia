@@ -23,3 +23,9 @@
  * [OmegaKoralle](https://github.com/OmegaKoralle)
  * [Trognic](https://github.com/Trognic)
  * [Xeais](https://github.com/Xeais)
+
+## Audio
+ * [Artemis-Archtress](https://github.com/Artemis-Archtress)
+ * Carlo
+ * Creach
+ * Yves
