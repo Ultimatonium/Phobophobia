@@ -12,7 +12,7 @@
 * [Maya](https://autodesk.com/) - 3D computer graphics application
 * [Blender](https://www.blender.org/) - 3D computer graphics application
 * [AdvancedSkeleton](https://www.animationstudios.com.au/advanced-skeleton) - Rigging plugin for Maya
-* [Substance Painter](https://www.substance3d.com/products/substance-painter/) - Texturing app
+* [Substance Painter](https://www.substance3d.com/products/substance-painter/) - Texturing application
 * [Substance Designer](https://www.substance3d.com/products/substance-designer/) - Material creation and scan processing tool
 * [FMOD Studio](https://www.fmod.com/studio/) - Software for creating adaptive game music and sounds
 
