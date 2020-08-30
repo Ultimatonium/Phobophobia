@@ -18,7 +18,7 @@
 ## Authors
  * [Ultimatonium (me)](https://github.com/Ultimatonium)
  * [Kevin Brantschen](https://kbrantschen.artstation.com)
- * [Homeeer](https://github.com/Homeeer) 
+ * [Gabriel Hubli](https://www.gabrielhubli.com) 
  * [M3tz1](https://github.com/M3tz1)
  * [OmegaKoralle](https://github.com/OmegaKoralle)
  * [Trognic](https://github.com/Trognic)
@@ -27,5 +27,5 @@
 ## Audio
  * [Artemis-Archtress](https://github.com/Artemis-Archtress)
  * Carlo
- * Creach
+ * [Kaan](https://soundcloud.com/vellum-musik)
  * Yves
