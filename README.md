@@ -28,5 +28,5 @@
 ## Audio
  * [Artemis-Archtress](https://github.com/Artemis-Archtress)
  * [Carlo](https://soundcloud.com/vellum-musik)
- * [Kaan]
+ * Kaan
  * Yves
